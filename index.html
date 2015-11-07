@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8" />
+<title>Placeholder</title>
+<link href="../csss/slideshow.css" rel="stylesheet" />
+<link href="../csss/reusable.css" rel="stylesheet" />
+<link href="prism.css" rel="stylesheet" />
+<link href="theme.css" rel="stylesheet" />
+<link href="talk.css" rel="stylesheet" />
+<script src="../prefixfree/prefixfree.min.js"></script>
+
+</head>
+<body class="language-javascript">
+
+<section id="for-browser" class="dark slide">
+	<h1>Important</h1>
+	This slide deck was created for use in a controlled environment, during a talk. It works best with Firefox at 1920x1080. It WILL PROBABLY NOT work properly in other browsers.
+</section>
+
+<header id="intro" class="image slide" style="background-image: url(img/moveable.png);">
+	<h1>
+		WebFonts: Level Up!
+	</h1>
+	<h2><a href="http://w3.org/People#clilley">Chris Lilley</a> <a href="http://twitter.com/svgeesus">@svgeesus</a></h2>
+	<p class="attribution"></p>
+</header>
+
+
+<section class="inverse slide darker hi" id="doing-stuff">
+	<h1>Who am I</h1>
+		<div class="delayed"><img id="mypic" src="img/chris-av.jpg"></div>
+		<div class="delayed">
+			<ul>
+				
+				<li><a href="http://prismjs.com">Technical Director, Interaction Domain, W3C</a></li>
+				<li><a href="http://leaverou.github.io/prefixfree">Started SVG</a></li>
+				<li><a href="http://dabblet.com">PNG co-author</a></li>
+				<li><a href="http://css3test.com">W3C Technical Architecture Group, 3 years</a></li>
+				<li><a href="http://cubic-bezier.com/">Chair CSS WG (1997-2001)</a></li>
+				<li><a href="http://leaverou.github.io/animatable/">CSS2 co-editor (@font-face, descriptors)</a></li>
+				<li><a href="">CSS3 Color co-editor</a></li>
+				<li><a href="">WOFF 1,0, WOFF 2.0</a></li>
+				<li><a href="http://leaverou.github.io/awesomplete/">Chromatic Fonts</a></li>
+				<li><a href="">IETF RFCs</a>
+			</ul>
+			<small></small>
+		</div>
+		<p class="delayed" id="csswg">
+			<strong>CSS WG</strong>
+			Staff Contact
+		</p>
+		<p class="delayed" id="webfontswg">
+			<strong>WebFonts WG</strong>
+			Staff Contact
+		</p>
+		<p class="delayed" id="csswg">
+			<strong>WebAudio WG</strong>
+			Staff Contact
+		</p>
+	</section>
+	
+<section class="slide darker" id="topics">
+	<h1>Topics for today</h1>
+<div class="delayed"><p>WebFont basics</p></div>
+<div class="delayed"><p>OpenType Features</p></div>
+<div class="delayed"><p>Performance</p></div>
+<div class="delayed"><p>The Future</p></div>
+	
+	</section>
+
+<section class="dark slide">
+	<h1 class="flourish">Characters &amp; Glyphs</h1>
+	<div class="delayed"><p>A <em>character</em> is just a <span title="Unicode">number</span>, with some properties (is it a number? Is it punctuation?)</p></div>
+	<div class="delayed"><p>A <em>glyph</em> is a visual representation of (one or more) characters</p></div>
+	<div class="delayed"><p>Multiple glyphs possible for the same character</p></div>
+	<div class="delayed huge"><p>a a a <br />
+		<span lang="ar" dir="rtl"> &zwnj;ﺣ&zwnj; ﺣﺣﺣ &zwj;ﺣ&zwnj; &zwj;ﺣ&zwj; &zwnj;ﺣ&zwj;</span></p></div>
+</section>
+
+<section class="slide">
+	<h1>Font, family, face</h1>
+	<div class="delayed"><p>A font <em>family</em> can contain multiple <em>faces</em></p></div>
+	<div class="delayed"><p>Faces within a family vary by:</p></div>
+	<div class="delayed"><ul>
+		<li>weight</li>
+		<li>width</li>
+		<li>other variations (italic …)</li></ul></div>
+</section>
+
+<section class="dark slide">
+	<h1>Properties &amp; descriptors</h1>
+<textarea id="descriptors"><code lang="javascript">
+@font-face {
+	font-family: 'Something';
+	src: url(fonts/s.woff);
+	font-weight: bold;
+}
+h1 {
+	font-family: Something;
+	font-weight: bold;
+}</code></textarea>
+	<div class="delayed"><p>Properties are <em>requests for styling</em></p></div>
+	<div class="delayed"><p>Descriptors are (possibly untrue) <em>statements about individual font faces</em></p></div>
+</section>
+
+
+<footer class="dark slide">
+	<img src="img/chris-av.jpg" />
+	<h1>Thank you!</h1>
+	<ul>
+		<li><a href="mailto:chris@w3.org">chris@w3.org</a></li>
+		<li><a href="http://www.w3.org/People#clilley">w3.org/People#clilley</a></li>
+		<li><a href="http://twitter.com/svgeesus">@svgeesus</a></li>
+	</ul>
+	<p>Slides: <a href="http://svgeesus.github.io/fonts-level-up">svgeesus.github.io/fonts-level-up</a></p>
+	<p style="font-size: 50%;">CSS Slideshow framework by Lea Verou: <a href="http://github.com/LeaVerou/CSSS">github.com/LeaVerou/CSSS</a></p>
+</footer>
+
+
+
+<script src="../csss/slideshow.js"></script>
+<script src="prism.js"></script>
+<script src="../csss/plugins/css-edit.js"></script>
+<script src="../csss/plugins/css-snippets.js"></script>
+<script src="../incrementable/incrementable.js"></script>
+
+<script src="talk.js"></script>
+
+</body>
+</html>

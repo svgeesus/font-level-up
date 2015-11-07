@@ -1,0 +1,7 @@
+﻿dark green #4E5D58
+pale green #9E9D81
+buff #F3D69B
+tan #E79D5E
+orange #D66039
+darkgrey #2D2C2C
+midgrey #474748
