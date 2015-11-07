@@ -9,7 +9,7 @@
 }
 
 body {
-	font: 100%/1.5 'Free Sans', 'Helvetica Neue', sans-serif;
+	font: 140%/1.5 'Free Sans', 'Helvetica Neue', sans-serif;
 	background: linear-gradient(45deg, silver 25%, transparent 25%, transparent 75%, silver 75%),
 	            linear-gradient(45deg, silver 25%, transparent 25%, transparent 75%, silver 75%) 20px 20px;
 	background-color: #eee;
@@ -125,7 +125,7 @@ textarea {
 	.slide > h1 {
 		text-align: center;
 		margin: 0 0 .6em;
-		font-size: 200%;
+		font-size: 140%;
 	}
 	
 	.slide h2 {

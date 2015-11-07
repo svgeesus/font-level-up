@@ -72,7 +72,8 @@
 
 <section class="dark slide">
 	<h1 class="flourish">Characters &amp; Glyphs</h1>
-	<div class="delayed"><p>A <em>character</em> is just a <span title="Unicode">number</span>, with some properties (is it a number? Is it punctuation?)</p></div>
+	<div class="delayed"><p>A <em>character</em> is just a <span title="Unicode">number</span>, with some properties <br/>
+		(is it a number? Is it punctuation?)</p></div>
 	<div class="delayed"><p>A <em>glyph</em> is a visual representation of (one or more) characters</p></div>
 	<div class="delayed"><p>Multiple glyphs possible for the same character</p></div>
 	<div class="delayed huge"><p>a a a <br />
@@ -103,6 +104,18 @@ h1 {
 }</code></textarea>
 	<div class="delayed"><p>Properties are <em>requests for styling</em></p></div>
 	<div class="delayed"><p>Descriptors are (possibly untrue) <em>statements about individual font faces</em></p></div>
+</section>
+
+<section class="slide">
+	<h1>Font stacks</h1>
+	<div class="delayed"><p>First font with glyphs for a given character is used</p></div>
+	<div class="delayed"><p>Problem: avoiding bad Latin glyphs in Japanese fonts</p></div>
+	<pre class="delayed">@font-face {
+	font-family: something;
+	src: url(Latin.woff), url(Japanese.woff);
+}</pre>
+<div class="delayed"><p>Ok, but suppose the Latin font has kana which suck, too?<br/>
+<em>Both</em> fonts can't be first!</p></div>
 </section>
 
 
