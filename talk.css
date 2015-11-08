@@ -314,18 +314,35 @@
 
 /* Styling for individual code samples */
 
-#descriptors {
+#descriptors, #descrip2 {
 	position: absolute;
-	top: 15em;
+	top: 16em;
 	bottom: 0;
 	right: 0;
 	left: auto;
-	width:24em;
-	height: 15em
+	width:20em;
+	height: 15em;
+	padding-left: 2em;
+}
+
+pre.inline {
+	margin-left: 2em;
+	padding-left: 2em;
+	width: 70%;
+}
+
+pre.inline code {
+	
 }
 
 
+#faces li {
+	margin-left: 2em;
+}
 
+.apology { 
+	color: #D66039;
+}
 
 footer.slide {
 	text-align: center;

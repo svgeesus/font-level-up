@@ -6,13 +6,13 @@
 <title>Placeholder</title>
 <link href="../csss/slideshow.css" rel="stylesheet" />
 <link href="../csss/reusable.css" rel="stylesheet" />
-<link href="../prism/themes/prism.css" rel="stylesheet" />
+<link href="prism-smalldark.css" rel="stylesheet" />
 <link href="theme.css" rel="stylesheet" />
 <link href="talk.css" rel="stylesheet" />
 <script src="../prefixfree/prefixfree.min.js"></script>
 
 </head>
-<body class="language-javascript">
+<body class="language-css">
 
 <section id="for-browser" class="dark slide">
 	<h1>Important</h1>
@@ -80,14 +80,15 @@
 		<span lang="ar" dir="rtl"> &zwnj;ﺣ&zwnj; ﺣﺣﺣ &zwj;ﺣ&zwnj; &zwj;ﺣ&zwj; &zwnj;ﺣ&zwj;</span></p></div>
 </section>
 
-<section class="slide">
+
+<section class="dark slide" id="faces">
 	<h1>Font, family, face</h1>
 	<div class="delayed"><p>A font <em>family</em> can contain multiple <em>faces</em></p></div>
 	<div class="delayed"><p>Faces within a family vary by:</p></div>
-	<div class="delayed"><ul>
-		<li>weight</li>
-		<li>width</li>
-		<li>other variations (italic …)</li></ul></div>
+	<div><ul>
+		<li class="delayed">weight</li>
+		<li class="delayed">width</li>
+		<li class="delayed">other variations (italic …)</li></ul></div>
 </section>
 
 <!-- textarea commented out; background fulls size, h1 is sand serif -->
@@ -99,7 +100,7 @@
 	src: url(fonts/s.woff);
 	font-weight: bold;
 }
-h1 {
+h3 {
 	font-family: Something;
 	font-weight: bold;
 }</textarea>-->
@@ -117,7 +118,7 @@ h1 {
 	src: url(fonts/s.woff);
 	font-weight: bold;
 }
-h1 {
+h3 {
 	font-family: Something;
 	font-weight: bold;
 }</textarea>
@@ -126,15 +127,15 @@ h1 {
 </section>
 
 <!-- same, but with code.  -->
-<section class="dark slide">
+<section class="dark slide" id="prop-desc">
 	<h1>Properties &amp; descriptors</h1>
-<pre  class="delayed  code"><code class="language-css">
+<pre id="descrip2" class="delayed  code"><code class="language-css">
 @font-face {
 	font-family: 'Something';
 	src: url(fonts/s.woff);
 	font-weight: bold;
 }
-h1 {
+h3 {
 	font-family: Something;
 	font-weight: bold;
 }</code></pre>
@@ -142,16 +143,28 @@ h1 {
 	<div class="delayed"><p>Descriptors are (possibly untrue) <em>statements about individual font faces</em></p></div>
 </section>
 
-<section class="slide">
+<section class="slide" id="stacks">
 	<h1>Font stacks</h1>
 	<div class="delayed"><p>First font with glyphs for a given character is used</p></div>
 	<div class="delayed"><p>Problem: avoiding bad Latin glyphs in Japanese fonts</p></div>
-	<pre class="delayed">@font-face {
+	<pre class="delayed" class="inline"><code>@font-face {
 	font-family: something;
 	src: url(Latin.woff), url(Japanese.woff);
-}</pre>
+}</code></pre>
 <div class="delayed"><p>Ok, but suppose the Latin font has kana which suck, too?<br/>
 <em>Both</em> fonts can't be first!</p></div>
+</section>
+
+<section class="dark slide" id="urange">
+	<h1>Unicode-range</h1>
+	<div class="delayed"><p>Descriptor for allowed range of Unicode characters</p></div>
+	<div class="delayed"><p>Glyphs for characters outside range <em>not used</em></p>
+		<p class="delayed">… even if the font has them</p>
+	</div>
+	<div class="delayed apology"><p><img src="img/poop.png" style="float: left; margin-right: 2em">
+		I'm really sorry about the unicode-range syntax. Whatever was I thinking?</p>
+		<pre class="inline"><code class="language-css">U+12??</code>
+	</div>
 </section>
 
 
