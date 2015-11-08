@@ -6,7 +6,7 @@
 <title>Placeholder</title>
 <link href="../csss/slideshow.css" rel="stylesheet" />
 <link href="../csss/reusable.css" rel="stylesheet" />
-<link href="prism.css" rel="stylesheet" />
+<link href="../prism/prism.css" rel="stylesheet" />
 <link href="theme.css" rel="stylesheet" />
 <link href="talk.css" rel="stylesheet" />
 <script src="../prefixfree/prefixfree.min.js"></script>
@@ -90,9 +90,10 @@
 		<li>other variations (italic …)</li></ul></div>
 </section>
 
+<!-- textarea commented out; background fulls size, h1 is sand serif -->
 <section class="dark slide">
 	<h1>Properties &amp; descriptors</h1>
-<textarea id="descriptors"><code lang="javascript">
+<!--<textarea id="descriptors" class="delayed">
 @font-face {
 	font-family: 'Something';
 	src: url(fonts/s.woff);
@@ -101,7 +102,25 @@
 h1 {
 	font-family: Something;
 	font-weight: bold;
-}</code></textarea>
+}</textarea>-->
+	<div class="delayed"><p>Properties are <em>requests for styling</em></p></div>
+	<div class="delayed"><p>Descriptors are (possibly untrue) <em>statements about individual font faces</em></p></div>
+</section>
+
+
+<!-- same, but with textarea. background now truncated, h1 is serif, weird -->
+<section class="dark slide">
+	<h1>Properties &amp; descriptors</h1>
+<textarea id="descriptors" class="delayed">
+@font-face {
+	font-family: 'Something';
+	src: url(fonts/s.woff);
+	font-weight: bold;
+}
+h1 {
+	font-family: Something;
+	font-weight: bold;
+}</textarea>
 	<div class="delayed"><p>Properties are <em>requests for styling</em></p></div>
 	<div class="delayed"><p>Descriptors are (possibly untrue) <em>statements about individual font faces</em></p></div>
 </section>

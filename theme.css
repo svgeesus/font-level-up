@@ -57,11 +57,11 @@ textarea {
 	color: inherit;
 	border: 0;
 	outline: none;
-	position: absolute;
+	/* position: absolute;
 	top: 0;
 	right: 0;
 	width: 75%;
-	height: 100%;
+	height: 100%; */
 	padding: .6em 1em;
 	box-sizing: border-box;
 	background: hsl(200, 20%, 25%) linear-gradient(rgba(0,0,0,.1) 50%, transparent 0);

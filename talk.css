@@ -165,13 +165,6 @@
 	font-size:400%;
 }
 
-#descriptors {
-	position: absolute;
-	bottom: 1em;
-	right: 1em;
-	width:30em;
-	height: 16em
-}
 
 .subject {
 	position: relative;
@@ -317,6 +310,22 @@
 	#animation-delay[data-step="3"] pre .delay::before {
 		content: "-4s";
 	}
+
+
+/* Styling for individual code samples */
+
+#descriptors {
+	position: absolute;
+	top: 15em;
+	bottom: 0;
+	right: 0;
+	left: auto;
+	width:24em;
+	height: 15em
+}
+
+
+
 
 footer.slide {
 	text-align: center;
