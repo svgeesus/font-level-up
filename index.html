@@ -111,7 +111,7 @@ h1 {
 <!-- same, but with textarea. background now truncated, h1 is serif, weird -->
 <section class="dark slide">
 	<h1>Properties &amp; descriptors</h1>
-<textarea id="descriptors" class="delayed">
+<textarea id="descriptors" class="delayed lang-css code">
 @font-face {
 	font-family: 'Something';
 	src: url(fonts/s.woff);
@@ -121,6 +121,23 @@ h1 {
 	font-family: Something;
 	font-weight: bold;
 }</textarea>
+	<div class="delayed"><p>Properties are <em>requests for styling</em></p></div>
+	<div class="delayed"><p>Descriptors are (possibly untrue) <em>statements about individual font faces</em></p></div>
+</section>
+
+<!-- same, but with code.  -->
+<section class="dark slide">
+	<h1>Properties &amp; descriptors</h1>
+<pre  class="delayed  code"><code class="lang-css">
+@font-face {
+	font-family: 'Something';
+	src: url(fonts/s.woff);
+	font-weight: bold;
+}
+h1 {
+	font-family: Something;
+	font-weight: bold;
+}</code></pre>
 	<div class="delayed"><p>Properties are <em>requests for styling</em></p></div>
 	<div class="delayed"><p>Descriptors are (possibly untrue) <em>statements about individual font faces</em></p></div>
 </section>
@@ -153,7 +170,7 @@ h1 {
 
 
 <script src="../csss/slideshow.js"></script>
-<script src="prism.js"></script>
+<script src="../prism/prism.js"></script>
 <script src="../csss/plugins/css-edit.js"></script>
 <script src="../csss/plugins/css-snippets.js"></script>
 <script src="../incrementable/incrementable.js"></script>
