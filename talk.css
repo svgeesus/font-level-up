@@ -1,3 +1,10 @@
+
+@font-face {
+	font-family: LinBio;
+	src: url(fonts/LinBiolinum_R.woff);
+}
+
+
 #for-browser {
 	background: #333;
 	background-image: linear-gradient(to left, rgba(0,0,0,.5), rgba(0,0,0,.5)), linear-gradient(to left, rgba(0,0,0,.5), rgba(0,0,0,.5));
@@ -46,7 +53,6 @@
 		bottom: -.5em;
 		color: white;
 		font-size: 80%;
-		xmix-blend-mode: difference;
 	}
 	
 		#intro .attribution a {
@@ -335,6 +341,52 @@ pre.inline code {
 	
 }
 
+/* styles for split example/code slides */
+.vsplit .figure {
+	position: absolute;
+	top: 200px;
+	width: 50%;
+	height: 80%;
+	background: #4E5D58;
+	overflow: visible;
+	font-variant-numeric: oldstyle-nums;
+}
+
+.vsplit textarea {
+	position: absolute;
+	top: 200px;
+	right: 0;
+	width: 50%;
+	height: 80%;
+	left: 50%;
+}
+
+.hsplit .figure {
+	position: absolute;
+	top: 200px;
+	width: 100%;
+	height: 40%;
+	background: #4E5D58;
+	overflow: visible;
+	font-variant-numeric: oldstyle-nums;
+}
+
+.hsplit textarea {
+	position: absolute;
+	top: 640px;
+	right: 0;
+	width: 100%;
+	height: 40%;
+	left: 0%;
+}
+
+
+/* and for specific examples */
+
+#numeric {
+	font-family: LinBio;
+	font-size: 400%;
+}
 
 #faces li {
 	margin-left: 2em;

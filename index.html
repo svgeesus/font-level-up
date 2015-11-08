@@ -70,7 +70,7 @@
 	
 	</section>
 
-<section class="dark slide">
+<section class="dark slide" id="charglyph">
 	<h1 class="flourish">Characters &amp; Glyphs</h1>
 	<div class="delayed"><p>A <em>character</em> is just a <span title="Unicode">number</span>, with some properties <br/>
 		(is it a number? Is it punctuation?)</p></div>
@@ -91,42 +91,6 @@
 		<li class="delayed">other variations (italic …)</li></ul></div>
 </section>
 
-<!-- textarea commented out; background fulls size, h1 is sand serif -->
-<section class="dark slide">
-	<h1>Properties &amp; descriptors</h1>
-<!--<textarea id="descriptors" class="delayed">
-@font-face {
-	font-family: 'Something';
-	src: url(fonts/s.woff);
-	font-weight: bold;
-}
-h3 {
-	font-family: Something;
-	font-weight: bold;
-}</textarea>-->
-	<div class="delayed"><p>Properties are <em>requests for styling</em></p></div>
-	<div class="delayed"><p>Descriptors are (possibly untrue) <em>statements about individual font faces</em></p></div>
-</section>
-
-
-<!-- same, but with textarea. background now truncated, h1 is serif, weird -->
-<section class="dark slide">
-	<h1>Properties &amp; descriptors</h1>
-<textarea id="descriptors" class="delayed lang-css code">
-@font-face {
-	font-family: 'Something';
-	src: url(fonts/s.woff);
-	font-weight: bold;
-}
-h3 {
-	font-family: Something;
-	font-weight: bold;
-}</textarea>
-	<div class="delayed"><p>Properties are <em>requests for styling</em></p></div>
-	<div class="delayed"><p>Descriptors are (possibly untrue) <em>statements about individual font faces</em></p></div>
-</section>
-
-<!-- same, but with code.  -->
 <section class="dark slide" id="prop-desc">
 	<h1>Properties &amp; descriptors</h1>
 <pre id="descrip2" class="delayed  code"><code class="language-css">
@@ -167,6 +131,21 @@ h3 {
 	</div>
 </section>
 
+<section class="dark slide vsplit dont-resize">
+	<h1>Test for editable css, vertical split</h1>
+	<div class="delayed figure" id="numeric">12345</div>
+<textarea id="" class="delayed code" data-subject="#numeric">
+font-variant-numeric: oldstyle-nums;
+</textarea>
+
+<section class="dark slide hsplit dont-resize">
+	<h1>Test for editable css, horizontal split</h1>
+	<div class="delayed figure" id="numeric2">12345</div>
+<textarea id="" class="delayed code" data-subject="#numeric2">
+font-variant-numeric: oldstyle-nums;
+</textarea>
+	
+</section>
 
 <footer class="dark slide">
 	<img src="img/chris-av.jpg" />
