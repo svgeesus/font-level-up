@@ -259,64 +259,6 @@
 		transition: .4s margin-left;
 	}
 
-#animation-delay {
-
-}
-
-	#animation-delay h1::after {
-		content: ": 0s"
-	}
-
-	#animation-delay[data-step="1"] h1::after {
-		content: ": 1s"
-	}
-
-	#animation-delay[data-step="1"] .animation > div {
-		margin-left: 2.1em;
-	}
-
-	#animation-delay[data-step="2"] h1::after {
-		content: ": -1s"
-	}
-
-	#animation-delay[data-step="2"] .animation > div {
-		margin-left: -2.1em;
-	}
-
-	#animation-delay[data-step="3"] h1::after {
-		content: ": -4s"
-	}
-
-	#animation-delay[data-step="3"] .animation > div {
-		margin-left: -8.4em;
-	}
-
-	#animation-delay pre {
-		margin-top: 3em;
-		font-size: 90%;
-	}
-
-	#animation-delay[data-step] pre .delay::before {
-		display: inline-block;
-		padding-top: .1em;
-		margin-left: 1ch;
-		background: hsl(65, 100%, 50%);
-		mix-blend-mode: multiply;
-		line-height: 1.1;
-	}
-
-	#animation-delay[data-step="1"] pre .delay::before {
-		content: "1s";
-	}
-
-	#animation-delay[data-step="2"] pre .delay::before {
-		content: "-1s";
-	}
-
-	#animation-delay[data-step="3"] pre .delay::before {
-		content: "-4s";
-	}
-
 
 /* Styling for individual code samples */
 
@@ -418,31 +360,7 @@ footer.slide {
 			text-decoration: none;
 		}
 
-#csswg-composition:not(:target) circle {
-	stroke-dashoffset: 0;
-}
 
-#csswg-composition {
-
-}
-
-	#csswg-composition .legend {
-		margin: 1em;
-		font-size: 90%;
-	}
-
-		#csswg-composition .legend p {
-			white-space: nowrap;
-		}
-	
-	#csswg-composition circle {
-		transition: 1s cubic-bezier(.2,.7,.5,1.4);
-		transition-property: stroke-dasharray, stroke-dashoffset;
-	}
-
-	#csswg-composition:not(:target) circle {
-		stroke-dasharray: 0 100;
-	}
 
 .slide.browser-support {
 
@@ -553,58 +471,8 @@ footer.slide {
 		margin: 0;
 	}
 
-#tufte {
 
-}
 
-	#tufte blockquote p:first-of-type {
-		position: relative;
-	}
-
-	#tufte blockquote p:first-of-type::before {
-		position: absolute;
-		font-size: 200%;
-		font-weight: bold;
-		color: gold;
-		line-height: 1;
-		content: '“';
-		top: 0;
-		right: 100.5%;
-	}
-
-.pie-bar.slide {
-	text-align: center;
-}
-
-	.pie-bar.slide > div:first-of-type {
-		margin-bottom: 1.5em;
-	}
-
-	.conic-pie,
-	.bar-chart {
-		display: inline-block;
-		vertical-align: bottom;
-		width: 7em;
-		height: 7em;
-		margin: 0 2em;
-	}
-
-	.conic-pie {
-		border-radius: 50%;
-		background: center / 100% 100%;
-	}
-
-	.bar-chart {
-		line-height: 7em;
-	}
-
-		.bar-chart > div {
-			display: inline-block;
-			vertical-align: bottom;
-			width: 1em;
-			background: gold;
-			height: 100%;
-		}
 
 #epilogue {
 	background-image: url(img/whole-pie.jpg);
