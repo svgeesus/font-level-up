@@ -30,7 +30,7 @@
 
 <section class="inverse slide darker hi" id="doing-stuff">
 	<h1>Who am I</h1>
-		<div class="delayed"><img id="mypic" src="img/chris-av.jpg"></div>
+		<div class="delayed"><img id="mypic" src="img/chris-av.jpg" alt="me"></div>
 		<div class="delayed">
 			<ul>
 				
@@ -55,7 +55,7 @@
 			<strong>WebFonts WG</strong>
 			Staff Contact
 		</p>
-		<p class="delayed" id="csswg">
+		<p class="delayed" id="webaudiowg">
 			<strong>WebAudio WG</strong>
 			Staff Contact
 		</p>
@@ -111,7 +111,7 @@ h3 {
 	<h1>Font stacks</h1>
 	<div class="delayed"><p>First font with glyphs for a given character is used</p></div>
 	<div class="delayed"><p>Problem: avoiding bad Latin glyphs in Japanese fonts</p></div>
-	<pre class="delayed" class="inline"><code>@font-face {
+	<pre class="delayed inline"><code>@font-face {
 	font-family: something;
 	src: url(Latin.woff), url(Japanese.woff);
 }</code></pre>
@@ -125,32 +125,33 @@ h3 {
 	<div class="delayed"><p>Glyphs for characters outside range <em>not used</em></p>
 		<p class="delayed">… even if the font has them</p>
 	</div>
-	<div class="delayed apology"><p><img src="img/poop.png" style="float: left; margin-right: 2em">
+	<div class="delayed apology"><p><img src="img/poop.png" style="float: left; margin-right: 2em" alt="poop"/>
 		I'm really sorry about the unicode-range syntax. Whatever was I thinking?</p>
-		<pre class="inline"><code class="language-css">U+12??</code>
+		<pre class="inline"><code class="language-css">U+12??</code></pre>
 	</div>
 </section>
 
 <section class="dark slide vsplit dont-resize" id="vsplit">
 	<h1>Test for editable css, vertical split</h1>
 	<div class="delayed figure" id="numeric">12345</div>
-<textarea id="" class="delayed code" data-subject="#numeric">
+<textarea class="delayed code" data-subject="#numeric">
 font-variant-numeric: oldstyle-nums;
 </textarea>
+</section>
 
-<!--
+
 <section class="dark slide hsplit dont-resize" id="hsplit">
 	<h1>Test for editable css, horizontal split</h1>
 	<div class="delayed figure" id="numeric2">12345</div>
-<textarea id="" class="delayed code" data-subject="#numeric2">
+<textarea class="delayed code" data-subject="#numeric2">
 font-variant-numeric: oldstyle-nums;
 </textarea>
--->
+
 	
 </section>
 
 <footer class="dark slide">
-	<img src="img/chris-av.jpg" />
+	<img src="img/chris-av.jpg" alt="me"/>
 	<h1>Thank you!</h1>
 	<ul>
 		<li><a href="mailto:chris@w3.org">chris@w3.org</a></li>
