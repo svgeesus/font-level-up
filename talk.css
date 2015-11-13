@@ -21,8 +21,6 @@
 	#intro h1 {
 		position: absolute;
 		top: .4em;
-		color: #F3D69B;
-		text-shadow: -2px -2px 1px white, 2px 2px 5px #E79D5E, 4px 4px 5px #E79D5E, 7px 7px 1px #4E5D58, 8px 8px 0px black;
 		right: .4em;
 		width: 7em;
 		margin: 0;
@@ -35,13 +33,17 @@
 		margin: .4em 0 0;
 		font-size: 200%;
 		line-height: 1;
-		color: #F3D69B;
-		text-shadow: -2px -2px 1px white, 2px 2px 5px #E79D5E, 4px 4px 5px #E79D5E, 7px 7px 1px #4E5D58, 8px 8px 0px black;
 		text-decoration: none;
 		position: absolute;
 		right: .8em;
 		bottom: .8em;
 		text-align: right;
+	}
+
+	#intro h1, #intro h2 {
+		color: #F3D69B;
+		text-shadow: -3px -3px 0px white, -1px -1px 2px white, 1px 1px 2px #2D2C2C, 3px 3px 0px #2D2C2C;
+		
 	}
 
 	#intro a {
@@ -166,9 +168,14 @@
 				margin-bottom: .2em;
 			}
 
+#prop-desc dt, #charglyph dt {
+	font-weight: bold;
+	color: #E79D5E;
+}
+
 
 .huge {
-	font-size:400%;
+	font-size:200%;
 }
 
 
@@ -298,12 +305,11 @@ pre.inline code {
 .hsplit .figure {
 	position: absolute;
 	top: 200px;
-	left: -30px;
-	width: 100%;
+	left: -15px;
+	width: 100vw;
 	height: 40%;
 	background: #4E5D58;
-	overflow: visible;
-	font-variant-numeric: oldstyle-nums;
+	overflow: hidden;
 }
 
 .hsplit textarea {
@@ -320,8 +326,13 @@ pre.inline code {
 
 #numeric {
 	font-family: LinBio;
-	font-size: 400%;
+	font-size: 230%;
 }
+
+	#numeric p {
+		margin-top: 0;
+		margin-left: 50px;
+	}
 
 #faces li {
 	margin-left: 2em;

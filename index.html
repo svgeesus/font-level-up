@@ -16,7 +16,7 @@
 
 <section id="for-browser" class="dark slide">
 	<h1>Important</h1>
-	This slide deck was created for use in a controlled environment, during a talk. It works best with Firefox at 1920x1080. It WILL PROBABLY NOT work properly in other browsers.
+	This slide deck was created for use in a controlled environment, during a talk. It works best with Firefox at 1920x1080. It WILL PROBABLY NOT work correctly in other browsers, due to limited support for CSS3 font-variant-* properties at this time.
 </section>
 
 <header id="intro" class="image slide" style="background-image: url(img/moveable.png);">
@@ -34,16 +34,19 @@
 		<div class="delayed">
 			<ul>
 				
-				<li><a href="http://prismjs.com">Technical Director, Interaction Domain, W3C</a></li>
-				<li><a href="http://leaverou.github.io/prefixfree">Started SVG</a></li>
-				<li><a href="http://dabblet.com">PNG co-author</a></li>
-				<li><a href="http://css3test.com">W3C Technical Architecture Group, 3 years</a></li>
-				<li><a href="http://cubic-bezier.com/">Chair CSS WG (1997-2001)</a></li>
-				<li><a href="http://leaverou.github.io/animatable/">CSS2 co-editor (@font-face, descriptors)</a></li>
-				<li><a href="">CSS3 Color co-editor</a></li>
-				<li><a href="">WOFF 1,0, WOFF 2.0</a></li>
-				<li><a href="http://leaverou.github.io/awesomplete/">Chromatic Fonts</a></li>
-				<li><a href="">IETF RFCs</a>
+				<li><a href="http://www.w3.org/People/#clilley">Technical Director, Interaction Domain, W3C</a></li>
+				<li><a href="http://www.w3.org/Graphics/SVG/WG/wiki/Secret_Origin_of_SVG#Drivers_and_Deployment">Started SVG</a></li>
+				<li><a href="http://www.w3.org/2001/12/tag-pressrelease.html.en">Chair, SVG WG (1998-2006)</a></li>
+				<li><a href="http://www.w3.org/TR/PNG/">PNG co-author</a></li>
+				<li><a href="http://www.w3.org/2001/12/tag-pressrelease.html.en">W3C Technical Architecture Group, 2001-2004</a></li>
+				<li><a href="http://www.w3.org/TR/webarch/#acks">WebArch co-author</a></li>
+				<li><a href="https://lists.w3.org/Archives/Member/w3c-ac-members/2001JulSep/0007.html">Chair CSS WG (1997-2002)</a></li>
+				<li><a href="http://www.w3.org/TR/REC-CSS2/">CSS2 co-editor (@font-face, descriptors)</a></li>
+				<li><a href="http://www.w3.org/TR/SVG10/#AuthorList">SVG 1.0, 1.1</a>
+				<li><a href="http://www.w3.org/TR/css3-color/">CSS3 Color co-editor</a></li>
+				<li><a href="http://www.w3.org/Fonts/WG/">WOFF 1,0, WOFF 2.0</a></li>
+				<li><a href="https://www.w3.org/community/svgopentype/">Chromatic Fonts</a></li>
+				<li><a href="https://tools.ietf.org/html/rfc7303">RFC 7303</a>
 			</ul>
 			<small></small>
 		</div>
@@ -68,14 +71,26 @@
 <div class="delayed"><p>Performance</p></div>
 <div class="delayed"><p>The Future</p></div>
 	
-	</section>
+</section>
+
+<section class="image slide bottom-heavy" style="background: url(img/helvtype_o.jpg) center #2D2C2C no-repeat; background-size: cover;" id="basics">
+	<h1>Basics</h1>
+</section>
 
 <section class="dark slide" id="charglyph">
 	<h1 class="flourish">Characters &amp; Glyphs</h1>
-	<div class="delayed"><p>A <em>character</em> is just a <span title="Unicode">number</span>, with some properties <br/>
-		(is it a number? Is it punctuation?)</p></div>
-	<div class="delayed"><p>A <em>glyph</em> is a visual representation of (one or more) characters</p></div>
-	<div class="delayed"><p>Multiple glyphs possible for the same character</p></div>
+	<div class="delayed">
+		<dl>
+			<dt>Character</dt>
+			<dd>a <span title="Unicode">number</span>, with properties</dd>
+		</dl>
+	</div>
+	<div class="delayed">
+		<dl>
+			<dt>Glyph</dt>
+			<dd>visual representation of character(s)</dd>
+		</dl>
+	</div>
 	<div class="delayed huge"><p>a a a <br />
 		<span lang="ar" dir="rtl"> &zwnj;ﺣ&zwnj; ﺣﺣﺣ &zwj;ﺣ&zwnj; &zwj;ﺣ&zwj; &zwnj;ﺣ&zwj;</span></p></div>
 </section>
@@ -103,8 +118,18 @@ h3 {
 	font-family: Something;
 	font-weight: bold;
 }</code></pre>
-	<div class="delayed"><p>Properties are <em>requests for styling</em></p></div>
-	<div class="delayed"><p>Descriptors are (possibly untrue) <em>statements about individual font faces</em></p></div>
+	<div class="delayed">
+		<dl>
+			<dt>Descriptors</dt>
+			<dd>describe individual font faces</dd>
+		</dl>
+	</div>
+	<div class="delayed">
+		<dl>
+			<dt>Properties</dt>
+			<dd>requests for styling</dd>
+		</dl>
+	</div>
 </section>
 
 <section class="slide" id="stacks">
@@ -115,7 +140,7 @@ h3 {
 	font-family: something;
 	src: url(Latin.woff), url(Japanese.woff);
 }</code></pre>
-<div class="delayed"><p>Ok, but suppose the Latin font has kana which suck, too?<br/>
+<div class="delayed"><p>
 <em>Both</em> fonts can't be first!</p></div>
 </section>
 
@@ -131,12 +156,20 @@ h3 {
 	</div>
 </section>
 
-<section class="dark slide vsplit dont-resize" id="vsplit">
-	<h1>Test for editable css, vertical split</h1>
-	<div class="delayed figure" id="numeric">12345</div>
+<section class="image slide " style="background: url(img/periodic_o.png) center #2D2C2C no-repeat; background-size: cover;" id="OTfeatures">
+	<h1>OpenType Features &amp; CSS</h1>
+</section>
+
+
+<section class="dark slide hsplit dont-resize" id="numeric">
+	<h1>Numeric font variants</h1>
+	<div class="delayed figure" id="numeric"><p>1234567890ABC<br /> 
+		1234567890abj</p></div>
 <textarea class="delayed code" data-subject="#numeric">
-font-variant-numeric: oldstyle-nums;
+font-variant-numeric: lining-nums;
+
 </textarea>
+<!-- live, change to oldstyle-nums -->
 </section>
 
 

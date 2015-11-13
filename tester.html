@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 16px">
+<head>
+
+<meta charset="utf-8" />
+<title>Placeholder</title>
+<link href="../csss/slideshow.css" rel="stylesheet" />
+<link href="../csss/reusable.css" rel="stylesheet" />
+<link href="prism-smalldark.css" rel="stylesheet" />
+<link href="theme.css" rel="stylesheet" />
+<link href="talk.css" rel="stylesheet" />
+<script src="../prefixfree/prefixfree.min.js"></script>
+
+</head>
+<body class="language-css">
+
+<section id="for-browser" class="dark slide">
+	<h1>Important</h1>
+	This slide deck was created for use in a controlled environment, during a talk. It works best with Firefox at 1920x1080. It WILL PROBABLY NOT work properly in other browsers.
+</section>
+
+<header id="intro" class="image slide" style="background-image: url(img/moveable.png);">
+	<h1>
+		WebFonts: Level Up!
+	</h1>
+	<h2><a href="http://w3.org/People#clilley">Chris Lilley</a> <a href="http://twitter.com/svgeesus">@svgeesus</a></h2>
+	<p class="attribution"></p>
+</header>
+
+
+<section class="inverse slide darker hi" id="doing-stuff">
+	<h1>Who am I</h1>
+		<div class="delayed"><img id="mypic" src="img/chris-av.jpg" alt="me"></div>
+		<div class="delayed">
+			<ul>
+				
+				<li><a href="http://prismjs.com">Technical Director, Interaction Domain, W3C</a></li>
+				<li><a href="http://leaverou.github.io/prefixfree">Started SVG</a></li>
+				<li><a>Chair, SVG WG (1998-2006)</a></li>
+				<li><a href="http://dabblet.com">PNG co-author</a></li>
+				<li><a href="http://css3test.com">W3C Technical Architecture Group, 3 years</a></li>
+				<li><a href="http://cubic-bezier.com/">Chair CSS WG (1997-2001)</a></li>
+				<li><a href="http://leaverou.github.io/animatable/">CSS2 co-editor (@font-face, descriptors)</a></li>
+				<li><a href="`">CSS 2.1</a></li>
+				<li><a href="">SVG 1.0, 1.1</a>
+				<li><a href="">CSS3 Color co-editor</a></li>
+				<li><a href="">WOFF 1,0, WOFF 2.0</a></li>
+				<li><a href="http://leaverou.github.io/awesomplete/">Chromatic Fonts</a></li>
+				<li><a href="">IETF RFCs</a>
+			</ul>
+			<small></small>
+		</div>
+		<p class="delayed" id="csswg">
+			<strong>CSS WG</strong>
+			Staff Contact
+		</p>
+		<p class="delayed" id="webfontswg">
+			<strong>WebFonts WG</strong>
+			Staff Contact
+		</p>
+		<p class="delayed" id="webaudiowg">
+			<strong>WebAudio WG</strong>
+			Staff Contact
+		</p>
+	</section>
+	
+<section class="slide darker" id="topics">
+	<h1>Topics for today</h1>
+<div class="delayed"><p>WebFont basics</p></div>
+<div class="delayed"><p>OpenType Features</p></div>
+<div class="delayed"><p>Performance</p></div>
+<div class="delayed"><p>The Future</p></div>
+	
+	</section>
+
+<section class="dark slide" id="charglyph">
+	<h1 class="flourish">Characters &amp; Glyphs</h1>
+	<div class="delayed"><p>A <em>character</em> is just a <span title="Unicode">number</span>, with some properties <br/>
+		(is it a number? Is it punctuation?)</p></div>
+	<div class="delayed"><p>A <em>glyph</em> is a visual representation of (one or more) characters</p></div>
+	<div class="delayed"><p>Multiple glyphs possible for the same character</p></div>
+	<div class="delayed huge"><p>a a a <br />
+		<span lang="ar" dir="rtl"> &zwnj;ﺣ&zwnj; ﺣﺣﺣ &zwj;ﺣ&zwnj; &zwj;ﺣ&zwj; &zwnj;ﺣ&zwj;</span></p></div>
+</section>
+
+
+<section class="dark slide" id="faces">
+	<h1>Font, family, face</h1>
+	<div class="delayed"><p>A font <em>family</em> can contain multiple <em>faces</em></p></div>
+	<div class="delayed"><p>Faces within a family vary by:</p></div>
+	<div><ul>
+		<li class="delayed">weight</li>
+		<li class="delayed">width</li>
+		<li class="delayed">other variations (italic …)</li></ul></div>
+</section>
+
+<section class="dark slide" id="prop-desc">
+	<h1>Properties &amp; descriptors</h1>
+<pre id="descrip2" class="delayed  code"><code class="language-css">
+@font-face {
+	font-family: 'Something';
+	src: url(fonts/s.woff);
+	font-weight: bold;
+}
+h3 {
+	font-family: Something;
+	font-weight: bold;
+}</code></pre>
+	<div class="delayed"><p>Properties are <em>requests for styling</em></p></div>
+	<div class="delayed"><p>Descriptors are (possibly untrue) <em>statements about individual font faces</em></p></div>
+</section>
+
+<section class="slide" id="stacks">
+	<h1>Font stacks</h1>
+	<div class="delayed"><p>First font with glyphs for a given character is used</p></div>
+	<div class="delayed"><p>Problem: avoiding bad Latin glyphs in Japanese fonts</p></div>
+	<pre class="delayed inline"><code>@font-face {
+	font-family: something;
+	src: url(Latin.woff), url(Japanese.woff);
+}</code></pre>
+<div class="delayed"><p>Ok, but suppose the Latin font has kana which suck, too?<br/>
+<em>Both</em> fonts can't be first!</p></div>
+</section>
+
+<section class="dark slide" id="urange">
+	<h1>Unicode-range</h1>
+	<div class="delayed"><p>Descriptor for allowed range of Unicode characters</p></div>
+	<div class="delayed"><p>Glyphs for characters outside range <em>not used</em></p>
+		<p class="delayed">… even if the font has them</p>
+	</div>
+	<div class="delayed apology"><p><img src="img/poop.png" style="float: left; margin-right: 2em" alt="poop"/>
+		I'm really sorry about the unicode-range syntax. Whatever was I thinking?</p>
+		<pre class="inline"><code class="language-css">U+12??</code></pre>
+	</div>
+</section>
+
+<section class="dark slide vsplit dont-resize" id="vsplit">
+	<h1>Test for editable css, vertical split</h1>
+	<div class="delayed figure" id="numeric">12345</div>
+<textarea class="delayed code" data-subject="#numeric">
+font-variant-numeric: oldstyle-nums;
+</textarea>
+</section>
+
+
+<section class="dark slide hsplit dont-resize" id="hsplit">
+	<h1>Test for editable css, horizontal split</h1>
+	<div class="delayed figure" id="numeric2">12345</div>
+<textarea class="delayed code" data-subject="#numeric2">
+font-variant-numeric: oldstyle-nums;
+</textarea>
+
+	
+</section>
+
+<footer class="dark slide">
+	<img src="img/chris-av.jpg" alt="me"/>
+	<h1>Thank you!</h1>
+	<ul>
+		<li><a href="mailto:chris@w3.org">chris@w3.org</a></li>
+		<li><a href="http://www.w3.org/People#clilley">w3.org/People#clilley</a></li>
+		<li><a href="http://twitter.com/svgeesus">@svgeesus</a></li>
+	</ul>
+	<p>Slides: <a href="http://svgeesus.github.io/fonts-level-up">svgeesus.github.io/fonts-level-up</a></p>
+	<p style="font-size: 50%;">CSS Slideshow framework by Lea Verou: <a href="http://github.com/LeaVerou/CSSS">github.com/LeaVerou/CSSS</a></p>
+</footer>
+
+
+
+<script src="../csss/slideshow.js"></script>
+<script src="../prism/prism.js"></script>
+<script src="../csss/plugins/css-edit.js"></script>
+<script src="../csss/plugins/css-snippets.js"></script>
+<script src="../incrementable/incrementable.js"></script>
+
+<script src="talk.js"></script>
+
+</body>
+</html>
