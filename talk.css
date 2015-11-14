@@ -15,6 +15,11 @@
 	src: url(fonts/Kafeel/KafeelPainter-Layers-COLR.ttf);
 }
 
+@font-face {
+	font-family: KafeelSVG;
+	src: url(fonts/Kafeel/KafeelPainter-Layers-SVG.ttf);
+}
+
 #for-browser {
 	background: #333;
 	background-image: linear-gradient(to left, rgba(0,0,0,.5), rgba(0,0,0,.5)), linear-gradient(to left, rgba(0,0,0,.5), rgba(0,0,0,.5));
@@ -310,17 +315,26 @@ pre.inline code {
 	color: #D66039;
 }
 
-img.figure {
+.figure {
 	margin-left: auto;
 	margin-right: auto;
 }
 
-#kCOLR {
-	font-family: KafeelCOLR; 
+#kCOLR, #kSVG { 
 	font-size: 600%; 
 	margin-left: auto; 
 	margin-right: auto; 
+	margin-top:0;
+	margin-bottom:0;
 	width: 90vw
+}
+
+#kCOLR {
+	font-family: KafeelCOLR; 
+}
+
+#kSVG {
+	font-family: KafeelSVG; 
 }
 
 footer.slide {
