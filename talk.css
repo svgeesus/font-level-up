@@ -1,4 +1,4 @@
-
+@import url("http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext");
 @font-face {
 	font-family: LinBio;
 	src: url(fonts/LinBiolinum_R.woff);
@@ -18,16 +18,6 @@
 @font-face {
 	font-family: KafeelSVG;
 	src: url(fonts/Kafeel/KafeelPainter-Layers-SVG.ttf);
-}
-
-:root {
-	--dark-green: #4E5D58;
-	--pale-green: #9E9D81;
-	--buff: #F3D69B;
-	--tan: #E79D5E;
-	--orange: #D66039;
-	--darkgrey: #2D2C2C;
-	--midgrey: #474748;
 }
 
 #for-browser {
@@ -59,7 +49,7 @@
 
 		#intro h1 strong {
 			color: var(--tan);
-			font-size: 105%; /* To align with 1st line */
+			font-size: 112%; /* To align with 1st line */
 		}
 	
 	#intro h2 {
