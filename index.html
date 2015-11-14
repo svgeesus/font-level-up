@@ -70,7 +70,6 @@
 <div class="delayed"><p>OpenType Features</p></div>
 <div class="delayed"><p>Performance</p></div>
 <div class="delayed"><p>The Future</p></div>
-	
 </section>
 
 <section class="image slide bottom-heavy" style="background: url(img/helvtype_o.jpg) center #2D2C2C no-repeat; background-size: cover;" id="basics">
@@ -160,14 +159,35 @@ h3 {
 	<h1>OpenType Features &amp; CSS</h1>
 </section>
 
+<section class="dark slide" id="featureIntro">
+	<h1>OpenType features</h1>
+	<div class="delayed"><p>Optional stylistic controls</p></div>
+	<div class="delayed"><p>Fonts vary in features provided</p></div>
+	<div class="delayed"><p>Control of features using CSS</p></div>
+	<!-- add a figure showing swashes etc -->
+</section>
+
+<section class="slide" id="fontVariant">
+	<h1>font-variant</h1>
+	<div class="delayed"><p>Much expanded in CSS3 fonts</p></div>
+	<div class="delayed"><p>Preferred method, but …</p></div>
+	<div class="delayed"><p>&nbsp;… currently <a href="http://caniuse.com/#feat=font-variant-alternates">poor support</a></p></div>
+</section>
+
+<section class="slide" id="fontFeatureSettings">
+	<h1>font-variant</h1>
+	<div class="delayed"><p>Low-level control</p></div>
+	<div class="delayed"><p>Cryptic … </p></div>
+	<div class="delayed"><p>&nbsp;… currently <a href="http://caniuse.com/#feat=font-feature">much wider support</a></p></div>
+	<!-- add a code sample showing the crypticness -->
+</section>
 
 <section class="dark slide hsplit dont-resize" id="numeric">
 	<h1>Numeric font variants</h1>
-	<div class="delayed figure" id="numeric"><p>1234567890ABC<br /> 
+	<div class="delayed figure" id="numericex"><p>1234567890ABC<br /> 
 		1234567890abj</p></div>
-<textarea class="delayed code" data-subject="#numeric">
+<textarea class="delayed code" data-subject="#numericex">
 font-variant-numeric: lining-nums;
-
 </textarea>
 <!-- live, change to oldstyle-nums -->
 </section>
@@ -179,8 +199,50 @@ font-variant-numeric: lining-nums;
 <textarea class="delayed code" data-subject="#numeric2">
 font-variant-numeric: oldstyle-nums;
 </textarea>
+</section>
+
+<section class="image slide bottom-heavy" style="background: url(img/speedometer_o.jpg) center #2D2C2C no-repeat; background-size: cover;" id="perf">
+	<h1 style="background: transparent">Performance</h1>
+</section>
+
+<section class="slide darker" id="subsetGlyph">
+	<h1>Subset glyphs</h1>
+<div class="delayed"><p>Delete glyphs for unused characters</p></div>
+<div class="delayed"><p>Big space savings</p></div>
+<div class="delayed"><p>Risks use of fallback, ugly</p></div>
+<div class="delayed tipster"><p>Don't subset writing systems</p></div>
+</section>
+
+<section class="slide" id="subsetTables">
+	<h1>Subset tables</h1>
+<div class="delayed"><p>Delete unused OpenType tables</p></div>
+<div class="delayed"><p>Moderate space savings</p></div>
+<div class="delayed"><p>Platform specific (hint, kern)</p></div>
+<div class="delayed tipster"><p>Don't break writing systems!</p></div>
+</section>
+
+<section class="darker slide" id="woff1">
+	<h1>WOFF compression</h1>
+<div class="delayed"><p>gzips each table</p></div>
+<div class="delayed"><p>adds header, metadata</p></div>
+<!-- add diagram showing sfnt to woff1, animate compression -->
+</section>
+
+<section class="darker slide" id="woff2">
+	<h1>WOFF2 compression</h1>
+<div class="delayed"><p>excellent, font-specific compression</p></div>
+<div class="delayed"><p>much smaller than woff1</p></div>
+<!-- add diagram showing sfnt to woff2, animate re-arrangement and then compression -->
+</section>
+
+<section class="darker slide" id="woffCompare">
+	<h1>Comparison: WOFF, WOFF2</h1>
+<!-- add graph of compression gains -->
+</section>
 
 	
+<section class="image slide top-heavy" style="background: url(img/crystal_ball_o.jpg) center #2D2C2C no-repeat; background-size: cover;" id="future">
+	<h1>The future</h1>
 </section>
 
 <footer class="dark slide">

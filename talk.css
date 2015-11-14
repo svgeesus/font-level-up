@@ -4,6 +4,11 @@
 	src: url(fonts/LinBiolinum_R.woff);
 }
 
+@font-face {
+	font-family: LinBio;
+	src: url(fonts/LinBiolinum_RB.woff);
+	font-weight: bold;
+}
 
 #for-browser {
 	background: #333;
@@ -156,28 +161,7 @@
 			}
 
 
-		p#mit {
-			display: inline-block;
-			width: 6em;
-			padding-top: 1em;
-		}
-			
-			#mit img {
-				display: block;
-				width: 80%;
-				margin-bottom: .2em;
-			}
-
-#prop-desc dt, #charglyph dt {
-	font-weight: bold;
-	color: #E79D5E;
-}
-
-
-.huge {
-	font-size:200%;
-}
-
+/* tooltip animation */
 
 .subject {
 	position: relative;
@@ -188,8 +172,6 @@
 .subject::after {
 	display: block;
 }
-
-
 
 .tooltip {
 	display: none;
@@ -228,35 +210,6 @@
 	font-weight: normal;
 }
 
-.animation {
-	position: relative;
-	height: 20vh;
-	border: solid;
-	border-width: 0 0 2px 2px;
-	margin-left: 10vw;
-	padding-top: 1px;
-	background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)) 21em 0 / 1px auto repeat-y;
-}
-
-	.animation::before {
-		content: "0s                                                                       10s";
-		position: absolute;
-		bottom: -1.5em;
-		left: -.4em;
-		white-space: pre;
-		background: linear-gradient(to right, black .3em, transparent 0) .25em 0 / 21em .3em repeat-x;
-
-	}
-
-	.animation > div {
-		position: relative;
-		z-index: -1;
-		width: 21em;
-		height: 10vh;
-		margin: 10vh 10vh 0 0;
-		background: linear-gradient(to right, gold, #D66039);
-		transition: .4s margin-left;
-	}
 
 
 /* Styling for individual code samples */
@@ -281,6 +234,7 @@ pre.inline {
 pre.inline code {
 	
 }
+
 
 /* styles for split example/code slides */
 .vsplit .figure {
@@ -324,15 +278,24 @@ pre.inline code {
 
 /* and for specific examples */
 
-#numeric {
+#numericex {
 	font-family: LinBio;
 	font-size: 230%;
 }
 
-	#numeric p {
+	#numericex p {
 		margin-top: 0;
 		margin-left: 50px;
 	}
+
+#prop-desc dt, #charglyph dt {
+	font-weight: bold;
+	color: #E79D5E;
+}
+
+.huge {
+	font-size:200%;
+}
 
 #faces li {
 	margin-left: 2em;
