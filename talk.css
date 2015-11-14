@@ -310,6 +310,19 @@ pre.inline code {
 	color: #D66039;
 }
 
+img.figure {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#kCOLR {
+	font-family: KafeelCOLR; 
+	font-size: 600%; 
+	margin-left: auto; 
+	margin-right: auto; 
+	width: 90vw
+}
+
 footer.slide {
 	text-align: center;
 	padding-top: 1em;

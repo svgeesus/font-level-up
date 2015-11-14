@@ -1,0 +1,45 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 60">
+<style type="text/css">
+      @font-face {
+        font-family: 'Douar';
+        font-weight: normal;
+        font-style: normal;
+        src: local('Douar'), url('Douar/Douar.woff') format('woff');
+      }
+     /* stupid same-origin policies forbid ../fonts as a path */
+
+      @font-face {
+        font-family: 'Douar Overlay';
+        font-weight: normal;
+        font-style: normal;
+        src: local('DouarOverlay'), url('Douar/DouarOverlay.woff') format('woff');
+      }
+      
+      @font-face {
+        font-family: 'Douar Outline';
+        font-weight: normal;
+        font-style: normal;
+        src: local('Douar-Outline'), url('Douar/Douar-Outline.woff') format('woff');
+      }
+      
+      .colorfont {
+        fill: #E79D5E;
+        font-family: 'Douar' !important;
+      }
+      
+      .colorfont-outline {
+        fill: #F3D69B; stroke: #532; stroke-width:0.5px;
+        font-family: 'Douar Outline' !important;
+      }
+
+       .colorfont-overlay {
+        fill:  #4E5D58;
+        font-family: 'Douar Overlay' !important;
+      }
+</style>
+<g text-anchor="start">
+<text x="12" y="52" font-size="30" class="colorfont-overlay">Testing 123</text>
+<text x="10" y="50" font-size="30" class="colorfont">Testing 123</text>
+<text x="10" y="50" font-size="30" class="colorfont-outline"> Testing 123</text>
+</g>
+</svg>
