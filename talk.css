@@ -20,17 +20,29 @@
 	src: url(fonts/Kafeel/KafeelPainter-Layers-SVG.ttf);
 }
 
+:root {
+	--dark-green: #4E5D58;
+	--pale-green: #9E9D81;
+	--buff: #F3D69B;
+	--tan: #E79D5E;
+	--orange: #D66039;
+	--darkgrey: #2D2C2C;
+	--midgrey: #474748;
+}
+
 #for-browser {
 	background: #333;
 	background-image: linear-gradient(to left, rgba(0,0,0,.5), rgba(0,0,0,.5)), linear-gradient(to left, rgba(0,0,0,.5), rgba(0,0,0,.5));
 	background-repeat: no-repeat;
-	background-size: 1920px x 1080px;
+	background-size: 1920px 1080px;
 }
 
 #intro {
-	background-image: url(img/cover.jpg);
-	background-position: left;
-	background-size: cover;
+	background: linear-gradient(to right, transparent 20%, black),
+	            url("img/moveable.png") left / cover;
+	background-blend-mode: multiply, normal;
+	text-align: right;
+	color: white;
 }
 
 	#intro h1 {
@@ -39,9 +51,16 @@
 		right: .4em;
 		width: 7em;
 		margin: 0;
-		text-align: right;
+		text-align: inherit;
 		font-size: 400%;
+		line-height: 1;
+		font-weight: normal;
 	}
+
+		#intro h1 strong {
+			color: var(--tan);
+			font-size: 105%; /* To align with 1st line */
+		}
 	
 	#intro h2 {
 		width: 8em;
@@ -52,18 +71,17 @@
 		position: absolute;
 		right: .8em;
 		bottom: .8em;
-		text-align: right;
-	}
-
-	#intro h1, #intro h2 {
-		color: #F3D69B;
-		text-shadow: -3px -3px 0px white, -1px -1px 2px white, 1px 1px 2px #2D2C2C, 3px 3px 0px #2D2C2C;
-		
+		color: inherit;
 	}
 
 	#intro a {
-			text-decoration: none;
-		}
+		text-decoration: none;
+	}
+
+	#intro .twitter {
+		font-weight: normal;
+		font-size: 102%; /* To align with 1st line */
+	}
 	
 	#intro .attribution {
 		position: absolute;
