@@ -10,6 +10,11 @@
 	font-weight: bold;
 }
 
+@font-face {
+	font-family: KafeelCOLR;
+	src: url(fonts/Kafeel/KafeelPainter-Layers-COLR.ttf);
+}
+
 #for-browser {
 	background: #333;
 	background-image: linear-gradient(to left, rgba(0,0,0,.5), rgba(0,0,0,.5)), linear-gradient(to left, rgba(0,0,0,.5), rgba(0,0,0,.5));
