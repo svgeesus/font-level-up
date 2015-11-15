@@ -6,6 +6,10 @@ $$("section > header.slide").forEach(function(slide) {
 	topics.appendChild(li);
 });
 
+$$(".question").forEach(function(q){
+	q.classList.add("delayed");
+});
+
 var slideshow = new SlideShow();
 
 function insertText(element, text) {

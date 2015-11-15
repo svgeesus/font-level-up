@@ -157,7 +157,8 @@ textarea {
 	margin: 0;*/
 	background: rgba(0,0,0,.6);
 	text-shadow: none;
-	font-weight: 100;
+	font-family: var(--heading-font);
+	font-weight: bold;
 }
 
 .delayed.displayed,

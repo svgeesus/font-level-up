@@ -1,4 +1,6 @@
 @import url("http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext");
+@import url(https://fonts.googleapis.com/css?family=Reenie+Beanie);
+
 @font-face {
 	font-family: LinBio;
 	src: url(fonts/LinBiolinum_R.woff);
@@ -120,6 +122,64 @@
 		#topics li:nth-of-type(n+3) {
 			color: white;
 		}
+
+#basics {}
+
+	#basics h1 {
+		background: none;
+		color: black;
+	}
+
+
+#charglyph {
+	padding: 0;
+	flex-flow: column;
+}
+
+	#charglyph:target {
+		display: flex;
+	}
+
+	#charglyph dl {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 0;
+	}
+
+		#charglyph dl dt {
+			font-size: 250%;
+			line-height: 1.1;
+		}
+
+	#charglyph dl+dl {
+		background: var(--buff);
+		color: var(--darkgrey);
+	}
+
+		#charglyph dl+dl dt {
+			color: var(--orange);
+		}
+
+.charquiz {
+	text-align: center;
+}
+	
+	.charquiz:not(:target) {
+		display: flex;
+		flex-flow: column;
+	}
+
+	.charquiz p {
+		margin: 0;
+	}
+
+	.charquiz .character {
+		flex: 1;
+		font: 80vh/.9 Baskerville, Garamond, Georgia, serif;
+	}
 
 .hi {
 	padding: 1vmin;
@@ -350,38 +410,6 @@ pre.inline code {
 	color: var(--tan);
 }
 
-#charglyph {
-	padding: 0;
-	flex-flow: column;
-}
-
-	#charglyph:target {
-		display: flex;
-	}
-
-	#charglyph dl {
-		display: flex;
-		flex: 1;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		margin: 0;
-	}
-
-		#charglyph dl dt {
-			font-size: 250%;
-			line-height: 1.1;
-		}
-
-	#charglyph dl+dl {
-		background: var(--buff);
-		color: var(--darkgrey);
-	}
-
-		#charglyph dl+dl dt {
-			color: var(--orange);
-		}
-
 /* Don't use presentational classes! */
 .huge {
 	font-size:200%;
@@ -536,50 +564,27 @@ footer.slide {
 				content: url(img/safari-logo.png);
 			}
 
-#comeon {
-	background-image: url(img/please.jpg);
-	background-position: top;
+.question.delayed {
+	position: relative;
+	display: inline-block;
+	opacity: 1;
+	border-bottom: .05em dotted var(--dark-green);
+	font: 300%/.6 Reenie Beanie, cursive;
 }
 
-	#comeon div {
+	.question.delayed::after {
+		content: attr(data-answer);
+	}
+
+	.question.delayed:not(.current):not(.displayed)::before {
+		content: "?";
 		position: absolute;
-		top: 0;
+		left: 0;
 		right: 0;
-		color: white;
-		text-align: right;
-		padding: .5em 1em;
-		font-weight: bold;
+		text-align: center;
+		color: var(--dark-green);
 	}
 
-	#comeon p {
-		margin: 0;
-	}
-
-
-
-
-#epilogue {
-	background-image: url(img/whole-pie.jpg);
-	background-position: top;
-	transition: 2s background;
-}
-
-#epilogue:target {
-	background-position: bottom;
-}
-
-	#epilogue h1 {
-		background: none;
-		bottom: .1em;
-		transition: 2s 2.5s opacity;
-	}
-
-	@media (max-width: 1024px) {
-		#epilogue h1 {
-			font-size: 6.4vw;
-		}
-	}
-
-	#epilogue:not(:target) h1 {
-		opacity: 0;
+	.question.delayed:not(.current):not(.displayed)::after {
+		visibility: hidden;
 	}
