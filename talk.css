@@ -466,7 +466,8 @@ pre.inline code {
 /* and for specific examples */
 
 #prop-desc dt,
-#charglyph dt {
+#charglyph dt,
+#charglyph2 dt {
 	font-family: var(--heading-font);
 	font-weight: bold;
 	color: var(--tan);
