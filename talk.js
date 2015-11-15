@@ -12,6 +12,10 @@ $$(".question").forEach(function(q){
 
 var slideshow = new SlideShow();
 
+$$('.css-control').forEach(function(control) {
+	new CSSControl(control);
+});
+
 function insertText(element, text) {
 	var textEvent = document.createEvent('TextEvent');
 

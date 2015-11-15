@@ -93,7 +93,7 @@
 
 	<section class="slide charquiz" id="accent">
 		<p class="character">é</p>
-		<p><span class="question" data-answer="1-2"></span> character(s), <span class="question" data-answer="1"></span> glyph(s)</p>
+		<p><span class="question" data-answer="1-2"></span> character(s), <span class="question" data-answer="1"></span> glyph(s), <span class="question" data-answer="1-2"></span> font(s)</p>
 	</section>
 
 	<section class="dark incomplete slide">
@@ -205,6 +205,17 @@
 		<div class="delayed"><p>Cryptic … </p></div>
 		<div class="delayed"><p>&nbsp;… currently <a href="http://caniuse.com/#feat=font-feature">much wider support</a></p></div>
 		<!-- add a code sample showing the crypticness -->
+	</section>
+
+	<section class="dark slide dont-resize" id="font-variant-numeric">
+		<p class="figure">
+			1234567890ABC<br /> 
+			1234567890abj
+		</p>
+		<pre>font-variant-numeric: <select data-style="font-variant-numeric: {value};" class="css-control">
+			<option>lining-nums</option>
+			<option>oldstyle-nums</option>
+		</select>;</pre>
 	</section>
 
 	<section class="dark slide hsplit dont-resize" id="numeric">
@@ -333,6 +344,7 @@
 <script src="../prism/prism.js"></script>
 <script src="../csss/plugins/css-edit.js"></script>
 <script src="../csss/plugins/css-snippets.js"></script>
+<script src="../csss/plugins/css-controls.js"></script>
 <script src="../incrementable/incrementable.js"></script>
 
 <script src="talk.js"></script>

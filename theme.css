@@ -71,7 +71,7 @@ input[type="range"][orient="vertical"] {
 	writing-mode: bt-lr;
 }
 
-textarea {
+textarea, pre {
 	background: transparent;
 	color: inherit;
 	border: 0;

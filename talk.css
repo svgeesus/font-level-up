@@ -318,7 +318,7 @@
 
 /* tooltip animation */
 
-.subject {
+.subject:not(.slide) {
 	position: relative;
 	z-index: 1;
 }
@@ -432,16 +432,6 @@ pre.inline code {
 
 
 /* and for specific examples */
-
-#numericex {
-	font-family: LinBio;
-	font-size: 230%;
-}
-
-	#numericex p {
-		margin-top: 0;
-		margin-left: 50px;
-	}
 
 #prop-desc dt,
 #charglyph dt {
@@ -628,3 +618,31 @@ footer.slide {
 	.question.delayed:not(.current):not(.displayed)::after {
 		visibility: hidden;
 	}
+
+#font-variant-numeric {
+	padding: 0;
+	text-align: center;	
+}
+
+	#font-variant-numeric p {
+		margin: 0;
+		font-family: LinBio;
+		font-size: 350%;
+	}
+
+	#font-variant-numeric pre {
+		margin-top: 1em;
+		text-align: left;
+	}
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	display: inline;
+	background: transparent;
+	border: none;
+	font: inherit;
+	color: inherit;
+	vertical-align: middle;
+	
+}
