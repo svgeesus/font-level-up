@@ -1,12 +1,12 @@
-var slideshow = new SlideShow();
+var topics = $("#topics ul");
+$$("section > header.slide").forEach(function(slide) {
+	var li = document.createElement("li");
+	li.style.backgroundImage = slide.style.backgroundImage;
+	li.textContent = $("h1", slide).textContent;
+	topics.appendChild(li);
+});
 
-/*StyleFix.register(function(css, raw) {
-	if (PrefixFree.Prefix + 'Filter' in document.body.style) {
-		css = css.replace(/\bfilter:/ig, PrefixFree.prefix + 'filter:');
-	}
-	
-	return css;
-});*/
+var slideshow = new SlideShow();
 
 function insertText(element, text) {
 	var textEvent = document.createEvent('TextEvent');
@@ -15,14 +15,6 @@ function insertText(element, text) {
 
 	element.dispatchEvent(textEvent);
 }
-
-$$(".tasty.slide").forEach(function(slide){
-	slide.classList.add("dont-resize");
-});
-
-$$(".pie").forEach(function(slide){
-	slide.classList.add("show-html");
-});
 
 $$('textarea').forEach(function(textarea) {
 	if (textarea.parentNode.id != "conic-test") {
@@ -53,6 +45,9 @@ $$('textarea').forEach(function(textarea) {
 	})
 });
 
+
+
+/*
 $$('.show-html').forEach(function(element) {
 
 	element.onmouseenter = function (evt) {
@@ -103,4 +98,4 @@ $$('.show-html').forEach(function(element) {
 	element.onmouseleave = function () {
 		element.tooltip.classList.remove('active');
 	}
-});
+});*/

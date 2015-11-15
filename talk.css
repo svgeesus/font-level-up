@@ -84,6 +84,43 @@
 			text-decoration: none;
 		}
 
+#topics {
+	padding: 0;
+	font: bold 300% var(--heading-font);
+}
+
+	#topics h1 {
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#topics ul {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-wrap: wrap;
+		height: 100%;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+		#topics li {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 50%;
+			background: center / cover no-repeat;
+			color: black;
+		}
+
+		#topics li:nth-of-type(n+3) {
+			color: white;
+		}
+
 .hi {
 	padding: 1vmin;
 	background: #4E5D58;
@@ -315,7 +352,7 @@ pre.inline code {
 
 #charglyph {
 	padding: 0;
-	flex-direction: column;
+	flex-flow: column;
 }
 
 	#charglyph:target {
