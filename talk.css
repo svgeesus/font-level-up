@@ -652,7 +652,7 @@ footer.slide {
 		visibility: hidden;
 	}
 
-#font-variant-numeric, #fractions {
+#font-variant-numeric, #fractions, #tabular {
 	padding: 0;
 	text-align: center;	
 }
@@ -663,11 +663,19 @@ footer.slide {
 		font-size: 350%;
 	}
 
-	#font-variant-numeric pre, #fractions pre {
+	 #tabular table {
+		margin-left: auto;
+		margin-right: auto;
+		text-align: right;
+		font-family: LinBio;
+		font-size: 280%;
+	}
+
+	#font-variant-numeric pre, #fractions pre, #tabular pre {
 		margin-top: 1em;
 	}
 
-	#font-variant-numeric select, #fractions select {
+	#font-variant-numeric select, #fractions select, #tabular select {
 		text-align: right;
 	}
 
