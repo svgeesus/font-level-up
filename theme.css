@@ -119,7 +119,7 @@ textarea {
 .slide {
 	padding: 2.5rem;	
 	background-color: #9E9D81;
-	color: #2D2C2C;
+	color: var(--darkgrey);
 }
 
 @media (max-width: 1024px) {
@@ -135,8 +135,8 @@ textarea {
 
 	.dark.slide,
 	header.slide {
-		background: #2D2C2C;
-		color: #F3D69B;
+		background: var(--darkgrey);
+		color: var(--buff);
 	}
 
 	.slide > h1 {

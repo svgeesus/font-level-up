@@ -306,11 +306,46 @@ pre.inline code {
 		margin-left: 50px;
 	}
 
-#prop-desc dt, #charglyph dt {
+#prop-desc dt,
+#charglyph dt {
+	font-family: var(--heading-font);
 	font-weight: bold;
-	color: #E79D5E;
+	color: var(--tan);
 }
 
+#charglyph {
+	padding: 0;
+	flex-direction: column;
+}
+
+	#charglyph:target {
+		display: flex;
+	}
+
+	#charglyph dl {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 0;
+	}
+
+		#charglyph dl dt {
+			font-size: 250%;
+			line-height: 1.1;
+		}
+
+	#charglyph dl+dl {
+		background: var(--buff);
+		color: var(--darkgrey);
+	}
+
+		#charglyph dl+dl dt {
+			color: var(--orange);
+		}
+
+/* Don't use presentational classes! */
 .huge {
 	font-size:200%;
 }
@@ -323,6 +358,7 @@ pre.inline code {
 	color: #D66039;
 }
 
+/* Why not use the <figure> element? */
 .figure {
 	margin-left: auto;
 	margin-right: auto;
