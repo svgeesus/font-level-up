@@ -16,12 +16,14 @@
 	--buff: #F3D69B;
 	--tan: #E79D5E;
 	--orange: #D66039;
+	--red: #d00; /* use only with a multiply blend mode! */
 	--darkgrey: #2D2C2C;
 	--midgrey: #474748;
 
 	/* Fonts */
 	--heading-font: Arvo, serif;
 	--body-font: 'Free Sans', 'Helvetica Neue', sans-serif;
+	--handwriting-font: 'Reenie Beanie', cursive;
 }
 
 body {
@@ -216,4 +218,10 @@ code.de-emphasize {
 	font-size: .8rem;
 	line-height: 1;
 	color: #ccc;
+}
+
+.note {
+	font-family: var(--handwriting-font);
+	color: var(--red);
+	mix-blend-mode: multiply;
 }

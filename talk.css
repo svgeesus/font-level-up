@@ -181,6 +181,46 @@
 		font: 80vh/.9 Baskerville, Garamond, Georgia, serif;
 	}
 
+#familyface {}
+
+	#familyface article {
+		width: fit-content;
+		margin: 1.1em 2em;
+		font-size: 160%;
+	}
+
+		#familyface h1 {
+			font-family: inherit;
+			margin: 0;
+			text-indent: .4em;
+			line-height: .7;
+		}
+
+		#familyface ul {
+			position: relative;
+			padding: .3em .8em;
+			border-radius: .3em;
+			margin: 0;
+			background: var(--darkgrey);
+			color: var(--buff);
+		}
+
+			#familyface li {
+				display: inline;
+				list-style: none;
+			}
+
+			#familyface li.break::after {
+				content: "\A";
+				white-space: pre;
+			}
+
+		#familyface ul .note {
+			position: absolute;
+			left: 99%;
+			white-space: nowrap;
+		}
+
 .hi {
 	padding: 1vmin;
 	background: #4E5D58;
@@ -227,7 +267,7 @@
 			text-align: center;
 			color: black;
 			text-shadow: none;
-			font: 300%/.7 'Reenie Beanie', cursive;
+			font: 300%/.7 var(--handwriting-font);
 		}
 	
 		.hi figure img {
@@ -569,7 +609,7 @@ footer.slide {
 	display: inline-block;
 	opacity: 1;
 	border-bottom: .05em dotted var(--dark-green);
-	font: 300%/.6 Reenie Beanie, cursive;
+	font: 300%/.6 var(--handwriting-font);
 }
 
 	.question.delayed::after {
