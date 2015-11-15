@@ -386,6 +386,10 @@ footer.slide {
 	padding-top: 1em;
 	color: #9E9D81;
 }
+
+	footer.slide img {
+		border-radius: 50%;
+	}
 	
 	footer.slide h1 {
 		margin-top: 0;

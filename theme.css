@@ -155,7 +155,7 @@ textarea {
 .iframe.slide > h1 {
 	/*bottom: .5em;
 	margin: 0;*/
-	background: black;
+	background: rgba(0,0,0,.6);
 	text-shadow: none;
 	font-weight: 100;
 }

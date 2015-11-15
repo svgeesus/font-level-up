@@ -66,220 +66,236 @@
 	
 <section class="slide darker" id="topics">
 	<h1>Topics for today</h1>
-<div class="delayed"><p>WebFont basics</p></div>
-<div class="delayed"><p>OpenType Features</p></div>
-<div class="delayed"><p>Performance</p></div>
-<div class="delayed"><p>The Future</p></div>
+
+	<div class="delayed-children">
+		<p>WebFont basics</p>
+		<p>OpenType Features</p>
+		<p>Performance</p>
+		<p>The Future</p>
+	</div>
+
+
 </section>
 
-<section class="image slide bottom-heavy" style="background: url(img/helvtype_o.jpg) center #2D2C2C no-repeat; background-size: cover;" id="basics">
-	<h1>Basics</h1>
-</section>
+<section>
 
-<section class="dark slide" id="charglyph">	
-	<dl>
-		<dt>Character</dt>
-		<dd>a <span title="Unicode">number</span>, with properties</dd>
-	</dl>
+	<header class="image slide bottom-heavy" style="background: url(img/helvtype_o.jpg) center #2D2C2C no-repeat; background-size: cover;" id="basics">
+		<h1>Basics</h1>
+	</header>
 
-	<dl class="delayed">
-		<dt>Glyph</dt>
-		<dd>visual representation of character(s)</dd>
-	</dl>
-</section>
-
-<section class="dark slide" id="charglyph">
-	<p>a a a <br />
-	<span lang="ar" dir="rtl"> &zwnj;ﺣ&zwnj; ﺣﺣﺣ &zwj;ﺣ&zwnj; &zwj;ﺣ&zwj; &zwnj;ﺣ&zwj;</span></p>
-</section>
-
-
-<section class="dark slide" id="faces">
-	<h1>Font, family, face</h1>
-	<div class="delayed"><p>A font <em>family</em> can contain multiple <em>faces</em></p></div>
-	<div class="delayed"><p>Faces within a family vary by:</p></div>
-	<div><ul class="delayed-children">
-		<li>weight</li>
-		<li>width</li>
-		<li>other variations (italic …)</li></ul></div>
-</section>
-
-<section class="dark slide" id="prop-desc">
-	<h1>Properties &amp; descriptors</h1>
-<pre id="descrip2" class="delayed  code"><code class="language-css">
-@font-face {
-	font-family: 'Something';
-	src: url(fonts/s.woff);
-	font-weight: bold;
-}
-h3 {
-	font-family: Something;
-	font-weight: bold;
-}</code></pre>
-	<div class="delayed">
+	<section class="dark slide" id="charglyph">	
 		<dl>
-			<dt>Descriptors</dt>
-			<dd>describe individual font faces</dd>
+			<dt>Character</dt>
+			<dd>a <span title="Unicode">number</span>, with properties</dd>
 		</dl>
-	</div>
-	<div class="delayed">
-		<dl>
-			<dt>Properties</dt>
-			<dd>requests for styling</dd>
+
+		<dl class="delayed">
+			<dt>Glyph</dt>
+			<dd>visual representation of character(s)</dd>
 		</dl>
-	</div>
+	</section>
+
+	<section class="dark slide">
+		<p>a a a <br />
+		<span lang="ar" dir="rtl"> &zwnj;ﺣ&zwnj; ﺣﺣﺣ &zwj;ﺣ&zwnj; &zwj;ﺣ&zwj; &zwnj;ﺣ&zwj;</span></p>
+	</section>
+
+
+	<section class="dark slide" id="faces">
+		<h1>Font, family, face</h1>
+		<div class="delayed"><p>A font <em>family</em> can contain multiple <em>faces</em></p></div>
+		<div class="delayed"><p>Faces within a family vary by:</p></div>
+		<div><ul class="delayed-children">
+			<li>weight</li>
+			<li>width</li>
+			<li>other variations (italic …)</li></ul></div>
+	</section>
+
+	<section class="dark slide" id="prop-desc">
+		<h1>Properties &amp; descriptors</h1>
+	<pre id="descrip2" class="delayed  code"><code class="language-css">
+	@font-face {
+		font-family: 'Something';
+		src: url(fonts/s.woff);
+		font-weight: bold;
+	}
+	h3 {
+		font-family: Something;
+		font-weight: bold;
+	}</code></pre>
+		<div class="delayed">
+			<dl>
+				<dt>Descriptors</dt>
+				<dd>describe individual font faces</dd>
+			</dl>
+		</div>
+		<div class="delayed">
+			<dl>
+				<dt>Properties</dt>
+				<dd>requests for styling</dd>
+			</dl>
+		</div>
+	</section>
+
+	<section class="slide" id="stacks">
+		<h1>Font stacks</h1>
+		<div class="delayed"><p>First font with glyphs for a given character is used</p></div>
+		<div class="delayed"><p>Problem: avoiding bad Latin glyphs in Japanese fonts</p></div>
+		<pre class="delayed inline"><code>@font-face {
+		font-family: something;
+		src: url(Latin.woff), url(Japanese.woff);
+	}</code></pre>
+	<div class="delayed"><p>
+	<em>Both</em> fonts can't be first!</p></div>
+	</section>
+
+	<section class="dark slide" id="urange">
+		<h1>Unicode-range</h1>
+		<div class="delayed"><p>Descriptor for allowed range of Unicode characters</p></div>
+		<div class="delayed"><p>Glyphs for characters outside range <em>not used</em></p>
+			<p class="delayed">… even if the font has them</p>
+		</div>
+		<div class="delayed apology"><p><img src="img/poop.png" style="float: left; margin-right: 2em" alt="poop"/>
+			I'm really sorry about the unicode-range syntax. Whatever was I thinking?</p>
+			<pre class="inline"><code class="language-css">U+12??</code></pre>
+		</div>
+	</section>
 </section>
 
-<section class="slide" id="stacks">
-	<h1>Font stacks</h1>
-	<div class="delayed"><p>First font with glyphs for a given character is used</p></div>
-	<div class="delayed"><p>Problem: avoiding bad Latin glyphs in Japanese fonts</p></div>
-	<pre class="delayed inline"><code>@font-face {
-	font-family: something;
-	src: url(Latin.woff), url(Japanese.woff);
-}</code></pre>
-<div class="delayed"><p>
-<em>Both</em> fonts can't be first!</p></div>
+<section>
+	<header class="image slide " style="background: url(img/periodic_o.png) center #2D2C2C no-repeat; background-size: cover;" id="OTfeatures">
+		<h1>OpenType Features &amp; CSS</h1>
+	</header>
+
+	<section class="dark slide" id="featureIntro">
+		<h1>OpenType features</h1>
+		<div class="delayed"><p>Optional stylistic controls</p></div>
+		<div class="delayed"><p>Fonts vary in features provided</p></div>
+		<div class="delayed"><p>Control of features using CSS</p></div>
+		<!-- add a figure showing swashes etc -->
+	</section>
+
+	<section class="slide" id="fontVariant">
+		<h1>font-variant</h1>
+		<div class="delayed"><p>Much expanded in CSS3 fonts</p></div>
+		<div class="delayed"><p>Preferred method, but …</p></div>
+		<div class="delayed"><p>&nbsp;… currently <a href="http://caniuse.com/#feat=font-variant-alternates">poor support</a></p></div>
+	</section>
+
+	<section class="slide" id="fontFeatureSettings">
+		<h1>font-variant</h1>
+		<div class="delayed"><p>Low-level control</p></div>
+		<div class="delayed"><p>Cryptic … </p></div>
+		<div class="delayed"><p>&nbsp;… currently <a href="http://caniuse.com/#feat=font-feature">much wider support</a></p></div>
+		<!-- add a code sample showing the crypticness -->
+	</section>
+
+	<section class="dark slide hsplit dont-resize" id="numeric">
+		<h1>Numeric font variants</h1>
+		<div class="delayed figure" id="numericex"><p>1234567890ABC<br /> 
+			1234567890abj</p></div>
+	<textarea class="delayed code" data-subject="#numericex">
+	font-variant-numeric: lining-nums;
+	</textarea>
+	<!-- live, change to oldstyle-nums -->
+	</section>
+
+
+	<section class="dark slide hsplit dont-resize" id="hsplit">
+		<h1>Test for editable css, horizontal split</h1>
+		<div class="delayed figure" id="numeric2">12345</div>
+	<textarea class="delayed code" data-subject="#numeric2">
+	font-variant-numeric: oldstyle-nums;
+	</textarea>
+	</section>
 </section>
 
-<section class="dark slide" id="urange">
-	<h1>Unicode-range</h1>
-	<div class="delayed"><p>Descriptor for allowed range of Unicode characters</p></div>
-	<div class="delayed"><p>Glyphs for characters outside range <em>not used</em></p>
-		<p class="delayed">… even if the font has them</p>
-	</div>
-	<div class="delayed apology"><p><img src="img/poop.png" style="float: left; margin-right: 2em" alt="poop"/>
-		I'm really sorry about the unicode-range syntax. Whatever was I thinking?</p>
-		<pre class="inline"><code class="language-css">U+12??</code></pre>
-	</div>
+<section>
+
+	<header class="image slide bottom-heavy" style="background: url(img/speedometer_o.jpg) center #2D2C2C no-repeat; background-size: cover;" id="perf">
+		<h1 style="background: transparent">Performance</h1>
+	</header>
+
+	<section class="slide darker" id="subsetGlyph">
+		<h1>Subset glyphs</h1>
+	<div class="delayed"><p>Delete glyphs for unused characters</p></div>
+	<div class="delayed"><p>Big space savings</p></div>
+	<div class="delayed"><p>Risks use of fallback, ugly</p></div>
+	<div class="delayed tipster"><p>Don't subset writing systems</p></div>
+	</section>
+
+	<section class="slide" id="subsetTables">
+		<h1>Subset tables</h1>
+	<div class="delayed"><p>Delete unused OpenType tables</p></div>
+	<div class="delayed"><p>Moderate space savings</p></div>
+	<div class="delayed"><p>Platform specific (hint, kern)</p></div>
+	<div class="delayed tipster"><p>Don't break writing systems!</p></div>
+	</section>
+
+	<section class="darker slide" id="woff1">
+		<h1>WOFF compression</h1>
+		<div class="delayed"><p></p></div>
+		<div class="delayed"><p>adds header, metadata</p></div>
+		<div class="delayed"><p>gzips each table</p></div>
+		<div class="delayed"><p></p></div>
+	<!-- add diagram showing sfnt to woff1, animate compression -->
+	</section>
+
+	<section class="darker slide" id="woff2">
+		<h1>WOFF2 compression</h1>
+	<div class="delayed"><p>excellent, font-specific compression</p></div>
+	<div class="delayed"><p>much smaller than woff1</p></div>
+	<!-- add diagram showing sfnt to woff2, animate re-arrangement and then compression -->
+	</section>
+
+	<section class="darker slide" id="woffCompare">
+		<h1>Comparison: WOFF, WOFF2</h1>
+	<!-- add graph of compression gains -->
+	</section>
 </section>
 
-<section class="image slide " style="background: url(img/periodic_o.png) center #2D2C2C no-repeat; background-size: cover;" id="OTfeatures">
-	<h1>OpenType Features &amp; CSS</h1>
-</section>
+<section>
 
-<section class="dark slide" id="featureIntro">
-	<h1>OpenType features</h1>
-	<div class="delayed"><p>Optional stylistic controls</p></div>
-	<div class="delayed"><p>Fonts vary in features provided</p></div>
-	<div class="delayed"><p>Control of features using CSS</p></div>
-	<!-- add a figure showing swashes etc -->
-</section>
+	<header class="image slide top-heavy" style="background: url(img/crystal_ball_o.jpg) center #2D2C2C no-repeat; background-size: cover;" id="future">
+		<h1>The future</h1>
+	</header>
 
-<section class="slide" id="fontVariant">
-	<h1>font-variant</h1>
-	<div class="delayed"><p>Much expanded in CSS3 fonts</p></div>
-	<div class="delayed"><p>Preferred method, but …</p></div>
-	<div class="delayed"><p>&nbsp;… currently <a href="http://caniuse.com/#feat=font-variant-alternates">poor support</a></p></div>
-</section>
+	<section class=" slide" id="parametric">
+		<h1>Parametric fonts</h1>
+		<!-- add metapolator screenie -->
+	</section>
 
-<section class="slide" id="fontFeatureSettings">
-	<h1>font-variant</h1>
-	<div class="delayed"><p>Low-level control</p></div>
-	<div class="delayed"><p>Cryptic … </p></div>
-	<div class="delayed"><p>&nbsp;… currently <a href="http://caniuse.com/#feat=font-feature">much wider support</a></p></div>
-	<!-- add a code sample showing the crypticness -->
-</section>
+	<section class=" slide" id="chromaticFake">
+		<h1>Fake chromatic fonts</h1>
+		<div class="delayed"><p>Repeated text, positioned on top of itself</p></div>
+		<div class="delayed figure"><object data="img/DouarTest.svg" style="width: 80vw">demo of overlayed text</object></div>
+		<div class="delayed"><p>Repeated text, positioned on top of itself</p></div>
+		<div class="delayed"><p>Repeated text, positioned on top of itself</p></div>
+	</section>
 
-<section class="dark slide hsplit dont-resize" id="numeric">
-	<h1>Numeric font variants</h1>
-	<div class="delayed figure" id="numericex"><p>1234567890ABC<br /> 
-		1234567890abj</p></div>
-<textarea class="delayed code" data-subject="#numericex">
-font-variant-numeric: lining-nums;
-</textarea>
-<!-- live, change to oldstyle-nums -->
-</section>
+	<section class=" slide" id="TransTypeDemo">
+		<h1>Demo</h1>
+		<img src="img/TransType.png">
+	</section>
 
+	<section class="dark slide" id="kafeelCOLR">
+		<h1>COLR + CPAL</h1>
+		<div class="delayed"><p>COLR holds stack of TrueType outlines</p></div>
+		<div class="delayed"><p>CPAL holds color palette(s)</p></div>
+		<div class="delayed"><p id="kCOLR">Painter Kafeel</p></div>
+	</section>
 
-<section class="dark slide hsplit dont-resize" id="hsplit">
-	<h1>Test for editable css, horizontal split</h1>
-	<div class="delayed figure" id="numeric2">12345</div>
-<textarea class="delayed code" data-subject="#numeric2">
-font-variant-numeric: oldstyle-nums;
-</textarea>
-</section>
+	<section class=" slide" id="parametric">
+		<h1>Where did the styling go?</h1>
+	</section>
 
-<section class="image slide bottom-heavy" style="background: url(img/speedometer_o.jpg) center #2D2C2C no-repeat; background-size: cover;" id="perf">
-	<h1 style="background: transparent">Performance</h1>
-</section>
-
-<section class="slide darker" id="subsetGlyph">
-	<h1>Subset glyphs</h1>
-<div class="delayed"><p>Delete glyphs for unused characters</p></div>
-<div class="delayed"><p>Big space savings</p></div>
-<div class="delayed"><p>Risks use of fallback, ugly</p></div>
-<div class="delayed tipster"><p>Don't subset writing systems</p></div>
-</section>
-
-<section class="slide" id="subsetTables">
-	<h1>Subset tables</h1>
-<div class="delayed"><p>Delete unused OpenType tables</p></div>
-<div class="delayed"><p>Moderate space savings</p></div>
-<div class="delayed"><p>Platform specific (hint, kern)</p></div>
-<div class="delayed tipster"><p>Don't break writing systems!</p></div>
-</section>
-
-<section class="darker slide" id="woff1">
-	<h1>WOFF compression</h1>
-	<div class="delayed"><p></p></div>
-	<div class="delayed"><p>adds header, metadata</p></div>
-	<div class="delayed"><p>gzips each table</p></div>
-	<div class="delayed"><p></p></div>
-<!-- add diagram showing sfnt to woff1, animate compression -->
-</section>
-
-<section class="darker slide" id="woff2">
-	<h1>WOFF2 compression</h1>
-<div class="delayed"><p>excellent, font-specific compression</p></div>
-<div class="delayed"><p>much smaller than woff1</p></div>
-<!-- add diagram showing sfnt to woff2, animate re-arrangement and then compression -->
-</section>
-
-<section class="darker slide" id="woffCompare">
-	<h1>Comparison: WOFF, WOFF2</h1>
-<!-- add graph of compression gains -->
-</section>
-
-<section class="image slide top-heavy" style="background: url(img/crystal_ball_o.jpg) center #2D2C2C no-repeat; background-size: cover;" id="future">
-	<h1>The future</h1>
-</section>
-
-<section class=" slide" id="parametric">
-	<h1>Parametric fonts</h1>
-<!-- add metapolator screenie -->
-</section>
-
-<section class=" slide" id="chromaticFake">
-	<h1>Fake chromatic fonts</h1>
-	<div class="delayed"><p>Repeated text, positioned on top of itself</p></div>
-	<div class="delayed figure"><object data="img/DouarTest.svg" style="width: 80vw">demo of overlayed text</object></div>
-	<div class="delayed"><p>Repeated text, positioned on top of itself</p></div>
-	<div class="delayed"><p>Repeated text, positioned on top of itself</p></div>
-</section>
-
-<section class=" slide" id="TransTypeDemo">
-	<h1>Demo</h1>
-	<img src="img/TransType.png">
-</section>
-
-<section class="dark slide" id="kafeelCOLR">
-	<h1>COLR + CPAL</h1>
-	<div class="delayed"><p>COLR holds stack of TrueType outlines</p></div>
-	<div class="delayed"><p>CPAL holds color palette(s)</p></div>
-	<div class="delayed"><p id="kCOLR">Painter Kafeel</p></div>
-</section>
-
-<section class=" slide" id="parametric">
-	<h1>Where did the styling go?</h1>
-</section>
-
-<section class="dark slide" id="kafeelSVG">
-	<h1>SVG (+ CPAL)</h1>
-	<div class="delayed"><p>SVG holds SVG graphics</p></div>
-	<div class="delayed"><p>CPAL holds color palette(s)</p></div>
-	<div class="delayed"><p>CSS variables to alter palette</p></div>
-	<div class="delayed"><p id="kSVG">Painter Kafeel</p></div>
+	<section class="dark slide" id="kafeelSVG">
+		<h1>SVG (+ CPAL)</h1>
+		<div class="delayed"><p>SVG holds SVG graphics</p></div>
+		<div class="delayed"><p>CPAL holds color palette(s)</p></div>
+		<div class="delayed"><p>CSS variables to alter palette</p></div>
+		<div class="delayed"><p id="kSVG">Painter Kafeel</p></div>
+	</section>
 </section>
 
 <footer class="dark slide">
