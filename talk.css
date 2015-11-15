@@ -1,5 +1,5 @@
 @import url("http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext");
-@import url(https://fonts.googleapis.com/css?family=Reenie+Beanie);
+@import url("https://fonts.googleapis.com/css?family=Reenie+Beanie");
 
 @font-face {
 	font-family: LinBio;
@@ -160,6 +160,38 @@
 	}
 
 		#charglyph dl+dl dt {
+			color: var(--orange);
+		}
+
+.split-definition {
+	padding: 0;
+	flex-flow: column;
+}
+
+	.split-definition:target {
+		display: flex;
+	}
+
+	.split-definition dl {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 0;
+	}
+
+		.split-definition dl dt {
+			font-size: 250%;
+			line-height: 1.1;
+		}
+
+	.split-definition dl+dl {
+		background: var(--buff);
+		color: var(--darkgrey);
+	}
+
+		.split-definition dl+dl dt {
 			color: var(--orange);
 		}
 
