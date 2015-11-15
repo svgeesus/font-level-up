@@ -635,6 +635,10 @@ footer.slide {
 		text-align: left;
 	}
 
+	#font-variant-numeric select {
+		text-align: right;
+	}
+
 select {
 	-webkit-appearance: none;
 	-moz-appearance: none;
