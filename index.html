@@ -74,19 +74,7 @@
 		<h1>Basics</h1>
 	</header>
 
-	<section class="dark slide" id="charglyph">	
-		<dl>
-			<dt>Character</dt>
-			<dd>a <span title="Unicode">number</span>, with properties</dd>
-		</dl>
-
-		<dl class="delayed">
-			<dt>Glyph</dt>
-			<dd>visual representation of character(s)</dd>
-		</dl>
-	</section>
-
-	<section class="dark slide split-definition" id="charglyph2">	
+	<section class="dark slide split-definition" id="charglyph">	
 		<dl>
 			<dt>Character</dt>
 			<dd>a <span title="Unicode">number</span>, with properties</dd>
@@ -192,13 +180,15 @@
 		<h1>OpenType Features &amp; CSS</h1>
 	</header>
 
-	<section class="dark slide" id="featureIntro">
-		<h1>OpenType features</h1>
-		<div class="delayed"><p>Optional stylistic controls</p></div>
-		<div class="delayed"><p>Fonts vary in features provided</p></div>
-		<div class="delayed"><p>Control of features using CSS</p></div>
-		<!-- add a figure showing swashes etc -->
-	</section>
+	<section class="slide split-definition" id="featureIntro">
+		<dl>
+			<dt>OpenType features</dt>
+			<dd>Optional stylistic controls</dd>
+		</dl>
+		<dl class="delayed">
+			<dt>Control with CSS</dt>
+			<dd>Fonts vary in features provided</dd>
+		</dl></section>
 
 	<section class="slide" id="fontVariant">
 		<h1>font-variant</h1>
@@ -226,6 +216,7 @@
 		</select>;</pre>
 	</section>
 
+<!-- broken, keep as template for hsplit 
 	<section class="dark slide hsplit dont-resize" id="numeric">
 		<h1>Numeric font variants</h1>
 		<div class="delayed figure" id="numericex"><p>1234567890ABC<br /> 
@@ -233,7 +224,6 @@
 	<textarea class="delayed code" data-subject="#numericex">
 	font-variant-numeric: lining-nums;
 	</textarea>
-	<!-- live, change to oldstyle-nums -->
 	</section>
 
 
@@ -244,6 +234,19 @@
 	font-variant-numeric: oldstyle-nums;
 	</textarea>
 	</section>
+-->
+
+<section class="dark slide dont-resize" id="fractions">
+		<p class="figure">
+			1/2 3/4 5/8<br /> 
+			13/27 86/483
+		</p>
+		<pre class="styled">font-variant-numeric: <select data-style="font-variant-numeric: {value};" class="css-control">
+			<option>normal</option>
+			<option>diagonal-fractions</option>
+		</select>;</pre>
+	</section>
+
 </section>
 
 <section>

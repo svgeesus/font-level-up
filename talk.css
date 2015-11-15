@@ -130,7 +130,7 @@
 		color: black;
 	}
 
-
+/* 
 #charglyph {
 	padding: 0;
 	flex-flow: column;
@@ -163,6 +163,8 @@
 			color: var(--orange);
 		}
 
+		*/
+
 .split-definition {
 	padding: 0;
 	flex-flow: column;
@@ -184,7 +186,10 @@
 		.split-definition dl dt {
 			font-size: 250%;
 			line-height: 1.1;
+			font-family: var(--heading-font);
+			font-weight: bold;
 		}
+
 
 	.split-definition dl+dl {
 		background: var(--buff);
@@ -466,17 +471,12 @@ pre.inline code {
 /* and for specific examples */
 
 #prop-desc dt,
-#charglyph dt,
-#charglyph2 dt {
+#charglyph dt {
 	font-family: var(--heading-font);
 	font-weight: bold;
 	color: var(--tan);
 }
 
-/* Don't use presentational classes! */
-.huge {
-	font-size:200%;
-}
 
 #faces li {
 	margin-left: 2em;
@@ -652,22 +652,22 @@ footer.slide {
 		visibility: hidden;
 	}
 
-#font-variant-numeric {
+#font-variant-numeric, #fractions {
 	padding: 0;
 	text-align: center;	
 }
 
-	#font-variant-numeric p {
+	#font-variant-numeric p, #fractions p {
 		margin: 0;
 		font-family: LinBio;
 		font-size: 350%;
 	}
 
-	#font-variant-numeric pre {
+	#font-variant-numeric pre, #fractions pre {
 		margin-top: 1em;
 	}
 
-	#font-variant-numeric select {
+	#font-variant-numeric select, #fractions select {
 		text-align: right;
 	}
 
