@@ -9,6 +9,12 @@
 	font-weight: bold;
 }
 
+@font-face {
+	font-family: 'amp';
+	src: url(fonts/Rochester-Regular.otf);
+	unicode-range: U+26;
+}
+
 :root {
 	/* Colors */
 	--dark-green: #4E5D58;
@@ -24,6 +30,7 @@
 	--heading-font: Arvo, serif;
 	--body-font: 'Free Sans', 'Helvetica Neue', sans-serif;
 	--handwriting-font: 'Reenie Beanie', cursive;
+	--ampersand-font: amp, Arvo, serif;
 }
 
 body {

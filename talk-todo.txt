@@ -1,0 +1,50 @@
+﻿todo for talk (? means optional, if time):
+
+? slide with bad japanese serif latin, as example
+
+Unicode range: start with syntax (say current slide content).
+split definition format: top has pre code with Latin-only urange; 
+bottom has dt descriptor dd allowed range of Unicode characters 
+DONE but ugly, flex puts all the space on the code
+
+new slide with ampersand example DONE 
+  but FF bug!! fixed but not deployed
+  https://bugzilla.mozilla.org/show_bug.cgi?id=475891
+in about:config, layout.css.unicode-range.enabled =  true
+  https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/unicode-range 
+  live result works (with config change) so wtf
+
+? make rochester into woff if cygwin stops misbehaving
+
+? finally, new slide with syntax apology if it still seems worth saying
+
+replace second myriad pro with a different font that has condensed; pref a serif one
+
+? shift the h1 on OT features slide so it is over the green foundries not the grey ot features
+
+add slide after #featureIntro with lots of features used at once. use megalopolis-extra, and spans to set the features (fancy ligatures, swashes)
+DONE, could be improved with spans to set swashes from other stylistic sets
+
+add the asian forms opentype feature example
+  needs raw textarea with selectors
+  use lang selector, simplified vs traditional chinese  草 (U+8349)
+  Source Han Sans (Adobe) has CJK linguistic forms
+
+add woff1 diagram, showing per-table compression, header, meta
+
+add woff2 diagram showing type rearrangement, discard, full stream compression (and header & meta)
+
+make woff1 and woff2 svg graphs for median filesize savings, data from woff2 evaluation report
+
+
+new slide in performance section: declaring subsetting with urange. multiple @font-face rules to make a composite font.
+only downloaded if that range is needed
+reduces page weight but can increase load time (more http requests, load on demand if text changes)
+
+?? miss out font loading API if no time to make slides for it
+
+-------
+tips
+
+each face needs its own @font-face. avoid synthetic bold and synthetic (obliqued) italic
+

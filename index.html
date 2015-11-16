@@ -154,7 +154,8 @@
 		<h1>Font stacks</h1>
 		<div class="delayed"><p>First font with glyphs for a given character is used</p></div>
 		<div class="delayed"><p>Problem: avoiding bad Latin glyphs in Japanese fonts</p></div>
-		<pre class="delayed inline"><code>@font-face {
+		<pre class="delayed inline">
+<code>	@font-face {
 		font-family: something;
 		src: url(Latin.woff), url(Japanese.woff);
 	}</code></pre>
@@ -162,8 +163,22 @@
 	<em>Both</em> fonts can't be first!</p></div>
 	</section>
 
-	<section class="dark slide" id="urange">
-		<h1>Unicode-range</h1>
+	<section class="dark slide split-definition" id="urange">
+	<!--	<h1>Unicode-range</h1> -->
+		<div class="delayed">
+			<dl>
+				<dt>Descriptor</dt>
+				<dd>allowed range of Unicode characters</dd>
+			</dl>
+		</div>
+		<pre id="urange" class="delayed  code"><code class="language-css">
+	@font-face {
+		font-family: 'Something';
+		src: url(fonts/j.woff);
+		unicode-range: U+A5, U+4E00-9FFF, U+30??, U+FF00-FF9F; 
+		/* yen, kanji, hiragana, katakana */
+	}</code></pre>
+		<!--
 		<div class="delayed"><p>Descriptor for allowed range of Unicode characters</p></div>
 		<div class="delayed"><p>Glyphs for characters outside range <em>not used</em></p>
 			<p class="delayed">… even if the font has them</p>
@@ -172,6 +187,21 @@
 			I'm really sorry about the unicode-range syntax. Whatever was I thinking?</p>
 			<pre class="inline"><code class="language-css">U+12??</code></pre>
 		</div>
+	-->
+	</section>
+
+	<section class="slide split-definition" id="fancy-ampersand">
+		<dl>
+			<dt id="ampersand">This & That</dt>
+			<dd>no need for extra elements</dd>
+			<!-- broken in Firefox, unicode-range bug *still* not
+		         deployed. fix is to set, in about:config
+		         layout.css.unicode-range.enabled to true
+		         then restart firefox /facepalm -->
+		</dl>
+		<dl>
+			<dt>U+26</dt>
+			<dd>Use just the ampersand</dd></dl>
 	</section>
 </section>
 
@@ -179,6 +209,12 @@
 	<header class="image slide " style="background: url(img/periodic_o.png) center #2D2C2C no-repeat; background-size: cover;" id="OTfeatures">
 		<h1>OpenType Features &amp; CSS</h1>
 	</header>
+
+	<section class="slide" id="OTF-sample">
+		<p>CAPITALE FULGURANT</p>
+		<p class="modeste">et modeste avec ça</p>
+		<p>INCROYABLE astrale </p>
+	</section>
 
 	<section class="slide split-definition" id="featureIntro">
 		<dl>
@@ -190,20 +226,16 @@
 			<dd>Fonts vary in features provided</dd>
 		</dl></section>
 
-	<section class="slide" id="fontVariant">
-		<h1>font-variant</h1>
-		<div class="delayed"><p>Much expanded in CSS3 fonts</p></div>
-		<div class="delayed"><p>Preferred method, but …</p></div>
-		<div class="delayed"><p>&nbsp;… currently <a href="http://caniuse.com/#feat=font-variant-alternates">poor support</a></p></div>
+	<section class="slide split-definition" id="low-and-high">
+		<dl><dt>font-variant</dt>
+			<dd>Preferred, but <a href="http://caniuse.com/#feat=font-variant-alternates">poor support</a></dd>
+		</dl>
+		<dl class="delayed">
+			<dt>font-feature-settings</dt>
+			<dd>Cryptic, low-level, <a href="http://caniuse.com/#feat=font-feature">widespread support</a></dd>
+		</dl>
 	</section>
 
-	<section class="slide" id="fontFeatureSettings">
-		<h1>font-variant</h1>
-		<div class="delayed"><p>Low-level control</p></div>
-		<div class="delayed"><p>Cryptic … </p></div>
-		<div class="delayed"><p>&nbsp;… currently <a href="http://caniuse.com/#feat=font-feature">much wider support</a></p></div>
-		<!-- add a code sample showing the crypticness -->
-	</section>
 
 	<section class="dark slide dont-resize" id="font-variant-numeric">
 		<p class="figure">

@@ -42,21 +42,14 @@ pre[class*="language-"],
 /* Code blocks */
 pre[class*="language-"] {
 	font-size: 0.6em;
-	xpadding: 1em;
 	margin-left: 1em;
 	overflow: auto;
-	xborder: .3em solid hsl(30, 20%, 40%);
-	xborder-radius: .5em;
-	xbox-shadow: 1px 1px .5em black inset;
 }
 
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
 	padding: .15em .1em .05em;
-	xborder-radius: .3em;
-	xborder: .13em solid hsl(30, 20%, 40%);
-	xbox-shadow: 1px 1px .3em -.1em black inset;
 	white-space: normal;
 }
 

@@ -13,6 +13,11 @@
 }
 
 @font-face {
+	font-family: megalopolis;
+	src: url(fonts/MEgalopolisExtra.otf);
+}
+
+@font-face {
 	font-family: KafeelCOLR;
 	src: url(fonts/Kafeel/KafeelPainter-Layers-COLR.ttf);
 }
@@ -123,6 +128,19 @@
 			color: white;
 		}
 
+.titleslide {
+	padding: 0;
+	font: bold 300% var(--heading-font);
+}
+
+	.titleslide h1 {
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
 #basics {}
 
 	#basics h1 {
@@ -174,7 +192,7 @@
 		display: flex;
 	}
 
-	.split-definition dl {
+	.split-definition dl, .split-definition pre {
 		display: flex;
 		flex: 1;
 		flex-direction: column;
@@ -417,6 +435,7 @@
 	padding-left: 2em;
 }
 
+/*
 pre.inline {
 	margin-left: 2em;
 	padding-left: 2em;
@@ -426,6 +445,7 @@ pre.inline {
 pre.inline code {
 	
 }
+*/
 
 
 /* styles for split example/code slides */
@@ -485,6 +505,27 @@ pre.inline code {
 .apology { 
 	color: #D66039;
 }
+
+#fancy-ampersand.split-definition dt {
+	/* font-family: var(--ampersand-font); */
+	font-family: amp, Arvo, serif;
+}
+
+
+#OTF-sample p {
+	font-family: megalopolis;
+	font-size: 300%;
+	font-variant-ligatures: discretionary-ligatures ;
+	text-align: center;
+	margin-top: 0.1em;
+	margin-bottom: 0.1em;
+	text-shadow: 3px 3px 7px var(--dark-green);
+}
+
+	#OTF-sample p.modeste {
+		font-size: 240%;
+		color: var(--orange);
+	}
 
 /* Why not use the <figure> element? */
 .figure {
