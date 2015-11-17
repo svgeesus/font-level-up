@@ -58,40 +58,17 @@
 		</ul>
 	</section>
 
-	<section class="inverse slide darker hi" id="doing-stuff">
-		<h1>Who am I</h1>
-		<div class="delayed">
-			<ul>
-				
-				<li><a href="http://www.w3.org/People/#clilley">Technical Director, Interaction Domain, W3C</a></li>
-				<li><a href="http://www.w3.org/Graphics/SVG/WG/wiki/Secret_Origin_of_SVG#Drivers_and_Deployment">Started SVG</a></li>
-				<li><a href="http://www.w3.org/2001/12/tag-pressrelease.html.en">Chair, SVG WG (1998-2006)</a></li>
-				<li><a href="http://www.w3.org/TR/PNG/">PNG co-author</a></li>
-				<li><a href="http://www.w3.org/2001/12/tag-pressrelease.html.en">W3C Technical Architecture Group, 2001-2004</a></li>
-				<li><a href="http://www.w3.org/TR/webarch/#acks">WebArch co-author</a></li>
-				<li><a href="https://lists.w3.org/Archives/Member/w3c-ac-members/2001JulSep/0007.html">Chair CSS WG (1997-2002)</a></li>
-				<li><a href="http://www.w3.org/TR/REC-CSS2/">CSS2 co-editor (@font-face, descriptors)</a></li>
-				<li><a href="http://www.w3.org/TR/SVG10/#AuthorList">SVG 1.0, 1.1</a>
-				<li><a href="http://www.w3.org/TR/css3-color/">CSS3 Color co-editor</a></li>
-				<li><a href="http://www.w3.org/Fonts/WG/">WOFF 1,0, WOFF 2.0</a></li>
-				<li><a href="https://www.w3.org/community/svgopentype/">Chromatic Fonts</a></li>
-				<li><a href="https://tools.ietf.org/html/rfc7303">RFC 7303</a></li>
-			</ul>
-			<small></small>
-		</div>
-		<p class="delayed" id="csswg">
-			<strong>CSS WG</strong>
-			Staff Contact
-		</p>
-		<p class="delayed" id="webfontswg">
-			<strong>WebFonts WG</strong>
-			Staff Contact
-		</p>
-		<p class="delayed" id="webaudiowg">
-			<strong>WebAudio WG</strong>
-			Staff Contact
-		</p>
+	<section class="slide activity" id="webfonts">
+		<h1 id="woff-logo"><span class="web">Web</span>Fonts</h1>
+		<ul>
+			<li>Chair, Fonts WG (1996-1998)</li>
+			<!-- all Member-only, sadly -->
+			<li><a href="http://www.w3.org/Fonts/WG/">WOFF 1,0, WOFF 2.0</a></li>
+			<li><a href="https://www.w3.org/community/svgopentype/">Chromatic Fonts</a></li>
+		</ul>
 	</section>
+
+<!-- end of hello -->	
 </section>
 	
 <section class="slide darker" id="topics">
@@ -217,25 +194,6 @@ h1 {
 	-->
 	</section>
 
-	<section class="slide hsplit dont-resize" id="ampersand-demo">
-	<!--
-	First hover over the h1 to show that it has no extra elements.
-	Then type:
-
-	@font-face {
-		font-family: ampersand;
-		src: url(fonts/Rochester-Regular.otf);
-		unicode-range: U+26;
-	}
-
-	then change the font-family on the h1 to ampersand, var(--heading-font)
-	-->
-		<h1 class="show-html">This & That</h1>
-	<textarea>h1 {
-	font-family: var(--heading-font);
-}</textarea>
-	</section>
-
 	<section class="slide split-definition" id="fancy-ampersand">
 		<dl>
 			<dt id="ampersand">This & That</dt>
@@ -250,6 +208,27 @@ h1 {
 			<dd>Use just the ampersand</dd>
 		</dl>
 	</section>
+
+	<section class="slide hsplit dont-resize" id="ampersand-demo">
+	<!--
+	First hover over the h1 to show that it has no extra elements.
+	Then type:
+
+	@font-face {
+		font-family: ampersand;
+		src: url(fonts/Rochester-Regular.otf);
+		unicode-range: U+26;
+	}
+
+	then change the font-family on the h1 to ampersand, var(- -heading-font)
+	-->
+		<h1 class="show-html">This & That</h1>
+	<textarea>h1 {
+	font-family: var(--heading-font);
+}</textarea>
+	</section>
+
+	<!-- end of basics section -->
 </section>
 
 <section>
@@ -348,6 +327,32 @@ h1 {
 		</select>;</pre>
 	</section>
 
+	<section class="dark slide dont-resize" id="east-asian">
+		<p class="figure">
+			<span lang="zh-hans">草</span> 
+			<span lang="zh-hant">草</span> 
+		</p>
+		<pre class="styled">font-variant-east-asian: <select data-style="font-variant-east-asian: {value};" class="css-control">
+			<option>normal</option>
+			<option>simplified</option>
+			<option>traditional</option>
+		</select>;</pre>
+	</section>
+
+	<section class="dark slide dont-resize" id="no-fake-bold-italic">
+		<p class="figure">
+			<i>abc</i> abc <b>abd</b>
+		</p>
+		<pre class="styled">font-synthesis: <select data-style="font-synthesis: {value};" class="css-control">
+			<option>weight style</option>
+			<option>weight</option>
+			<option>style</option>
+			<option>none</option>
+		</select>;</pre>
+	</section>
+
+
+<!-- end of OT features section -->
 </section>
 
 <section>
@@ -400,10 +405,18 @@ h1 {
 		<h1>The future</h1>
 	</header>
 
+
 	<section class=" slide" id="parametric">
 		<h1>Parametric fonts</h1>
 		<!-- add metapolator screenie -->
 	</section>
+
+	<section class="slide darker" id="illuminated">
+		<h1>From illuminated manuscripts</h1>
+		<p><img src="img/illum.jpg" alt="illuminated manuscript"/></p>
+	</section>
+
+	<section class="slide darker" id="emojidance" title="to emoji" data-src="http://emojiparty.club/%F0%9F%98%8E%F0%9F%98%B3%F0%9F%98%8D%F0%9F%98%BC"></section>
 
 	<section class=" slide" id="chromaticFake">
 		<h1>Fake chromatic fonts</h1>
@@ -414,8 +427,8 @@ h1 {
 	</section>
 
 	<section class=" slide" id="TransTypeDemo">
-		<h1>Demo</h1>
-		<img src="img/TransType.png" alt="screenshot for demo">
+		<h1>TransType Demo</h1>
+		<p><img src="img/TransType.png" alt="screenshot for demo"></p>
 	</section>
 
 	<section class="dark slide" id="kafeelCOLR">
@@ -425,7 +438,7 @@ h1 {
 		<div class="delayed"><p id="kCOLR">Painter Kafeel</p></div>
 	</section>
 
-	<section class=" slide" id="unstyled">
+	<section class="image slide" id="unstyled" style="background: url(img/woodletters_o.jpg) center #2D2C2C no-repeat; background-size: cover;">
 		<h1>Where did the styling go?</h1>
 	</section>
 
@@ -434,8 +447,46 @@ h1 {
 		<div class="delayed"><p>SVG holds SVG graphics</p></div>
 		<div class="delayed"><p>CPAL holds color palette(s)</p></div>
 		<div class="delayed"><p>CSS variables to alter palette</p></div>
-		<div class="delayed"><p id="kSVG">Painter Kafeel</p></div>
+		<div class="delayed"><p class="kSVG">Painter Kafeel</p></div>
 	</section>
+
+	<section class="slide hsplit dont-resize" id="svg-palette-demo">
+	<!--
+	This depends on the SVG glyphs having used ver() syntax, which the exported kafeel does not
+	Bug report to FontLab for TransType 4
+	Also, var syntax changed wrt SVG Glyphs in OpenType report
+	http://www.w3.org/2013/10/SVG_in_OpenType/#render
+	-->
+	<p class="kSVG">Painter Kafeel</p>
+	<textarea>p.kSVG {
+	--color0: #F39;
+	--color1: #9E9D81;
+	--color2: #F06;
+	--color3: #703;
+}</textarea>
+	</section>
+
+	<section class="slide split-definition" id="css4-fonts">
+		<dl><dt>CSS4 font-palette</dt>
+			<dd>select from provided palettes</dd>
+		</dl>
+		<dl class="delayed">
+			<dt>CSS4 @palette-entries</dt>
+			<dd>overide baked-in palettes</dd>
+		</dl>
+	</section>
+
+	<section class="slide split-definition" id="css4-fonts2">
+		<dl><dt>CSS4 font-synthesis</dt>
+			<dd>small-caps (disable fake small caps)</dd>
+		</dl>
+		<dl class="delayed">
+			<dt>CSS4 emoji, math, fangsong</dt>
+			<dd>New generic font families</dd>
+		</dl>
+	</section>
+
+	<!-- end of futures section -->
 </section>
 
 <footer class="dark slide">

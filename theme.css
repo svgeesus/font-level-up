@@ -1,4 +1,17 @@
-@import url(https://fonts.googleapis.com/css?family=Arvo:400,700);
+@font-face {
+  font-family: 'Arvo';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Arvo'), url(fonts/Arvo.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Arvo';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Arvo-Bold'), url(fonts/Arvo-Bold.woff2) format('woff2');
+}
+
 @font-face {
 	font-family: 'Free Sans';
 	src: url(fonts/FreeSans.woff);
