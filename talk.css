@@ -209,12 +209,14 @@
 		}
 
 
-	.split-definition dl+dl {
+	.split-definition dl+dl,
+	#urange dl {
 		background: var(--buff);
 		color: var(--darkgrey);
 	}
 
-		.split-definition dl+dl dt {
+		.split-definition dl+dl dt,
+		#urange dl dt {
 			color: var(--orange);
 		}
 

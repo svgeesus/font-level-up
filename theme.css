@@ -254,6 +254,11 @@ code.de-emphasize {
  	hyphens: none;
  }
 
+ .slide:not(.dark) pre {
+ 	background: var(--darkgrey);
+ 	box-shadow: 1em 0 0 1em var(--darkgrey), -1em 0 0 1em var(--darkgrey);
+ }
+
  /* Code blocks */
  pre[class*="language-"] {
  	font-size: 0.6em;

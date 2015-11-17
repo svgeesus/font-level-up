@@ -154,21 +154,19 @@ h1 {
 		<h1>Font stacks</h1>
 		<div class="delayed"><p>First font with glyphs for a given character is used</p></div>
 		<div class="delayed"><p>Problem: avoiding bad Latin glyphs in Japanese fonts</p></div>
-		<pre class="delayed inline">
-<code>	@font-face {
-		font-family: something;
-		src: url(Latin.woff), url(Japanese.woff);
-	}</code></pre>
+		<pre class="delayed inline"><code>@font-face {
+	font-family: something;
+	src: url(Latin.woff), url(Japanese.woff);
+}</code></pre>
 	<div class="delayed"><p>
-	<em>Both</em> fonts can't be first!</p></div>
+	<em>Both</em> fonts can’t be first!</p></div>
 	</section>
 
 	<section class="dark slide split-definition" id="urange">
-	<!--	<h1>Unicode-range</h1> -->
-			<dl>
-				<dt>Unicode-range</dt>
-				<dd>Descriptor for allowed range of Unicode characters</dd>
-			</dl>
+		<dl>
+			<dt>unicode-range</dt>
+			<dd>Descriptor for allowed range of Unicode characters</dd>
+		</dl>
 		<pre class="delayed  code"><code class="language-css">
 	@font-face {
 		font-family: 'Something';
