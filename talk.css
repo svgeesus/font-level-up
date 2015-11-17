@@ -497,6 +497,12 @@
 	font-family: amp, Arvo, serif;
 }
 
+#ligatures p {
+	font-family: megalopolis;
+	font-size: 300%;
+	text-align: center;
+}
+
 
 #OTfeatures.image.slide > h1:only-child {
 	margin-top: 210px;
@@ -510,7 +516,7 @@
 	text-align: center;
 	margin-top: 0.1em;
 	margin-bottom: 0.1em;
-	text-shadow: 3px 3px 7px var(--dark-green);
+	text-shadow: 2px 2px 5px var(--dark-green);
 }
 
 	#OTF-sample p.modeste {
