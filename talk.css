@@ -435,9 +435,11 @@
 		line-height: 2;
 	}
 
-	#ampersand-demo textarea {
+	#ampersand-demo textarea, #loadAPI textarea {
 		font-size: 80% !important;
 	}
+
+#loadAPI textarea
 
 .property.slide {
 	text-align: center;
@@ -475,6 +477,10 @@
 	#east-asian p :lang(zh-hant) {
 		color: var(--buff);
 	}
+
+pre.inline + pre.inline {
+	margin-top:1em;
+}
 
 #no-fake-bold-italic  p {
 	font-size: 200%;

@@ -439,14 +439,14 @@ h1 {
 		</dl>
 	</section>
 
-	<section class="slide">
+	<section class="slide" id="mobilewoff2">
 		<h1>WOFF2 & mobile</h1>
 		<p>Balance decompression time & download speed</p>
 		<p>Last 2% size gain <em>doubles</em> decode time!</p>
 		<p>Memory for decompression only 1.05x that for WOFF1</p>
 	</section>
 
-	<section class="slide darker">
+	<section class="slide darker" id="loadAPI">
 		<h1>Font Loading API</h1>
 		
 		<pre class="delayed inline"><code>@font-face {
@@ -459,12 +459,12 @@ h1 {
 	'Demo',
 	'url(Arvo.woff) format ("woff")',
 	{ weight: 'bold' }
-);</code></pre>
+;</code></pre>
 	</section>
 
-	<section class="slide">
+	<section class="slide" id="LoadAPIEvents">
 		<h1>Font Loading API: Events</h1>
-		<p class="delayed">load start, load complete, load failed</p>
+		<p>load start, load complete, load failed</p>
 	</section>
 
 	<!-- end of perf section -->
