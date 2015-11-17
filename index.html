@@ -365,24 +365,19 @@ h1 {
 		<h1>Subset glyphs</h1>
 	<div class="delayed"><p>Delete glyphs for unused characters</p></div>
 	<div class="delayed"><p>Big space savings</p></div>
-	<div class="delayed"><p>Risks use of fallback, ugly</p></div>
-	<div class="delayed tipster"><p>Don't subset writing systems</p></div>
 	</section>
 
 	<section class="slide" id="subsetTables">
 		<h1>Subset tables</h1>
 	<div class="delayed"><p>Delete unused OpenType tables</p></div>
 	<div class="delayed"><p>Moderate space savings</p></div>
-	<div class="delayed"><p>Platform specific (hint, kern)</p></div>
-	<div class="delayed tipster"><p>Don't break writing systems!</p></div>
 	</section>
 
 	<section class="darker slide" id="woff1">
 		<h1>WOFF compression</h1>
-		<div class="delayed"><p></p></div>
 		<div class="delayed"><p>adds header, metadata</p></div>
 		<div class="delayed"><p>gzips each table</p></div>
-		<div class="delayed"><p></p></div>
+
 	<!-- add diagram showing sfnt to woff1, animate compression -->
 	</section>
 
@@ -393,10 +388,60 @@ h1 {
 	<!-- add diagram showing sfnt to woff2, animate re-arrangement and then compression -->
 	</section>
 
-	<section class="darker slide" id="woffCompare">
-		<h1>Comparison: WOFF, WOFF2</h1>
-	<!-- add graph of compression gains -->
+	<section class="darker slide split-definition" id="woff1size">
+		<dl><dt>WOFF 1.0</dt>
+			<dd>with TrueType glyphs</dd>
+		</dl>
+		<dl>
+			<dt>45%</dt>
+			<dd>(of original size, mean value)</dd>
+		</dl>
 	</section>
+
+	<section class="darker slide split-definition" id="woff2size">
+		<dl><dt>WOFF 2.0</dt>
+			<dd>with TrueType glyphs</dd>
+		</dl>
+		<dl>
+			<dt>25%</dt>
+			<dd>(better than WOFF1, mean value)</dd>
+		</dl>
+	</section>
+
+		<section class="darker slide split-definition" id="woff2size2">
+		<dl><dt>WOFF 2.0</dt>
+			<dd>with CFF glyphs</dd>
+		</dl>
+		<dl>
+			<dt>15.5%</dt>
+			<dd>(better than WOFF1, mean value)</dd>
+		</dl>
+	</section>
+
+	<section class="slide">
+		<h1>WOFF2 & mobile</h1>
+		<p>Balance decompression time & download speed</p>
+		<p>Last 2% size gain <em>doubles</em> decode time!</p>
+		<p>Memory for decompression only 1.05x that for WOFF1</p>
+	</section>
+
+	<section class="slide darker">
+		<h1>Font Loading API</h1>
+		<p class="delayed">Events for load start, complete, failure</p>
+		<pre class="delayed inline"><code>@font-face {
+	font-family: something;
+	src: url(foo.woff) format ("woff");
+	font-weight: bold;
+}</code></pre>
+		<! sliding the second on on top of the first would be nice -->
+		<pre class="delayed inline"><code class="language-javascript">var foo = new FontFace ()
+	'something';
+	'url(Latin.woff) format ("woff")',
+	{ weight: 'bold' }
+);</code></pre>
+	</section>
+
+	<!-- end of perf section -->
 </section>
 
 <section>
@@ -404,12 +449,6 @@ h1 {
 	<header class="image slide top-heavy" style="background: url(img/crystal_ball_o.jpg) center #2D2C2C no-repeat; background-size: cover;" id="future">
 		<h1>The future</h1>
 	</header>
-
-
-	<section class=" slide" id="parametric">
-		<h1>Parametric fonts</h1>
-		<!-- add metapolator screenie -->
-	</section>
 
 	<section class="slide darker" id="illuminated">
 		<h1>From illuminated manuscripts</h1>
@@ -447,7 +486,7 @@ h1 {
 		<div class="delayed"><p>SVG holds SVG graphics</p></div>
 		<div class="delayed"><p>CPAL holds color palette(s)</p></div>
 		<div class="delayed"><p>CSS variables to alter palette</p></div>
-		<div class="delayed"><p class="kSVG">Painter Kafeel</p></div>
+		<div class="delayed"><p id="kSVG">Painter Kafeel</p></div>
 	</section>
 
 	<section class="slide hsplit dont-resize" id="svg-palette-demo">
@@ -457,7 +496,7 @@ h1 {
 	Also, var syntax changed wrt SVG Glyphs in OpenType report
 	http://www.w3.org/2013/10/SVG_in_OpenType/#render
 	-->
-	<p class="kSVG">Painter Kafeel</p>
+	<p id="kSVG2">Painter Kafeel</p>
 	<textarea>p.kSVG {
 	--color0: #F39;
 	--color1: #9E9D81;
@@ -481,7 +520,7 @@ h1 {
 			<dd>small-caps (disable fake small caps)</dd>
 		</dl>
 		<dl class="delayed">
-			<dt>CSS4 emoji, math, fangsong</dt>
+			<dt>emoji, math, fangsong</dt>
 			<dd>New generic font families</dd>
 		</dl>
 	</section>

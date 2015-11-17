@@ -603,7 +603,7 @@
 		margin: auto;
 	}
 
-#kCOLR, #kafeelSVG .kSVG, { 
+#kCOLR, #kSVG { 
 	font-size: 600%; 
 	margin-left: auto; 
 	margin-right: auto; 
@@ -612,13 +612,13 @@
 	width: 90vw
 }
 
-#svg-palette-demo .kSVG { 
+#svg-palette-demo #kSVG2 { 
 	font-size: 400%; 
 	margin-left: auto; 
 	margin-right: auto; 
 	margin-top:0;
 	margin-bottom:0;
-	width: 90vw
+	width: 90vw;
 	text-align: center;
 }
 
@@ -626,7 +626,7 @@
 	font-family: KafeelCOLR; 
 }
 
-.kSVG {
+#kSVG, #kSVG2 {
 	font-family: KafeelSVG; 
 }
 
