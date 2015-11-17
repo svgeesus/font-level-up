@@ -9,6 +9,13 @@
 }
 
 @font-face {
+  font-family: 'Reenie Beanie';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Reenie Beanie'), local('ReenieBeanie'), url(https://fonts.gstatic.com/s/reeniebeanie/v7/ljpKc6CdXusL1cnGUSamXzxObtw73-qQgbr7Be51v5c.woff2) format('woff2');
+}
+
+@font-face {
 	font-family: LinBio;
 	src: url(fonts/LinBiolinum_R.woff);
 }
