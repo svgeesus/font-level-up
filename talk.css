@@ -423,30 +423,18 @@
 
 
 /* Styling for individual code samples */
-
-#descriptors, #descrip2 {
-	position: absolute;
-	top: 16em;
-	bottom: 0;
-	right: 0;
-	left: auto;
-	width:20em;
-	height: 15em;
-	padding-left: 2em;
+#propvsdesc-code pre {
+	width: fit-content;
+	margin: auto;
 }
 
-/*
-pre.inline {
-	margin-left: 2em;
-	padding-left: 2em;
-	width: 70%;
+#propvsdesc-code .comment {
+	transition: .4s opacity;
 }
 
-pre.inline code {
-	
+#propvsdesc-code:not([data-step]) .comment {
+	opacity: 0;
 }
-*/
-
 
 /* styles for split example/code slides */
 .vsplit .figure {
@@ -489,8 +477,6 @@ pre.inline code {
 
 
 /* and for specific examples */
-
-#prop-desc dt,
 #charglyph dt {
 	font-family: var(--heading-font);
 	font-weight: bold;

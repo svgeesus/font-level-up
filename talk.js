@@ -1,3 +1,4 @@
+
 var topics = $("#topics ul");
 $$("section > header.slide").forEach(function(slide) {
 	var li = document.createElement("li");

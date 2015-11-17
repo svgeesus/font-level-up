@@ -124,30 +124,31 @@
 		</article>
 	</section>
 
-	<section class="dark slide" id="prop-desc">
+	<section class="dark slide" id="propvsdesc-code" data-steps="1">
 		<h1>Properties &amp; descriptors</h1>
-	<pre id="descrip2" class="delayed  code"><code class="language-css">
-	@font-face {
-		font-family: 'Something';
-		src: url(fonts/s.woff);
-		font-weight: bold;
-	}
-	h3 {
-		font-family: Something;
-		font-weight: bold;
-	}</code></pre>
-		<div class="delayed">
-			<dl>
-				<dt>Descriptors</dt>
-				<dd>describe individual font faces</dd>
-			</dl>
-		</div>
-		<div class="delayed">
-			<dl>
-				<dt>Properties</dt>
-				<dd>requests for styling</dd>
-			</dl>
-		</div>
+		<pre><code class="language-css">
+@font-face {
+	font-family: 'Something'; /* Descriptor */
+	src: url(fonts/s.woff); /* Descriptor */
+	font-weight: bold; /* Descriptor */
+}
+
+h1 {
+	font-family: Something; /* Property */
+	font-weight: bold; /* Property */
+}</code></pre>
+	</section>
+
+	<section class="dark slide split-definition" id="propvsdesc">
+		<dl>
+			<dt>Descriptors</dt>
+			<dd>describe individual font faces</dd>
+		</dl>
+	
+		<dl>
+			<dt>Properties</dt>
+			<dd>requests for styling</dd>
+		</dl>
 	</section>
 
 	<section class="slide" id="stacks">
