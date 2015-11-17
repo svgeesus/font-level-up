@@ -87,9 +87,44 @@
 		font-size: 80%;
 	}
 	
-		#intro .attribution a {
+		#intro .attribution a:not() {
 			text-decoration: none;
 		}
+
+.activity {
+	text-align: center;
+	font: bold 400%/1 var(--heading-font);
+}
+
+	.activity img {
+		height: 55vh;
+	}
+
+	.activity a:not(:hover) {
+		text-decoration: none;
+	}
+
+	.activity .de-emphasize {
+		font-weight: normal;
+	}
+
+	.activity ul {
+		list-style: none;
+		padding: 0;
+	}
+
+		.activity li {
+			margin: .9em 0;
+		}
+
+	#hi img {
+		border-radius: 50%;
+		border: .2em solid var(--darkgrey);
+	}
+
+	#css img {
+		height: 45vh;
+	}
 
 #topics {
 	padding: 0;

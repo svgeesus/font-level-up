@@ -240,7 +240,7 @@ code.de-emphasize {
 
  .slide:not(.dark) pre {
  	background: var(--darkgrey);
- 	box-shadow: 1em 0 0 1em var(--darkgrey), -1em 0 0 1em var(--darkgrey);
+ 	box-shadow: 2em 0 0 1em var(--darkgrey), -2em 0 0 1em var(--darkgrey);
  }
 
  /* Code blocks */
