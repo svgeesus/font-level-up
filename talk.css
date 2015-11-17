@@ -469,7 +469,7 @@
 	font-size: 400%;
 }
 	#east-asian p :lang(zh-hans) {
-		color: var(--pale-green);
+		color: var(--dark-green);
 	}
 
 	#east-asian p :lang(zh-hant) {
