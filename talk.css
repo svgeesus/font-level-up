@@ -1,7 +1,3 @@
-/* 
-@import url("http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext");
-@import url("https://fonts.googleapis.com/css?family=Reenie+Beanie");
-*/
 
 @font-face {
   font-family: 'Lato';
@@ -587,6 +583,22 @@
 	#east-asian p :lang(zh-hant) {
 		color: var(--buff);
 	}
+
+#no-fake-bold-italic  p {
+	font-family: LinBio;	/* has only one face */
+	font-size: 200%;
+	text-align: center;
+}
+	
+	#no-fake-bold-italic p i {
+		font-style: italic;
+	}
+
+	#no-fake-bold-italic p b {
+		font-style: bold;
+		/* firefox fakebolds anyway */
+	}
+
 
 #OTfeatures.image.slide > h1:only-child {
 	margin-top: 210px;
