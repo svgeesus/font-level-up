@@ -512,6 +512,11 @@ pre.inline code {
 }
 
 
+#OTfeatures.image.slide > h1:only-child {
+	margin-top: 210px;
+}
+
+
 #OTF-sample p {
 	font-family: megalopolis;
 	font-size: 300%;

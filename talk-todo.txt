@@ -14,6 +14,8 @@ in about:config, layout.css.unicode-range.enabled =  true
   https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/unicode-range 
   live result works (with config change) so wtf
 
+add slide with full css code
+
 ? make rochester into woff if cygwin stops misbehaving
 
 ? finally, new slide with syntax apology if it still seems worth saying
@@ -21,6 +23,7 @@ in about:config, layout.css.unicode-range.enabled =  true
 replace second myriad pro with a different font that has condensed; pref a serif one
 
 ? shift the h1 on OT features slide so it is over the green foundries not the grey ot features
+DONE
 
 add slide after #featureIntro with lots of features used at once. use megalopolis-extra, and spans to set the features (fancy ligatures, swashes)
 DONE, could be improved with spans to set swashes from other stylistic sets
@@ -29,6 +32,14 @@ add the asian forms opentype feature example
   needs raw textarea with selectors
   use lang selector, simplified vs traditional chinese  草 (U+8349)
   Source Han Sans (Adobe) has CJK linguistic forms
+
+add equivalent low-level code using font-feature-settings
+
+add font-synthesis: none
+
+add font-kerning: normal to force all browsers to do the kerning they should be doing anyway
+
+mentions same-origin policy and effect on webfonts
 
 add woff1 diagram, showing per-table compression, header, meta
 
