@@ -37,6 +37,8 @@ add equivalent low-level code using font-feature-settings
 
 add font-synthesis: none
 
+add emoji and illuminated examples of chromatic fonts
+
 add font-kerning: normal to force all browsers to do the kerning they should be doing anyway
 
 mentions same-origin policy and effect on webfonts
@@ -53,6 +55,13 @@ only downloaded if that range is needed
 reduces page weight but can increase load time (more http requests, load on demand if text changes)
 
 ?? miss out font loading API if no time to make slides for it
+
+add chromatic font intro slides with illuminated and with emojii
+
+ mention css4 font-palette property
+https://drafts.csswg.org/css-fonts-4/
+
+in futures, talk about new generic font families like emoji  and fangsong 
 
 -------
 tips
