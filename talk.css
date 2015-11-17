@@ -1,18 +1,20 @@
+/* 
 @import url("http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext");
 @import url("https://fonts.googleapis.com/css?family=Reenie+Beanie");
+*/
 
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(http://fonts.gstatic.com/s/lato/v11/ayfRv9GMahGqd-q6YxHjSg.woff2) format('woff2');
+  src: local('Lato Regular'), local('Lato-Regular'), url(Lato.woff2) format('woff2');
 }
 
 @font-face {
   font-family: 'Reenie Beanie';
   font-style: normal;
   font-weight: 400;
-  src: local('Reenie Beanie'), local('ReenieBeanie'), url(https://fonts.gstatic.com/s/reeniebeanie/v7/ljpKc6CdXusL1cnGUSamXzxObtw73-qQgbr7Be51v5c.woff2) format('woff2');
+  src: local('Reenie Beanie'), local('ReenieBeanie'), url(fonts/ReenieBeanie.woff2) format('woff2');
 }
 
 @font-face {
