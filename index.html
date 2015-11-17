@@ -135,13 +135,13 @@
 		<h1>Properties &amp; descriptors</h1>
 		<pre><code class="language-css">
 @font-face {
-	font-family: 'Something'; /* Descriptor */
+	font-family: Arvo; /* Descriptor */
 	src: url(fonts/s.woff); /* Descriptor */
 	font-weight: bold; /* Descriptor */
 }
 
 h1 {
-	font-family: Something; /* Property */
+	font-family: Arvo; /* Property */
 	font-weight: bold; /* Property */
 }</code></pre>
 	</section>
@@ -163,7 +163,7 @@ h1 {
 		<div class="delayed"><p>First font with glyphs for a given character is used</p></div>
 		<div class="delayed"><p>Problem: avoiding bad Latin glyphs in Japanese fonts</p></div>
 		<pre class="delayed inline"><code>@font-face {
-	font-family: something;
+	font-family: Demo;
 	src: url(Latin.woff), url(Japanese.woff);
 }</code></pre>
 	<div class="delayed"><p>
@@ -177,7 +177,7 @@ h1 {
 		</dl>
 		<pre class="delayed  code"><code class="language-css">
 	@font-face {
-		font-family: 'Something';
+		font-family: 'Demo';
 		src: url(fonts/j.woff);
 		unicode-range: U+A5, U+4E00-9FFF, U+30??, U+FF00-FF9F; 
 		/* yen, kanji, hiragana, katakana */
@@ -414,8 +414,8 @@ h1 {
 			<dd>with TrueType glyphs</dd>
 		</dl>
 		<dl>
-			<dt>45%</dt>
-			<dd>(of original size, mean value)</dd>
+			<dt>55%</dt>
+			<dd>(mean saving)</dd>
 		</dl>
 	</section>
 
@@ -424,8 +424,8 @@ h1 {
 			<dd>with TrueType glyphs</dd>
 		</dl>
 		<dl>
-			<dt>25%</dt>
-			<dd>(better than WOFF1, mean value)</dd>
+			<dt>68%</dt> <!-- 25% better than woff1 -->
+			<dd>(mean saving)</dd>
 		</dl>
 	</section>
 
@@ -434,8 +434,8 @@ h1 {
 			<dd>with CFF glyphs</dd>
 		</dl>
 		<dl>
-			<dt>15.5%</dt>
-			<dd>(better than WOFF1, mean value)</dd>
+			<dt>63.5</dt> <!-- 15.5% better than woff1 -->
+			<dd>(mean saving)</dd>
 		</dl>
 	</section>
 
@@ -448,18 +448,23 @@ h1 {
 
 	<section class="slide darker">
 		<h1>Font Loading API</h1>
-		<p class="delayed">Events for load start, complete, failure</p>
+		
 		<pre class="delayed inline"><code>@font-face {
-	font-family: something;
-	src: url(foo.woff) format ("woff");
+	font-family: Demo;
+	src: url(Arvo.woff) format ("woff");
 	font-weight: bold;
 }</code></pre>
 		<! sliding the second on on top of the first would be nice -->
 		<pre class="delayed inline"><code class="language-javascript">var foo = new FontFace ()
-	'something',
-	'url(Latin.woff) format ("woff")',
+	'Demo',
+	'url(Arvo.woff) format ("woff")',
 	{ weight: 'bold' }
 );</code></pre>
+	</section>
+
+	<section class="slide">
+		<h1>Font Loading API: Events</h1>
+		<p class="delayed">load start, load complete, load failed</p>
 	</section>
 
 	<!-- end of perf section -->

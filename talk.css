@@ -466,7 +466,7 @@
 	/* placeholder while Source Han Sans downloads */
 	font-family: 'Microsoft JengHei';
 	font-weight: bold;
-	font-size: 400%;
+	font-size: 500%;
 }
 	#east-asian p :lang(zh-hans) {
 		color: var(--dark-green);
