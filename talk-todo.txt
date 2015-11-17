@@ -1,6 +1,6 @@
 ﻿todo for talk (? means optional, if time):
 
-? slide with bad japanese serif latin, as example
+NO TIME  slide with bad japanese serif latin, as example
 
 Unicode range: start with syntax (say current slide content).
 split definition format: top has pre code with Latin-only urange; 
@@ -18,8 +18,9 @@ add slide with full css code
 DONE
 
 ? make rochester into woff if cygwin stops misbehaving
+copied as Amper.otf for faster live coding
 
-? finally, new slide with syntax apology if it still seems worth saying
+NOPE  finally, new slide with syntax apology if it still seems worth saying
 
 replace second myriad pro with a different font that has condensed; pref a serif one
 
@@ -47,18 +48,18 @@ add font-kerning: normal to force all browsers to do the kerning they should be 
 
 mentions same-origin policy and effect on webfonts
 
-add woff1 diagram, showing per-table compression, header, meta
+NO DIAG add woff1 diagram, showing per-table compression, header, meta
 
-add woff2 diagram showing type rearrangement, discard, full stream compression (and header & meta)
+NO DIAG add woff2 diagram showing type rearrangement, discard, full stream compression (and header & meta)
 
-make woff1 and woff2 svg graphs for median filesize savings, data from woff2 evaluation report
+DONE make woff1 and woff2 svg graphs for median filesize savings, data from woff2 evaluation report
 
 
-new slide in performance section: declaring subsetting with urange. multiple @font-face rules to make a composite font.
+(not yet) new slide in performance section: declaring subsetting with urange. multiple @font-face rules to make a composite font.
 only downloaded if that range is needed
 reduces page weight but can increase load time (more http requests, load on demand if text changes)
 
-?? miss out font loading API if no time to make slides for it
+DONE font loading API if no time to make slides for it
 
  mention css4 font-palette property
 https://drafts.csswg.org/css-fonts-4/
@@ -66,6 +67,12 @@ DONE
 
 in futures, talk about new generic font families like emoji  and fangsong 
 DONE
+
+
+fix:
+woff 1,0
+sample with woff2 and woff1 fallback
+
 -------
 tips
 
