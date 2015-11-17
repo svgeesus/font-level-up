@@ -43,6 +43,11 @@
 	src: url(fonts/Kafeel/KafeelPainter-Layers-SVG.ttf);
 }
 
+@font-face {
+	font-family: 'roch';
+	src: url(fonts/Rochester-Regular.otf);
+}
+
 #for-browser {
 	background: #333;
 	background-image: linear-gradient(to left, rgba(0,0,0,.5), rgba(0,0,0,.5)), linear-gradient(to left, rgba(0,0,0,.5), rgba(0,0,0,.5));
@@ -106,6 +111,15 @@
 		#intro .attribution a:not() {
 			text-decoration: none;
 		}
+
+#woff-logo {
+	font-family: roch;
+	font-size: 250%;
+	color: var(--orange);
+}
+	#woff-logo .web {
+		color: var(--dark-green);
+	}
 
 .activity {
 	text-align: center;
@@ -559,6 +573,20 @@
 	text-align: center;
 }
 
+#east-asian p {
+	/* placeholder while Source Han Sans downloads */
+	font-family: 'Microsoft JengHei';
+	font-weight: bold;
+	font-size: 400%;
+	text-align: center;
+}
+	#east-asian p :lang(zh-hans) {
+		color: var(--pale-green);
+	}
+
+	#east-asian p :lang(zh-hant) {
+		color: var(--buff);
+	}
 
 #OTfeatures.image.slide > h1:only-child {
 	margin-top: 210px;

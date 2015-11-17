@@ -32,6 +32,7 @@ add the asian forms opentype feature example
   needs raw textarea with selectors
   use lang selector, simplified vs traditional chinese  草 (U+8349)
   Source Han Sans (Adobe) has CJK linguistic forms
+  NOT DONE failed download after 1.4Gb, can't find equivalent fort with Han variant forms
 
 add equivalent low-level code using font-feature-settings
 
