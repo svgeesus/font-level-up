@@ -84,14 +84,9 @@ textarea, pre.styled {
 	color: inherit;
 	border: 0;
 	outline: none;
-	/* position: absolute;
-	top: 0;
-	right: 0;
-	width: 75%;
-	height: 100%; */
 	padding: .6em 1em;
 	box-sizing: border-box;
-	background: hsl(200, 20%, 25%) linear-gradient(rgba(0,0,0,.1) 50%, transparent 0);
+	background: var(--darkgrey) linear-gradient(rgba(0,0,0,.1) 50%, transparent 0);
 	background-origin: content-box;
 	background-size: auto 3em;
 	background-attachment: local;
@@ -114,16 +109,6 @@ textarea, pre.styled {
 			tab-size: 3;
 			overflow: auto;
 		}
-	}
-
-	textarea.bottom {
-		bottom: 0;
-		left: 0;
-		right: 0;
-		top: auto;
-		width: 100%;
-		height: auto;
-		box-shadow: 0 .1em .2em rgba(0,0,0,.3) inset;
 	}
 
 .slide {
@@ -241,7 +226,6 @@ code.de-emphasize {
  code[class*="language-"],
  pre[class*="language-"] {
  	color: white;
- 	text-shadow: 0 -.1em .2em black;
  	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
  	direction: ltr;
  	text-align: left;

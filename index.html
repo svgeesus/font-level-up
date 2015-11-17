@@ -186,6 +186,25 @@ h1 {
 	-->
 	</section>
 
+	<section class="slide hsplit dont-resize" id="ampersand-demo">
+	<!--
+	First hover over the h1 to show that it has no extra elements.
+	Then type:
+
+	@font-face {
+		font-family: ampersand;
+		src: url(fonts/Rochester-Regular.otf);
+		unicode-range: U+26;
+	}
+
+	then change the font-family on the h1 to ampersand, var(--heading-font)
+	-->
+		<h1 class="show-html">This & That</h1>
+	<textarea>h1 {
+	font-family: var(--heading-font);
+}</textarea>
+	</section>
+	
 	<section class="slide split-definition" id="fancy-ampersand">
 		<dl>
 			<dt id="ampersand">This & That</dt>
@@ -197,7 +216,8 @@ h1 {
 		</dl>
 		<dl>
 			<dt>U+26</dt>
-			<dd>Use just the ampersand</dd></dl>
+			<dd>Use just the ampersand</dd>
+		</dl>
 	</section>
 </section>
 

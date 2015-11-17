@@ -56,7 +56,7 @@ $$('textarea').forEach(function(textarea) {
 
 
 
-/*
+
 $$('.show-html').forEach(function(element) {
 
 	element.onmouseenter = function (evt) {
@@ -76,6 +76,10 @@ $$('.show-html').forEach(function(element) {
 
 			element.classList.remove('show-html');
 			element.classList.remove('subject');
+
+			if (!element.classList.length) {
+				element.removeAttribute("class");
+			}
 
 			code.textContent = element.outerHTML || element.innerHTML;
 			
@@ -107,4 +111,4 @@ $$('.show-html').forEach(function(element) {
 	element.onmouseleave = function () {
 		element.tooltip.classList.remove('active');
 	}
-});*/
+});

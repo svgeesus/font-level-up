@@ -224,7 +224,7 @@
 	text-align: center;
 }
 	
-	.charquiz:not(:target) {
+	.charquiz:target {
 		display: flex;
 		flex-flow: column;
 	}
@@ -390,10 +390,10 @@
 	position: absolute;
 	z-index: 100;
 	max-width: 90vw;
-	padding: 1em;
+	padding: .6em 1em;
 	border: 1px solid rgba(0,0,0,.2);
 	border-radius: .5em;
-	box-shadow: .1em .1em 1em rgba(0,0,0,.5);
+	box-shadow: .1em .1em 1em rgba(0,0,0,.5) !important;
 	overflow: auto;
 	background: white;
 	font-size: 90%;
@@ -461,10 +461,9 @@
 
 .hsplit textarea {
 	position: absolute;
-	top: 640px;
+	bottom: 0;
 	right: 0;
 	width: 100%;
-	height: 40%;
 	left: 0%;
 }
 
@@ -489,6 +488,19 @@
 	/* font-family: var(--ampersand-font); */
 	font-family: amp, Arvo, serif;
 }
+
+#ampersand-demo {
+	
+}
+
+	#ampersand-demo h1 {
+		font-size: 300%;
+		line-height: 2;
+	}
+
+	#ampersand-demo textarea {
+		font-size: 80% !important;
+	}
 
 #ligatures p {
 	font-family: megalopolis;
