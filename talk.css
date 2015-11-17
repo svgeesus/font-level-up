@@ -209,40 +209,6 @@
 		color: black;
 	}
 
-/* 
-#charglyph {
-	padding: 0;
-	flex-flow: column;
-}
-
-	#charglyph:target {
-		display: flex;
-	}
-
-	#charglyph dl {
-		display: flex;
-		flex: 1;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		margin: 0;
-	}
-
-		#charglyph dl dt {
-			font-size: 250%;
-			line-height: 1.1;
-		}
-
-	#charglyph dl+dl {
-		background: var(--buff);
-		color: var(--darkgrey);
-	}
-
-		#charglyph dl+dl dt {
-			color: var(--orange);
-		}
-
-		*/
 
 .split-definition {
 	padding: 0;
@@ -618,6 +584,7 @@
 	#OTF-sample p.modeste {
 		font-size: 240%;
 		color: var(--orange);
+		text-shadow: 2px 2px 3px var(--midgrey);
 	}
 
 /* Why not use the <figure> element? */
@@ -636,7 +603,7 @@
 		margin: auto;
 	}
 
-#kCOLR, #kSVG { 
+#kCOLR, #kafeelSVG .kSVG, { 
 	font-size: 600%; 
 	margin-left: auto; 
 	margin-right: auto; 
@@ -645,11 +612,21 @@
 	width: 90vw
 }
 
+#svg-palette-demo .kSVG { 
+	font-size: 400%; 
+	margin-left: auto; 
+	margin-right: auto; 
+	margin-top:0;
+	margin-bottom:0;
+	width: 90vw
+	text-align: center;
+}
+
 #kCOLR {
 	font-family: KafeelCOLR; 
 }
 
-#kSVG {
+.kSVG {
 	font-family: KafeelSVG; 
 }
 
@@ -796,12 +773,12 @@ footer.slide {
 		visibility: hidden;
 	}
 
-#font-variant-numeric, #fractions, #tabular {
+#font-variant-numeric, #fractions, #tabular, #ligatures, #east-asian, #no-fake-bold-italic {
 	padding: 0;
 	text-align: center;	
 }
 
-	#font-variant-numeric p, #fractions p {
+	#font-variant-numeric p, #fractions p, #east-asian p, #no-fake-bold-italic p {
 		margin: 0;
 		font-family: LinBio;
 		font-size: 350%;
@@ -815,11 +792,11 @@ footer.slide {
 		font-size: 280%;
 	}
 
-	#font-variant-numeric pre, #fractions pre, #tabular pre {
+	#font-variant-numeric pre, #fractions pre, #tabular pre, #ligatures pre, #east-asian pre, #no-fake-bold-italic pre {
 		margin-top: 1em;
 	}
 
-	#font-variant-numeric select, #fractions select, #tabular select {
+	#font-variant-numeric select, #fractions select, #tabular select, #ligatures select, #east-asian select, #no-fake-bold-italic select {
 		text-align: right;
 	}
 

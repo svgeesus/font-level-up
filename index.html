@@ -438,7 +438,7 @@ h1 {
 		<div class="delayed"><p id="kCOLR">Painter Kafeel</p></div>
 	</section>
 
-	<section class=" slide" id="unstyled">
+	<section class="image slide" id="unstyled" style="background: url(img/woodletters_o.jpg) center #2D2C2C no-repeat; background-size: cover;">
 		<h1>Where did the styling go?</h1>
 	</section>
 
@@ -447,8 +447,24 @@ h1 {
 		<div class="delayed"><p>SVG holds SVG graphics</p></div>
 		<div class="delayed"><p>CPAL holds color palette(s)</p></div>
 		<div class="delayed"><p>CSS variables to alter palette</p></div>
-		<div class="delayed"><p id="kSVG">Painter Kafeel</p></div>
+		<div class="delayed"><p class="kSVG">Painter Kafeel</p></div>
 	</section>
+
+	<section class="slide hsplit dont-resize" id="svg-palette-demo">
+	<!--
+	This depends on the SVG glyphs having used ver() syntax, which the exported kafeel does not
+	Bug report to FontLab for TransType 4
+	-->
+	<p class="kSVG">Painter Kafeel</p>
+	<textarea>p.kSVG {
+	--color0: #F39;
+	--color1: #9E9D81;
+	--color2: #F06;
+	--color3: #703;
+}</textarea>
+	</section>
+
+	<!-- end of futures section -->
 </section>
 
 <footer class="dark slide">
