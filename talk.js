@@ -1,3 +1,11 @@
+$$("pre input").forEach(function(input) {
+	var adjustSize = function(){
+		input.style.width = input.value.length + "ch";
+	};
+
+	input.addEventListener("input", adjustSize);
+	adjustSize();
+});
 
 var topics = $("#topics ul");
 $$("section > header.slide").forEach(function(slide) {

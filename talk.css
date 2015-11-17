@@ -537,7 +537,14 @@
 	.figure {
 		margin-left: auto;
 		margin-right: auto;
+		font-family: LinBio;
+		font-size: 400%;
 		line-height: 1.35;
+	}
+
+	.property.slide pre input[type="number"] {
+		-webkit-appearance: none;
+		-moz-appearance:textfield;
 	}
 
 #ligatures p {
@@ -551,7 +558,6 @@
 	font-family: 'Microsoft JengHei';
 	font-weight: bold;
 	font-size: 400%;
-	text-align: center;
 }
 	#east-asian p :lang(zh-hans) {
 		color: var(--pale-green);
@@ -562,9 +568,7 @@
 	}
 
 #no-fake-bold-italic  p {
-	font-family: LinBio;	/* has only one face */
 	font-size: 200%;
-	text-align: center;
 }
 	
 	#no-fake-bold-italic p i {
@@ -576,11 +580,9 @@
 		/* firefox fakebolds anyway */
 	}
 
-
 #OTfeatures.image.slide > h1:only-child {
 	margin-top: 210px;
 }
-
 
 #OTF-sample p {
 	font-family: Megalopolis;
