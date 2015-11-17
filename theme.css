@@ -275,6 +275,11 @@ code.de-emphasize {
  	color: var(--pale-green);
  }
 
+ .comment {
+ 	font-family: var(--handwriting-font);
+ 	font-size: 110%;
+ }
+
  .token.punctuation {
  	opacity: .7;
  }

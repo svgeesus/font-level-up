@@ -412,20 +412,11 @@
 		white-space: pre-wrap;	
 	}
 
-
-
-.comment {
-	color: red;
-	font-family: 'Reenie Beanie', sans-serif;
-	font-weight: normal;
-}
-
-
-
 /* Styling for individual code samples */
 #propvsdesc-code pre {
 	width: fit-content;
 	margin: auto;
+	font-size: 80%;
 }
 
 #propvsdesc-code .comment {
