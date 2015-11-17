@@ -626,6 +626,16 @@
 	margin-right: auto;
 }
 
+#illuminated p, #TransTypeDemo p {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+	#illuminated p img, #TransTypeDemo p img {
+		margin: auto;
+	}
+
 #kCOLR, #kSVG { 
 	font-size: 600%; 
 	margin-left: auto; 
