@@ -5,7 +5,7 @@
 Unicode range: start with syntax (say current slide content).
 split definition format: top has pre code with Latin-only urange; 
 bottom has dt descriptor dd allowed range of Unicode characters 
-DONE but ugly, flex puts all the space on the code
+DONE
 
 new slide with ampersand example DONE 
   but FF bug!! fixed but not deployed
@@ -15,6 +15,7 @@ in about:config, layout.css.unicode-range.enabled =  true
   live result works (with config change) so wtf
 
 add slide with full css code
+DONE
 
 ? make rochester into woff if cygwin stops misbehaving
 
@@ -22,7 +23,7 @@ add slide with full css code
 
 replace second myriad pro with a different font that has condensed; pref a serif one
 
-? shift the h1 on OT features slide so it is over the green foundries not the grey ot features
+shift the h1 on OT features slide so it is over the green foundries not the grey ot features
 DONE
 
 add slide after #featureIntro with lots of features used at once. use megalopolis-extra, and spans to set the features (fancy ligatures, swashes)
@@ -37,8 +38,10 @@ add the asian forms opentype feature example
 add equivalent low-level code using font-feature-settings
 
 add font-synthesis: none
+DONE but FF still synthesises a bold
 
 add emoji and illuminated examples of chromatic fonts
+DONE
 
 add font-kerning: normal to force all browsers to do the kerning they should be doing anyway
 
@@ -57,13 +60,12 @@ reduces page weight but can increase load time (more http requests, load on dema
 
 ?? miss out font loading API if no time to make slides for it
 
-add chromatic font intro slides with illuminated and with emojii
-
  mention css4 font-palette property
 https://drafts.csswg.org/css-fonts-4/
+DONE
 
 in futures, talk about new generic font families like emoji  and fangsong 
-
+DONE
 -------
 tips
 
