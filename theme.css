@@ -13,6 +13,7 @@
 	font-family: 'amp';
 	src: url(fonts/Rochester-Regular.otf);
 	unicode-range: U+26;
+	/* aargh the Firefox unicode-range bug strikes again ffs */
 }
 
 :root {
