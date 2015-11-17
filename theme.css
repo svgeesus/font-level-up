@@ -240,9 +240,6 @@ code.de-emphasize {
  pre[class*="language-"] {
  	color: white;
  	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
- 	direction: ltr;
- 	text-align: left;
- 	white-space: pre;
  	word-spacing: normal;
  	word-break: normal;
  	word-wrap: normal;
@@ -258,8 +255,6 @@ code.de-emphasize {
 
  /* Code blocks */
  pre[class*="language-"] {
- 	font-size: 0.6em;
- 	margin-left: 1em;
  	overflow: auto;
  }
 

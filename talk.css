@@ -25,7 +25,7 @@
 }
 
 @font-face {
-	font-family: megalopolis;
+	font-family: Megalopolis;
 	src: url(fonts/MEgalopolisExtra.otf);
 }
 
@@ -40,7 +40,7 @@
 }
 
 @font-face {
-	font-family: 'roch';
+	font-family: 'Rochester';
 	src: url(fonts/Rochester-Regular.otf);
 }
 
@@ -109,7 +109,7 @@
 		}
 
 #webfonts h1 {
-	font-family: roch;
+	font-family: Rochester;
 	font-size: 320%;
 	color: white;
 	text-shadow: .025em .025em var(--pale-green), .05em .05em var(--orange);
@@ -530,8 +530,18 @@
 		font-size: 80% !important;
 	}
 
+.property.slide {
+	text-align: center;
+}
+
+	.figure {
+		margin-left: auto;
+		margin-right: auto;
+		line-height: 1.35;
+	}
+
 #ligatures p {
-	font-family: megalopolis;
+	font-family: Megalopolis;
 	font-size: 300%;
 	text-align: center;
 }
@@ -573,7 +583,7 @@
 
 
 #OTF-sample p {
-	font-family: megalopolis;
+	font-family: Megalopolis;
 	font-size: 300%;
 	font-variant-ligatures: discretionary-ligatures ;
 	text-align: center;
@@ -587,12 +597,6 @@
 		color: var(--orange);
 		text-shadow: 2px 2px 3px var(--midgrey);
 	}
-
-/* Why not use the <figure> element? */
-.figure {
-	margin-left: auto;
-	margin-right: auto;
-}
 
 #illuminated p, #TransTypeDemo p {
 	display: flex;
