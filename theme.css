@@ -93,8 +93,6 @@ input[type="range"][orient="vertical"] {
 }
 
 textarea, pre.styled {
-	background: transparent;
-	color: inherit;
 	border: 0;
 	outline: none;
 	padding: .6em 1em;
@@ -103,8 +101,7 @@ textarea, pre.styled {
 	background-origin: content-box;
 	background-size: auto 3em;
 	background-attachment: local;
-	color: #F3D69B;
-	line-height: 1.5;
+	color: white;
 }
 
 	textarea:not(.bottom) {
@@ -237,7 +234,7 @@ code.de-emphasize {
  */
 
  code[class*="language-"],
- pre[class*="language-"] {
+ pre {
  	color: white;
  	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
  	word-spacing: normal;
@@ -249,12 +246,12 @@ code.de-emphasize {
  }
 
  .slide:not(.dark) pre {
- 	background: var(--darkgrey);
+ 	background-color: var(--darkgrey);
  	box-shadow: 2em 0 0 1em var(--darkgrey), -2em 0 0 1em var(--darkgrey);
  }
 
  /* Code blocks */
- pre[class*="language-"] {
+ pre {
  	overflow: auto;
  }
 

@@ -439,7 +439,60 @@
 		font-size: 80% !important;
 	}
 
-#loadAPI textarea
+#font-loading:target {
+	display: flex;
+	padding: 0;
+}
+
+	#font-loading pre {
+		position: relative;
+		box-shadow: none;
+		margin: 0;
+		padding: 1em;
+		font-size: 70%;
+		flex: 1;
+		transition: .4s flex;
+		overflow-x: hidden;
+	}
+
+		#font-loading pre::before {
+			content: "CSS";
+			position: absolute;
+			top: 0;
+			right: .5em;
+			padding: .3em .3em .1em;
+			background: var(--orange);
+			color: var(--darkgrey);
+			font: bold 120% var(--heading-font);
+			border-radius: .3em;
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+		}
+
+	#font-loading pre.language-css {
+		margin-right: .3em;
+	}
+
+		#font-loading pre.language-javascript::before {
+			content: "JS";
+		}
+
+	#font-loading pre.language-javascript .comment {
+		font-size: 150%;
+		line-height: .68
+	}
+	
+	#font-loading pre.language-javascript code + code {
+		transition: .4s .5s opacity;
+	}
+
+	#font-loading:not([data-step]) pre.language-javascript code + code {
+		opacity: 0;
+	}
+
+	#font-loading[data-step] pre.language-css {
+		flex: 0;
+	}
 
 .property.slide {
 	text-align: center;

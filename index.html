@@ -446,20 +446,37 @@ h1 {
 		<p>Memory for decompression only 1.05x that for WOFF1</p>
 	</section>
 
-	<section class="slide darker" id="loadAPI">
-		<h1>Font Loading API</h1>
+	<section class="slide darker" id="font-loading" data-steps="1">
+		<!-- <h1>Font Loading API</h1> -->
 		
-		<pre class="delayed inline"><code>@font-face {
-	font-family: Demo;
-	src: url(Arvo.woff) format ("woff");
+		<pre class="styled"><code>
+
+
+@font-face {
+	font-family: Arvo;
+	src: url(Arvo-BoldItalic.woff)
+	     format ("woff");
 	font-weight: bold;
+	font-style: italic;
 }</code></pre>
-		<! sliding the second on on top of the first would be nice -->
-		<pre class="delayed inline"><code class="language-javascript">var foo = new FontFace ()
-	'Demo',
-	'url(Arvo.woff) format ("woff")',
-	{ weight: 'bold' }
-;</code></pre>
+		
+		<pre class="styled language-javascript"><code>/* Font Loading API!
+http://w3.org/TR/css-font-loading
+Support: FF, Chrome, Opera, Android */
+var arvo = new FontFace({
+	'Arvo',
+	'url(Arvo-BoldItalic.woff) \
+		format ("woff")',
+	{
+		weight: "bold",
+		style: "italic"
+	}
+});</code><code>
+
+arvo.loaded.then(()=>{
+	document.body.classList.add("arvo-loaded");
+});
+</code></pre>
 	</section>
 
 	<section class="slide" id="LoadAPIEvents">
