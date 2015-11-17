@@ -2,6 +2,13 @@
 @import url("https://fonts.googleapis.com/css?family=Reenie+Beanie");
 
 @font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(http://fonts.gstatic.com/s/lato/v11/ayfRv9GMahGqd-q6YxHjSg.woff2) format('woff2');
+}
+
+@font-face {
 	font-family: LinBio;
 	src: url(fonts/LinBiolinum_R.woff);
 }
