@@ -108,12 +108,13 @@
 			text-decoration: none;
 		}
 
-#woff-logo {
+#webfonts h1 {
 	font-family: roch;
-	font-size: 250%;
-	color: var(--orange);
+	font-size: 320%;
+	color: white;
+	text-shadow: .025em .025em var(--pale-green), .05em .05em var(--orange);
 }
-	#woff-logo .web {
+	#webfonts h1 .web {
 		color: var(--dark-green);
 	}
 
@@ -390,7 +391,7 @@
 				}
 			
 		#csswg, #webfontswg, #webaudiowg {
-			color: #E79D5E;
+			color: var(--tan);
 		}
 		
 			#csswg strong, #webfontswg strong, #webaudiowg strong{
