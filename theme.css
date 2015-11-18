@@ -102,6 +102,7 @@ textarea, pre.styled {
 	background-size: auto 3em;
 	background-attachment: local;
 	color: white;
+	line-height: 1.5;
 }
 
 	textarea:not(.bottom) {
