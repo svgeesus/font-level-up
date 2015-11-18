@@ -589,15 +589,6 @@ pre.inline + pre.inline {
 		text-shadow: 2px 2px 3px var(--midgrey);
 	}
 
-#illuminated p, #TransTypeDemo p {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-	#illuminated p img, #TransTypeDemo p img {
-		margin: auto;
-	}
 
 /* SECTION: Performance */
 
@@ -659,7 +650,25 @@ pre.inline + pre.inline {
 			font-weight: normal;
 		}
 
+#mobilewoff2 {
+	font-size: 300%;
+}
+
 /* SECTION: The Future starts here */
+
+#illuminated p, #TransTypeDemo p {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+	#illuminated p img, #TransTypeDemo p img {
+		margin: auto;
+	}
+
+#kafeelColor, #kafeelSVG {
+	font-size: 300%;
+}
 
 .multicolour-fake {
 	position: relative;
