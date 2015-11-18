@@ -533,11 +533,11 @@ arvo.loaded.then(()=>{
 	Also, var syntax changed wrt SVG Glyphs in OpenType report
 	http://www.w3.org/2013/10/SVG_in_OpenType/#render
 	-->
-	<h1 class="multicolour-fake">
-		<span>Painter Kaffeel</span>
-	</h1>
+	<div class="multicolour-fake" id="demo">
+		<p>Painter Kaffeel</p>
+	</div>
 	<!-- Idea: instead of typing entirely new colours, press shift + arrow key with caret on hue to circle through all hues -->
-	<textarea>h1 {
+	<textarea>#demo {
 	--color0: black;
 	--color1: hsl(15, 75%, 34%);
 	--color2: hsl(15, 80%, 70%); 
