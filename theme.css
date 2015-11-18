@@ -42,7 +42,7 @@
 
 	/* Fonts */
 	--heading-font: Arvo, serif;
-	--body-font: 'Free Sans', 'Helvetica Neue', sans-serif;
+	--body-font: 'Helvetica Neue', 'Free Sanss', serif, sans-serif;
 	--handwriting-font: 'Reenie Beanie', cursive;
 	--ampersand-font: amp, Arvo, serif;
 }

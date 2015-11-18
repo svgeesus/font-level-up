@@ -409,7 +409,7 @@ h1 {
 	<!-- add diagram showing sfnt to woff2, animate re-arrangement and then compression -->
 	</section>
 
-	<section class="slide">
+	<section class="slide dont-resize">
 		<ul class="bar-chart" title="File size">
 			<li title="Uncompressed" style="height: 100%">100%</li>
 			<li title="WOFF 1.0" style="height: 45%">45%</li>
@@ -417,23 +417,13 @@ h1 {
 		</ul>
 	</section>
 
-	<section class="darker slide split-definition" id="woff1size">
-		<dl><dt>WOFF 1.0</dt>
-			<dd>with TrueType glyphs</dd>
-		</dl>
-		<dl>
-			<dt>55%</dt>
-			<dd>(mean saving)</dd>
-		</dl>
-	</section>
-
 	<section class="darker slide split-definition" id="woff2size">
 		<dl><dt>WOFF 2.0</dt>
 			<dd>with TrueType glyphs</dd>
 		</dl>
 		<dl>
-			<dt>68%</dt> <!-- 25% better than woff1 -->
-			<dd>(mean saving)</dd>
+			<dt>68%</dt>
+			<dd>25% better than WOFF 1.0</dd>
 		</dl>
 	</section>
 
@@ -442,8 +432,8 @@ h1 {
 			<dd>with CFF glyphs</dd>
 		</dl>
 		<dl>
-			<dt>63.5</dt> <!-- 15.5% better than woff1 -->
-			<dd>(mean saving)</dd>
+			<dt>63.5%</dt>
+			<dd>15.5% better than WOFF 1.0</dd>
 		</dl>
 	</section>
 
@@ -542,8 +532,9 @@ arvo.loaded.then(()=>{
 	Also, var syntax changed wrt SVG Glyphs in OpenType report
 	http://www.w3.org/2013/10/SVG_in_OpenType/#render
 	-->
-	<div class="multicolour-fake">
-		<h1>Painter Kaffeel</h1></div>
+	<h1 class="multicolour-fake">
+		<span>Painter Kaffeel</span>
+	</h1>
 	<!-- Idea: instead of typing entirely new colours, press shift + arrow key with caret on hue to circle through all hues -->
 	<textarea>h1 {
 	--color0: black;

@@ -634,7 +634,7 @@ pre.inline + pre.inline {
 			left: 0;
 			right: 0;
 			margin-top: .2em;
-			font-size: 50%;
+			font-size: 40%;
 			font-weight: normal;
 		}
 
@@ -657,6 +657,7 @@ pre.inline + pre.inline {
 
 	.multicolour-fake > * {
 		margin: 0;
+		display: block;
 	}
 
 	.multicolour-fake > :nth-of-type(n+2) {
