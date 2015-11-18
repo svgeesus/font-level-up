@@ -3,7 +3,7 @@
 <head>
 
 <meta charset="utf-8" />
-<title>Placeholder</title>
+<title>WebFonts: Level Up!</title>
 <link href="../csss/slideshow.css" rel="stylesheet" />
 <link href="../csss/reusable.css" rel="stylesheet" />
 <link href="theme.css" rel="stylesheet" />
@@ -15,7 +15,7 @@
 
 <section id="for-browser" class="dark slide">
 	<h1>Important</h1>
-	This slide deck was created for use in a controlled environment, during a talk. It works best with Firefox at 1920x1080. It WILL PROBABLY NOT work correctly in other browsers, due to limited support for CSS3 font-variant-* properties at this time.
+	This slide deck was created for use in a controlled environment, during a talk. It works best with a recent Firefox at 1920x1080. It WILL PROBABLY NOT work correctly in other browsers, due to limited support for CSS3 font-variant-* properties and css variables at this time. But the other browsers will catch up. Right? Right??!!
 </section>
 
 <header id="intro" class="slide">
@@ -528,10 +528,12 @@ arvo.loaded.then(()=>{
 
 	<section class="slide hsplit dont-resize" id="svg-palette-demo">
 	<!--
-	This depends on the SVG glyphs having used ver() syntax, which the exported kafeel does not
+	The original demo depends on the SVG glyphs having used var() syntax, which the 
+	exported kafeel does not
 	Bug report to FontLab for TransType 4
 	Also, var syntax changed wrt SVG Glyphs in OpenType report
 	http://www.w3.org/2013/10/SVG_in_OpenType/#render
+	so this is a demo of what it *will* be like
 	-->
 	<div class="multicolour-fake" id="demo">
 		<p>Painter Kaffeel</p>
