@@ -421,6 +421,27 @@
 	font-size: 75%;
 }
 
+#apology {
+
+}
+
+	#apology pre {
+		margin-top: 1em;
+	}
+
+	#apology img {
+		display: block;
+		margin: -.5em auto 0;
+		height: 40vh;
+	}
+
+	#apology p {
+		max-width: 15em;
+		margin: .5em auto 0;
+		text-align: center;
+		font: 150% var(--heading-font);
+	}
+
 #fancy-ampersand.split-definition dt {
 	/* font-family: var(--ampersand-font); */
 	font-family: amp, Arvo, serif;
