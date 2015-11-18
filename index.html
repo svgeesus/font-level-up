@@ -462,7 +462,7 @@ h1 {
 		<pre class="styled language-javascript"><code>/* Font Loading API!
 http://w3.org/TR/css-font-loading
 Support: FF, Chrome, Opera, Android */
-var arvo = new FontFace({
+var arvo = new FontFace(
 	'Arvo',
 	'url(Arvo-BoldItalic.woff) \
 		format ("woff")',
@@ -470,7 +470,7 @@ var arvo = new FontFace({
 		weight: "bold",
 		style: "italic"
 	}
-});</code><code>
+);</code><code>
 
 arvo.loaded.then(()=>{
 	document.body.classList.add("arvo-loaded");
