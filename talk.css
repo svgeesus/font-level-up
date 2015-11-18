@@ -650,7 +650,7 @@ pre.inline + pre.inline {
 			font-weight: normal;
 		}
 
-#mobilewoff2 {
+#mobilewoff2, #woff1, #woff2 {
 	font-size: 300%;
 }
 
