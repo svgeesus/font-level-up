@@ -578,7 +578,67 @@ pre.inline + pre.inline {
 		margin: auto;
 	}
 
-/* The Future starts here */
+/* SECTION: Performance */
+
+.bar-chart {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	height: 75vh;
+	padding: 1em 0 0 0;
+	margin: 0 2em;
+	border: solid rgba(0,0,0,.4);
+	border-width: 0 0 .1em .1em;
+	background: linear-gradient(hsla(0,0%,100%,.1) 50%, transparent 0) 0 0 / auto 20% content-box content-box;
+	list-style: none;
+}
+
+	.bar-chart::before {
+		content: attr(title);
+		position: absolute;
+		transform-origin: -.8em 50%;
+		transform: rotate(-90deg);
+		font-weight: bold;
+	}
+
+	@keyframes bar-grow {
+		from { height: 0; color: transparent; }
+	}
+
+	.bar-chart li {
+		position: relative;
+		flex: 1;
+		margin: 0 5%;
+		background: var(--orange);
+		text-align: center;
+		font-size: 200%;
+		font-weight: bold;
+	}
+
+	.slide:target .bar-chart li {
+		animation: bar-grow 1s;
+	}
+
+	.bar-chart li:nth-of-type(3n+2) {
+		background: var(--tan);
+	}
+
+	.bar-chart li:nth-of-type(3n) {
+		background: var(--buff);
+	}
+
+		.bar-chart li::before {
+			content: attr(title);
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			margin-top: .2em;
+			font-size: 50%;
+			font-weight: normal;
+		}
+
+/* SECTION: The Future starts here */
 
 .multicolour-fake {
 	position: relative;
