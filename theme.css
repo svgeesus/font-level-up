@@ -31,11 +31,11 @@
 
 :root {
 	/* Colors */
-	--dark-green: #4E5D58;
-	--pale-green: #9E9D81;
+	--dark-green: hsl(160, 9%, 34%);
+	--pale-green: hsl(58, 13%, 56%);
 	--buff: #F3D69B;
 	--tan: #E79D5E;
-	--orange: #D66039;
+	--orange: hsl(15, 65%, 53%);
 	--red: #d00; /* use only with a multiply blend mode! */
 	--darkgrey: #2D2C2C;
 	--midgrey: #474748;

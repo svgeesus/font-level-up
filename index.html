@@ -479,11 +479,6 @@ arvo.loaded.then(()=>{
 </code></pre>
 	</section>
 
-	<section class="slide" id="LoadAPIEvents">
-		<h1>Font Loading API: Events</h1>
-		<p>load start, load complete, load failed</p>
-	</section>
-
 	<!-- end of perf section -->
 </section>
 
@@ -500,12 +495,9 @@ arvo.loaded.then(()=>{
 
 	<section class="slide darker" id="emojidance" title="to emoji" data-src="http://emojiparty.club/%F0%9F%98%8E%F0%9F%98%B3%F0%9F%98%8D%F0%9F%98%BC"></section>
 
-	<section class=" slide" id="chromaticFake">
-		<h1>Fake chromatic fonts</h1>
-		<div class="delayed"><p>Repeated text, positioned on top of itself</p></div>
-		<div class="delayed figure"><object data="img/DouarTest.svg" style="width: 80vw">demo of overlayed text</object></div>
-		<div class="delayed"><p>Repeated text, positioned on top of itself</p></div>
-		<div class="delayed"><p>Repeated text, positioned on top of itself</p></div>
+	<section class="slide dont-resize" id="fake-chromatic" data-steps="1">
+		<div class="multicolour-fake show-html">
+	<p>Painter Kaffeel</p></div>
 	</section>
 
 	<section class=" slide" id="TransTypeDemo">
@@ -539,12 +531,20 @@ arvo.loaded.then(()=>{
 	Also, var syntax changed wrt SVG Glyphs in OpenType report
 	http://www.w3.org/2013/10/SVG_in_OpenType/#render
 	-->
-	<p id="kSVG2">Painter Kafeel</p>
-	<textarea>p.kSVG {
-	--color0: #F39;
-	--color1: #9E9D81;
-	--color2: #F06;
-	--color3: #703;
+	<div class="multicolour-fake">
+		<h1>Painter Kaffeel</h1></div>
+	<!-- Idea: instead of typing entirely new colours, press shift + arrow key with caret on hue to circle through all hues -->
+	<textarea>h1 {
+	--color0: black;
+	--color1: hsl(15, 75%, 34%);
+	--color2: hsl(15, 80%, 70%); 
+	--color3: hsl(15, 75%, 53%);
+	--color4: hsl(15, 75%, 40%);
+	--color5: white;
+	--color6: hsl(58, 15%, 56%);
+	--color7: hsl(58, 15%, 65%);
+	--color8: hsl(58, 15%, 46%);
+	--color9: hsl(58, 15%, 30%);
 }</textarea>
 	</section>
 

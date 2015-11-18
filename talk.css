@@ -578,6 +578,87 @@ pre.inline + pre.inline {
 		margin: auto;
 	}
 
+/* The Future starts here */
+
+.multicolour-fake {
+	position: relative;
+
+	--color0: black;
+	--color1: hsl(15, 75%, 34%);
+	--color2: hsl(15, 80%, 70%); 
+	--color3: hsl(15, 75%, 53%); /* orange */
+	--color4: hsl(15, 75%, 40%);
+	--color5: white;
+	--color6: hsl(58, 15%, 56%);
+	--color7: hsl(58, 15%, 65%);
+	--color8: hsl(58, 15%, 46%); /* pale green */
+	--color9: hsl(58, 15%, 30%);
+}
+
+	.multicolour-fake > * {
+		margin: 0;
+	}
+
+	.multicolour-fake > :nth-of-type(n+2) {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	.multicolour-fake :nth-of-type(1) { font-family: Kafeel Painter base; color: var(--color0); }
+	.multicolour-fake :nth-of-type(2) { font-family: "Kafeel Painter 1"; color: var(--color1); }
+	.multicolour-fake :nth-of-type(3) { font-family: "Kafeel Painter 2"; color: var(--color2); }
+	.multicolour-fake :nth-of-type(4) { font-family: "Kafeel Painter 3"; color: var(--color3); }
+	.multicolour-fake :nth-of-type(5) { font-family: "Kafeel Painter 4"; color: var(--color4); }
+	.multicolour-fake :nth-of-type(6) { font-family: "Kafeel Painter 5"; color: var(--color5); }
+	.multicolour-fake :nth-of-type(7) { font-family: "Kafeel Painter 6"; color: var(--color6); }
+	.multicolour-fake :nth-of-type(8) { font-family: "Kafeel Painter 7"; color: var(--color7); }
+	.multicolour-fake :nth-of-type(9) { font-family: "Kafeel Painter 8"; color: var(--color8); }
+	.multicolour-fake :nth-of-type(10) { font-family: "Kafeel Painter 9"; color: var(--color9); }
+
+#fake-chromatic {
+	background: var(--buff);
+	overflow: hidden;
+}
+
+#fake-chromatic .tooltip {
+	font-size: 50%;
+	white-space: pre;
+	pointer-events: none;
+}
+
+	#fake-chromatic:target {
+		display: flex;
+	}
+
+	#fake-chromatic .multicolour-fake {
+		margin: auto;
+		font-size: 300%;
+	}
+
+	#fake-chromatic p {
+		transition: .8s transform;
+	}
+
+	#fake-chromatic p + p {
+		pointer-events: none;
+	}
+
+	#fake-chromatic[data-step] p:nth-of-type(2) { transform: translateY(-.5em);}
+	#fake-chromatic[data-step] p:nth-of-type(3) { transform: translateY(-1em);}
+	#fake-chromatic[data-step] p:nth-of-type(4) { transform: translateY(-1.5em);}
+	#fake-chromatic[data-step] p:nth-of-type(5) { transform: translateY(-2em);}
+	
+	#fake-chromatic p:nth-of-type(6) { transition-delay: 1s;}
+	#fake-chromatic[data-step] p:nth-of-type(6) { transform: translateY(2.5em);}
+
+	#fake-chromatic[data-step] p:nth-of-type(7) { transform: translateY(.5em);}
+	#fake-chromatic[data-step] p:nth-of-type(8) { transform: translateY(1em);}
+	#fake-chromatic[data-step] p:nth-of-type(9) { transform: translateY(1.5em);}
+	#fake-chromatic[data-step] p:nth-of-type(10) { transform: translateY(2em);}
+
 #kCOLR, #kSVG { 
 	font-size: 600%; 
 	margin-left: auto; 
@@ -587,15 +668,16 @@ pre.inline + pre.inline {
 	width: 90vw
 }
 
-#svg-palette-demo #kSVG2 { 
-	font-size: 400%; 
-	margin-left: auto; 
-	margin-right: auto; 
-	margin-top:0;
-	margin-bottom:0;
-	width: 90vw;
-	text-align: center;
+#svg-palette-demo {
+	background: var(--buff);
 }
+
+	#svg-palette-demo .multicolour-fake { 
+		font-size: 320%; 
+		margin: .3em auto;
+		width: 90vw;
+		text-align: center;
+	}
 
 #kCOLR {
 	font-family: KafeelCOLR; 

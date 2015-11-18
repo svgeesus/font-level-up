@@ -19,6 +19,18 @@ $$(".question").forEach(function(q){
 	q.classList.add("delayed");
 });
 
+$$(".multicolour-fake > *").forEach(function(p) {
+	var div = p.parentNode;
+
+	for (var i=0; i<9; i++) {
+		div.appendChild(document.createTextNode("\n\t"));
+		div.appendChild(p.cloneNode(true));
+	}
+});
+
+/**
+ * SLIDESHOW CREATION
+ */
 var slideshow = new SlideShow();
 
 $$('.css-control').forEach(function(control) {
