@@ -959,3 +959,18 @@ select {
 	vertical-align: middle;
 	
 }
+
+#image-credits {
+	font-size: 150%;
+}
+
+	#image-credits dt {
+		background: var(--dark-green);
+		padding: 6px;
+		border-radius: 4px;
+		color: var(--buff);
+	}
+
+	#image-credits a {
+		text-decoration: none;
+	}
