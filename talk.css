@@ -960,17 +960,25 @@ select {
 	
 }
 
-#image-credits {
+.credits {
 	font-size: 150%;
 }
 
-	#image-credits dt {
+	.credits dt {
 		background: var(--dark-green);
-		padding: 6px;
-		border-radius: 4px;
+		padding: 6px 2em ;
 		color: var(--buff);
 	}
 
-	#image-credits a {
+	.credits a {
 		text-decoration: none;
+	}
+
+#font-credits {
+	font-size: 140%;
+}
+
+	#font-credits dd {
+		font-family: var(--handwriting-font);
+		font-size: 100%;
 	}
