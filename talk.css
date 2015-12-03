@@ -7,6 +7,13 @@
 }
 
 @font-face {
+  font-family: 'Source Han Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url(fonts/SourceHanSansCN-Medium.woff);
+}
+
+@font-face {
   font-family: 'Reenie Beanie';
   font-style: normal;
   font-weight: 400;
@@ -538,11 +545,13 @@
 	text-align: center;
 }
 
-#east-asian p {
+#east-asian p.figure {
 	/* placeholder while Source Han Sans downloads */
-	font-family: 'Microsoft JengHei';
-	font-weight: bold;
+	font-family: 'Source Han Sans';
+	font-weight: 500;
+	margin: 0;
 	font-size: 500%;
+	}
 }
 	#east-asian p :lang(zh-hans) {
 		color: var(--dark-green);
@@ -550,6 +559,10 @@
 
 	#east-asian p :lang(zh-hant) {
 		color: var(--buff);
+	}
+
+	#east-asian p :lang(ja) {
+		color: var(--tan);
 	}
 
 pre.inline + pre.inline {
@@ -926,7 +939,7 @@ footer.slide {
 	text-align: center;	
 }
 
-	#font-variant-numeric p, #fractions p, #east-asian p, #no-fake-bold-italic p {
+	#font-variant-numeric p, #fractions p, #no-fake-bold-italic p {
 		margin: 0;
 		font-family: LinBio;
 		font-size: 350%;
