@@ -546,18 +546,17 @@
 }
 
 #east-asian p.figure {
-	/* placeholder while Source Han Sans downloads */
 	font-family: 'Source Han Sans';
 	font-weight: 500;
 	margin: 0;
-	font-size: 500%;
+	font-size: 400%;
 	}
 }
-	#east-asian p :lang(zh-hans) {
+	#east-asian p :lang(zh-Hans) {
 		color: var(--dark-green);
 	}
 
-	#east-asian p :lang(zh-hant) {
+	#east-asian p :lang(zh-Hant) {
 		color: var(--buff);
 	}
 
