@@ -20,9 +20,9 @@ DONE
 ? make rochester into woff if cygwin stops misbehaving
 copied as Amper.otf for faster live coding
 
-NOPE  finally, new slide with syntax apology if it still seems worth saying
+DONE  finally, new slide with syntax apology if it still seems worth saying
 
-replace second myriad pro with a different font that has condensed; pref a serif one
+DONE (but uses platform fonts not webfonts) replace second myriad pro with a different font that has condensed; pref a serif one
 
 shift the h1 on OT features slide so it is over the green foundries not the grey ot features
 DONE
@@ -35,8 +35,9 @@ add the asian forms opentype feature example
   use lang selector, simplified vs traditional chinese  草 (U+8349)
   Source Han Sans (Adobe) has CJK linguistic forms
   NOT DONE failed download after 1.4Gb, can't find equivalent fort with Han variant forms
+  STILL NOT DONE problems using Source Han Sans with language-sensitive forms. 
 
-add equivalent low-level code using font-feature-settings
+STILL TO DO add equivalent low-level code using font-feature-settings
 
 add font-synthesis: none
 DONE but FF still synthesises a bold
@@ -48,9 +49,9 @@ add font-kerning: normal to force all browsers to do the kerning they should be 
 
 mentions same-origin policy and effect on webfonts
 
-NO DIAG add woff1 diagram, showing per-table compression, header, meta
+TO-DO DIAG add woff1 diagram, showing per-table compression, header, meta
 
-NO DIAG add woff2 diagram showing type rearrangement, discard, full stream compression (and header & meta)
+TO-DO DIAG add woff2 diagram showing type rearrangement, discard, full stream compression (and header & meta)
 
 DONE make woff1 and woff2 svg graphs for median filesize savings, data from woff2 evaluation report
 
@@ -58,6 +59,8 @@ DONE make woff1 and woff2 svg graphs for median filesize savings, data from woff
 (not yet) new slide in performance section: declaring subsetting with urange. multiple @font-face rules to make a composite font.
 only downloaded if that range is needed
 reduces page weight but can increase load time (more http requests, load on demand if text changes)
+
+TODO - second fallback font declare as urange all, actually has .notdef only. Use as server-sie counter for when user content exceeps current subsetting.
 
 DONE font loading API if no time to make slides for it
 
