@@ -45,6 +45,10 @@ DONE but FF still synthesises a bold
 add emoji and illuminated examples of chromatic fonts
 DONE
 
+Link to Adam Twardoch original proposal for SVG in OpenType, 2011
+https://lists.w3.org/Archives/Public/public-webfonts-wg/2011Jun/0112.html
+and MS Build 2016 announcing support, 31 Mar 2016
+
 add font-kerning: normal to force all browsers to do the kerning they should be doing anyway
 
 mentions same-origin policy and effect on webfonts
