@@ -64,6 +64,10 @@ DONE make woff1 and woff2 svg graphs for median filesize savings, data from woff
 only downloaded if that range is needed
 reduces page weight but can increase load time (more http requests, load on demand if text changes)
 
+TODO Brotli compression options for best decompress speed with slight size tradeoff
+https://docs.google.com/presentation/d/10ZuRkawUDmeNKQCkmXrenCBva53NBKSwFzaBWEmn-8Y/pub?start=false&loop=false&delayms=3000#slide=id.gcafdb9c0a_0_194
+
+
 TODO - second fallback font declare as urange all, actually has .notdef only. Use as server-sie counter for when user content exceeps current subsetting.
 
 DONE font loading API if no time to make slides for it
