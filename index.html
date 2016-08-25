@@ -226,20 +226,25 @@ h1 {
         <section class="slide hsplit dont-resize" id="ampersand-demo">
             <!--
 	First hover over the h1 to show that it has no extra elements.
-	Then type:
 
-	@font-face {
-		font-family: ampersand;
-		src: url(fonts/Rochester-Regular.otf);
-		unicode-range: U+26;
-	}
+	Then change the font-family on the h1 to amps, Arvo, serif
+
+	Lastly add the unicode-range: U+26;
+	
 
 	then change the font-family on the h1 to ampersand, var(- -heading-font)
 	-->
             <h1 class="show-html">This & That</h1>
-            <textarea>h1 {
-	font-family: var(--heading-font);
-}</textarea>
+            <textarea>@font-face {
+		font-family: amps;
+		src: url(fonts/Rochester.otf);
+
+	}
+h1 {
+	font-family: Arvo, serif;
+}
+				
+</textarea>
         </section>
 
         <!-- end of basics section -->
@@ -359,33 +364,32 @@ h1 {
 	</section>
 	-->
 
+        <!-- nope
         <section class="property slide" id="east-asian">
             <p class="figure">
-                <!--
 			<span lang="zh-hans">草</span> 
 			<span lang="zh-hant">草</span>  
 			<span lang="ja-jp">草</span> 
-			-->
-                <span lang="zh-Hans">&#x66DC;</span>
-                <span lang="zh-Hant">&#x66DC;</span>
-                <span lang="ja-Jp">&#x66DC;</span>
-            </p>
-            <p class="figure">
-                <!--
+        <span lang="zh-Hans">&#x66DC;</span>
+        <span lang="zh-Hant">&#x66DC;</span>
+        <span lang="ja-Jp">&#x66DC;</span>
+        </p>
+        <p class="figure">
 			<span lang="zh-hans">草</span> 
 			<span lang="zh-hant">草</span>  
 			<span lang="ja-jp">草</span> 
-			-->
-                <span lang="zh-Hans">廣</span>
-                <span lang="zh-Hant">廣</span>
-                <span lang="ja-Jp">廣</span>
-            </p>
-            <pre><code>font-feature-settings:</code> <select data-style='font-feature-settings: "{value}";' class="css-control">
+            <span lang="zh-Hans">廣</span>
+            <span lang="zh-Hant">廣</span>
+            <span lang="ja-Jp">廣</span>
+        </p>
+        <pre><code>font-feature-settings:</code> <select data-style='font-feature-settings: "{value}";' class="css-control">
 			<option>normal</option>
 			<option>smpl</option>
 			<option>trad</option>
 		</select>;</pre>
-        </section>
+    </section>
+
+    -->
 
         <section class="property slide" id="no-fake-bold-italic">
             <p class="figure">
@@ -554,8 +558,16 @@ arvo.loaded.then(()=>{
             <p><img src="img/illum.jpg" alt="illuminated manuscript" /></p>
         </section>
 
+        <!--
         <section class="slide darker" id="emojidance" title="…to emoji" data-src="http://emojiparty.club/%F0%9F%98%8E%F0%9F%98%B3%F0%9F%98%8D%F0%9F%98%BC"></section>
+-->
 
+        <section class="slide darker" id="emoji" title="…to emoji">
+            <div class="embiggen" show-html>
+                😀 😎 🤖 👨‍👩‍👧‍👦 👦🏻 👧🏻 👨🏻 👩🏻 👦🏼 👧🏼 👨🏼 👩🏼<br/> 👦🏽 👧🏽 👨🏽 👩🏽 👦🏾 👧🏾 👨🏾 👩🏾 👦🏿 👧🏿 👨🏿 👩🏿<br/> 🐱 🐶 🐌 🌎 🍕 🍲 🍫 🍻 ⚽️ 🏀 🏈 ⚾️<br/> 🌈 🏯 🗽 🚆 📱 🎉 🗓 💸 🇫 🇴 🇳 🇹<br/> 🇺🇸 🇧🇷 🇲🇹 🇸🇪 🇳🇬
+                🇰🇭 🇭🇷 🇮🇩 🇳🇿 🇪🇬 🇫🇮 🇨🇳<br/>
+            </div>
+        </section>
         <section class="image slide" style="background-image: url('img/kafeel-handdrawn.jpg');" data-source="handpaintedtype.com"></section>
 
         <section class="slide dont-resize" id="fake-chromatic" data-steps="1">
@@ -566,7 +578,7 @@ arvo.loaded.then(()=>{
         </section>
 
         <section class=" slide" id="TransTypeDemo">
-            <h1>TransType Demo</h1>
+            <h1>TransType Editor</h1>
             <p><img src="img/TransType.png" alt="screenshot for demo"></p>
         </section>
 
