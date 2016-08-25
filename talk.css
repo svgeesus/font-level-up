@@ -710,50 +710,50 @@ pre.inline + pre.inline {
     right: 0;
     bottom: 0;
 }
-.multicolour-fake:nth-of-type(1) {
+.multicolour-fake>:nth-of-type(1) {
     font-family: Kafeel Painter base;
     color: var(--color0);
 }
-.multicolour-fake:nth-of-type(2) {
+.multicolour-fake>:nth-of-type(2) {
     font-family: "Kafeel Painter 1";
     color: var(--color1);
     margin-top: -.11em;
 }
-.multicolour-fake:nth-of-type(3) {
+.multicolour-fake>:nth-of-type(3) {
     font-family: "Kafeel Painter 2";
     color: var(--color2);
     margin-top: -.11em;
 }
-.multicolour-fake:nth-of-type(4) {
+.multicolour-fake>:nth-of-type(4) {
     font-family: "Kafeel Painter 3";
     color: var(--color3);
     margin-top: -.11em;
 }
-.multicolour-fake:nth-of-type(5) {
+.multicolour-fake>:nth-of-type(5) {
     font-family: "Kafeel Painter 4";
     color: var(--color4);
     margin-top: -0.025em;
 }
-.multicolour-fake:nth-of-type(6) {
+.multicolour-fake>:nth-of-type(6) {
     font-family: "Kafeel Painter 5";
     color: var(--color5);
 }
-.multicolour-fake:nth-of-type(7) {
+.multicolour-fake>:nth-of-type(7) {
     font-family: "Kafeel Painter 6";
     color: var(--color6);
     margin-top: 0.26em;
 }
-.multicolour-fake:nth-of-type(8) {
+.multicolour-fake>:nth-of-type(8) {
     font-family: "Kafeel Painter 7";
     color: var(--color7);
     margin-top: 0.26em;
 }
-.multicolour-fake:nth-of-type(9) {
+.multicolour-fake>:nth-of-type(9) {
     font-family: "Kafeel Painter 8";
     color: var(--color8);
     margin-top: 0.26em;
 }
-.multicolour-fake:nth-of-type(10) {
+.multicolour-fake>:nth-of-type(10) {
     font-family: "Kafeel Painter 9";
     color: var(--color9);
     margin-top: 0.29em;
@@ -1000,7 +1000,7 @@ select {
 }
 #emoji .embiggen {
     font-family: emojione;
-    font-size: 5em;
+    font-size: 3em;
 }
 .credits {
     font-size: 150%;

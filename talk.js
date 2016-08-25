@@ -1,31 +1,31 @@
 $$("pre input").forEach(function(input) {
-	var adjustSize = function(){
-		input.style.width = input.value.length + "ch";
-	};
+    var adjustSize = function() {
+        input.style.width = input.value.length + "ch";
+    };
 
-	input.addEventListener("input", adjustSize);
-	adjustSize();
+    input.addEventListener("input", adjustSize);
+    adjustSize();
 });
 
 var topics = $("#topics ul");
 $$("section > header.slide").forEach(function(slide) {
-	var li = document.createElement("li");
-	li.style.backgroundImage = slide.style.backgroundImage;
-	li.textContent = $("h1", slide).textContent;
-	topics.appendChild(li);
+    var li = document.createElement("li");
+    li.style.backgroundImage = slide.style.backgroundImage;
+    li.textContent = $("h1", slide).textContent;
+    topics.appendChild(li);
 });
 
-$$(".question").forEach(function(q){
-	q.classList.add("delayed");
+$$(".question").forEach(function(q) {
+    q.classList.add("delayed");
 });
 
 $$(".multicolour-fake > *").forEach(function(p) {
-	var div = p.parentNode;
+    var div = p.parentNode;
 
-	for (var i=0; i<9; i++) {
-		div.appendChild(document.createTextNode("\n\t"));
-		div.appendChild(p.cloneNode(true));
-	}
+    for (var i = 0; i < 9; i++) {
+        div.appendChild(document.createTextNode("\n\t"));
+        div.appendChild(p.cloneNode(true));
+    }
 });
 
 /**
@@ -34,44 +34,44 @@ $$(".multicolour-fake > *").forEach(function(p) {
 var slideshow = new SlideShow();
 
 $$('.css-control').forEach(function(control) {
-	new CSSControl(control);
+    new CSSControl(control);
 });
 
 function insertText(element, text) {
-	var textEvent = document.createEvent('TextEvent');
+    var textEvent = document.createEvent('TextEvent');
 
-	textEvent.initTextEvent('textInput', true, true, null, text);
+    textEvent.initTextEvent('textInput', true, true, null, text);
 
-	element.dispatchEvent(textEvent);
+    element.dispatchEvent(textEvent);
 }
 
 $$('textarea').forEach(function(textarea) {
-	if (textarea.parentNode.id != "conic-test") {
-		textarea.setAttribute('data-raw', '');
-	}
+    if (textarea.parentNode.id != "conic-test") {
+        textarea.setAttribute('data-raw', '');
+    }
 
-	new Incrementable(textarea);
-	new CSSSnippet(textarea);
+    new Incrementable(textarea);
+    new CSSSnippet(textarea);
 
-	textarea.addEventListener("keyup", function(evt){
-		if (evt.keyCode == 13) { // Enter
-			// Get indent
-			var before = this.value.slice(0, this.selectionStart-1);
-			var indents = before.match(/^\s*/mg);
-			var indent = indents && indents[indents.length - 1];
+    textarea.addEventListener("keyup", function(evt) {
+        if (evt.keyCode == 13) { // Enter
+            // Get indent
+            var before = this.value.slice(0, this.selectionStart - 1);
+            var indents = before.match(/^\s*/mg);
+            var indent = indents && indents[indents.length - 1];
 
-			if (indent) {
-				insertText(this, indent);
-			}
-		}
-	});
+            if (indent) {
+                insertText(this, indent);
+            }
+        }
+    });
 
-	textarea.addEventListener("keydown", function(evt){
-		if (evt.keyCode == 9) { // Tab
-			insertText(this, "\t");
-			evt.preventDefault();
-		}
-	})
+    textarea.addEventListener("keydown", function(evt) {
+        if (evt.keyCode == 9) { // Tab
+            insertText(this, "\t");
+            evt.preventDefault();
+        }
+    })
 });
 
 
@@ -79,56 +79,56 @@ $$('textarea').forEach(function(textarea) {
 
 $$('.show-html').forEach(function(element) {
 
-	element.onmouseenter = function (evt) {
-		if (!element.tooltip) {
-			element.tooltip = document.createElement('pre');
-			
-			var code = document.createElement('code');
-			var attrs = {};
+    element.onmouseenter = function(evt) {
+        if (!element.tooltip) {
+            element.tooltip = document.createElement('pre');
 
-			["class", "data-originalstyle", "data-originalcssText"].forEach(function(attr){
-				attrs[attr] = element.getAttribute(attr);
+            var code = document.createElement('code');
+            var attrs = {};
 
-				if (attr != "class") {
-					element.removeAttribute(attr);
-				}
-			});
+            ["class", "data-originalstyle", "data-originalcssText"].forEach(function(attr) {
+                attrs[attr] = element.getAttribute(attr);
 
-			element.classList.remove('show-html');
-			element.classList.remove('subject');
+                if (attr != "class") {
+                    element.removeAttribute(attr);
+                }
+            });
 
-			if (!element.classList.length) {
-				element.removeAttribute("class");
-			}
+            element.classList.remove('show-html');
+            element.classList.remove('subject');
 
-			code.textContent = element.outerHTML || element.innerHTML;
-			
-			for (var attr in attrs) {
-				var value = attrs[attr];
+            if (!element.classList.length) {
+                element.removeAttribute("class");
+            }
 
-				if (value != null) {
-					element.setAttribute(attr, value);
-				}
-			}
-			
-			element.tooltip.className = 'tooltip';
-			code.className = 'language-markup';
-			
-			element.tooltip.appendChild(code);
-			
-			SlideShow.getSlide(element).appendChild(element.tooltip);
-			
-			Prism.highlightElement(code);
-		}
-		
-		element.tooltip.style.top = evt.clientY - 10 + 'px';
-		
-		element.tooltip.classList.add('active');
-		
-		element.tooltip.style.left = Math.min(innerWidth - element.tooltip.offsetWidth - 10, evt.clientX) + 'px';
-	};
-	
-	element.onmouseleave = function () {
-		element.tooltip.classList.remove('active');
-	}
+            code.textContent = element.outerHTML || element.innerHTML;
+
+            for (var attr in attrs) {
+                var value = attrs[attr];
+
+                if (value != null) {
+                    element.setAttribute(attr, value);
+                }
+            }
+
+            element.tooltip.className = 'tooltip';
+            code.className = 'language-markup';
+
+            element.tooltip.appendChild(code);
+
+            SlideShow.getSlide(element).appendChild(element.tooltip);
+
+            Prism.highlightElement(code);
+        }
+
+        element.tooltip.style.top = evt.clientY - 10 + 'px';
+
+        element.tooltip.classList.add('active');
+
+        element.tooltip.style.left = Math.min(innerWidth - element.tooltip.offsetWidth - 10, evt.clientX) + 'px';
+    };
+
+    element.onmouseleave = function() {
+        element.tooltip.classList.remove('active');
+    }
 });
