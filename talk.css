@@ -1003,13 +1003,13 @@ select {
     font-size: 3em;
 }
 
-#woff1 div, #woff2-hmtx div  {
+#woff1 div, #woff2-hmtx div, #woff2 div  {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
 }
 
-#woff1 object, #woff2-hmtx object  {
+#woff1 object, #woff2-hmtx object, #woff2 object  {
 	height: 80vh;
 }
 
