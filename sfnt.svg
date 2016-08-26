@@ -1,0 +1,86 @@
+﻿<svg viewBox="0 0 40 240" xmlns="http://www.w3.org/2000/svg">
+<style>@font-face {
+  font-family: 'Arvo';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Arvo-Bold'), url(fonts/Arvo-Bold.woff2) format('woff2');
+}
+:root {
+	/* Colors */
+	--dark-green: hsl(160, 9%, 34%);
+	--pale-green: hsl(58, 13%, 56%);
+	--buff: #F3D69B;
+	--tan: #E79D5E;
+	--orange: hsl(15, 65%, 53%);
+	--red: #d00; /* use only with a multiply blend mode! */
+	--darkgrey: #2D2C2C;
+	--midgrey: #474748;
+}
+.labels text, .header text {
+	font-family: Arvo;
+	text-anchor: middle;
+}
+.labels text {
+		fill: var(--buff);
+}
+.header text {
+	fill: var(--tan);
+}
+.labels rect {
+		fill: var(--dark-green);
+		xstroke: var(--orange);
+		xstroke-width:2px;
+}
+.header rect {
+		fill: var(--darkgrey);
+</style>
+<g class="header" font-size="8">
+	<rect x="0" y="0" width="40" height="16" rx="2" ry="2"/>
+	<text x="20" y="10">directory</text>
+</g>
+<g class="labels" font-size="12" transform="translate(0,20)">
+<g class="table">
+<rect x="0" y="0" width="40" height="16" rx="2" ry="2"/>
+<text x="20" y="12">head</text>
+</g>
+<g class="table" transform="translate(0,20)">
+<rect x="0" y="0" width="40" height="16" rx="2" ry="2"/>
+<text x="20" y="12">hhea</text>
+</g>
+<g class="table" transform="translate(0,40)">
+<rect x="0" y="0" width="40" height="16" rx="2" ry="2"/>
+<text x="20" y="12">maxp</text>
+</g>
+<g class="table" transform="translate(0,60)">
+<rect x="0" y="0" width="40" height="16" rx="2" ry="2"/>
+<text x="20" y="12">OS/2</text>
+</g>
+<g class="table" transform="translate(0,80)">
+<rect x="0" y="0" width="40" height="16" rx="2" ry="2"/>
+<text x="20" y="12">hmtx</text>
+</g>
+<g class="table" transform="translate(0,100)">
+<rect x="0" y="0" width="40" height="16" rx="2" ry="2"/>
+<text x="20" y="12">cmap</text>
+</g>
+<g class="table" transform="translate(0,120)">
+<rect x="0" y="0" width="40" height="16" rx="2" ry="2"/>
+<text x="20" y="12">loca</text>
+</g>
+<g class="table" transform="translate(0,140)">
+<rect x="0" y="0" width="40" height="16" rx="2" ry="2"/>
+<text x="20" y="12">glyf</text>
+</g>
+<g class="table" transform="translate(0,160)">
+<rect x="0" y="0" width="40" height="16" rx="2" ry="2"/>
+<text x="20" y="12">name</text>
+</g>
+<g class="table" transform="translate(0,180)">
+<rect x="0" y="0" width="40" height="16" rx="2" ry="2"/>
+<text x="20" y="12">post</text>
+</g>
+<!--
+<text>hhea</text>
+, , OS/2, hmtx, cmap, loca, glyf, name, post-->
+</g>
+</svg>

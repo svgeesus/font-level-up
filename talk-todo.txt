@@ -1,16 +1,18 @@
-﻿todo for talk (? means optional, if time):
+﻿todo for talk (?? means optional, if time):
 
-TO-DO stash the Kafeel chromatic fonts somewhere for easy copying in each time (can't be put in GitHub, not free fonts)
-do another slide with the Multicolore fonts http://xerographer.github.io/multicoloure/ and Reinebow http://xerographer.github.io/reinebow/
+DONE stash the Kafeel chromatic fonts somewhere for easy copying in each time (can't be put in GitHub, not free fonts -  use .gitignore)
 
-Replace emojiparty with the EmojiOne examples
+?? do another slide with the Multicolore fonts http://xerographer.github.io/multicoloure/ and Reinebow http://xerographer.github.io/reinebow/
+plus the quote from the original multicolore designer
+
+DONE 	Replace emojiparty with the EmojiOne examples
 https://github.com/eosrei/emojione-color-font
 
 TO-DO more font loading api examples, see https://drafts.csswg.org/css-font-loading/#font-load-event-examples
 
-TO-DO add font-kerning: normal to force all browsers to do the kerning they should be doing anyway
+?? add font-kerning: normal to force all browsers to do the kerning they should be doing anyway
 
-TO-DO mentions same-origin policy and effect on webfonts
+?? mentions same-origin policy and effect on webfonts
 
 TO-DO DIAG add woff1 diagram, showing per-table compression, header, meta
 

@@ -454,26 +454,34 @@ h1 {
         </section>
 
         <section class="darker slide" id="woff1">
-            <h1>WOFF compression</h1>
-            <div class="delayed">
-                <p>adds header, metadata</p>
-            </div>
-            <div class="delayed">
-                <p>gzips each table</p>
-            </div>
-
-            <!-- add diagram showing sfnt to woff1, animate compression -->
+            <h1>WOFF 1 compression</h1>
+			<div class="wrapper">
+				<object class="sfnt" data="sfnt-woff1.svg"></object>    
+			</div>         
         </section>
 
-        <section class="darker slide" id="woff2">
-            <h1>WOFF2 compression</h1>
-            <div class="delayed">
-                <p>excellent, font-specific compression</p>
-            </div>
-            <div class="delayed">
-                <p>much smaller than woff1</p>
-            </div>
-            <!-- add diagram showing sfnt to woff2, animate re-arrangement and then compression -->
+		<section class="darker slide" id="woff2-hmtx">
+			<h1>WOFF2: hmtx</h1>
+			<div class="wrapper">
+				<object class="sfnt" data="woff2-hmtx.svg"></object>    
+			</div> 
+		</section>
+
+        <section class="darker slide split-definition" id="woff2-glyf-loca">
+            <dl>
+                <dt>WOFF2: glyf</dt>
+                <dd>Seven streams for better compression</dd>
+            </dl>
+
+            <dl class="delayed">
+                <dt>WOFF2: loca</dt>
+                <dd>discard, recalculate</dd>
+            </dl>
+        </section>
+            <h1>WOFF 2 compression</h1>
+            <div class="wrapper">
+				<object class="sfnt" data="sfnt-woff2.svg"></object>    
+			</div>  
         </section>
 
         <section class="slide dont-resize">
@@ -562,7 +570,8 @@ arvo.loaded.then(()=>{
         <section class="slide darker" id="emojidance" title="…to emoji" data-src="http://emojiparty.club/%F0%9F%98%8E%F0%9F%98%B3%F0%9F%98%8D%F0%9F%98%BC"></section>
 -->
 
-        <section class="slide darker" id="emoji" title="…to emoji">
+        <section class="slide darker" id="emoji">
+			<h1>…to emoji</h1>
             <div class="embiggen show-html">
                 😀 😎 🤖 👨‍👩‍👧‍👦 👦🏻 👧🏻 👨🏻 👩🏻 👦🏼 👧🏼 👨🏼 👩🏼
 				<br/> 👦🏽 👧🏽 👨🏽 👩🏽 👦🏾 👧🏾 👨🏾 👩🏾 👦🏿 👧🏿 👨🏿 👩🏿
@@ -627,7 +636,7 @@ arvo.loaded.then(()=>{
 	Bug report to FontLab for TransType 4
 	Also, var syntax changed wrt SVG Glyphs in OpenType report
 	http://www.w3.org/2013/10/SVG_in_OpenType/#render
-	so this is a demo of what it *will* be like
+	so this is, sadly, a demo of what it *will* be like
 	-->
             <div class="multicolour-fake" id="demo">
                 <p>Painter Kaffeel</p>
@@ -685,8 +694,10 @@ arvo.loaded.then(()=>{
             <dd>Jonathon Colman, cc-by-nc-nd</dd>
             <dt><a href="https://commons.wikimedia.org/wiki/File:12th-century_painters_-_Manuscript_of_Church_Law_-_WGA15726.jpg">Manuscript of Church Law</a></dt>
             <dd>Unknown Miniaturist, English (active 1120s in Canterbury). Public domain.</dd>
+			<!--
             <dt><a href="http://emojiparty.club">Emoji Party</a></dt>
             <dd>Charlie Clarke (linked with an iframe)</dd>
+			-->
         </dl>
     </section>
 
@@ -700,16 +711,21 @@ arvo.loaded.then(()=>{
             <dt><a href="http://www.handpaintedtype.com/">Painter Kafeel</a></dt>
             <dd>Commercial (50 USD). Set of ten fonts intended to be manually overlaid to produce lettering in the Indian hand-painted street signage style, by Painter Kafeel and sold by Handpainted Type. Used here as input to produce COLR and SVG demo chromatic
                 fonts. (Because this is a commercially licensed font, I could use it personally but not put the font into the GitHub repo).
-                <dt><a href="http://www.fontsquirrel.com/fonts/rochester">Rochester Regular</a></dt>
-                <dd>Formal, flowing handwriting script, by Sideshow. Used here for the ampersand, and the WebFonts logo.</dd>
-                <dt><a href="http://www.smeltery.net/fonts/megalopolis-extra">MEgalopolis Extra</a></dt>
-                <dd>OpenType display font with a single, bold, weight by SMeltery. Has many OpenType features such as discretionary ligatures, contextual forms, swash forms, numerical alternates, and a range of stylistic sets. Used here to demonstrate common
+            <dt><a href="http://www.fontsquirrel.com/fonts/rochester">Rochester Regular</a></dt>
+            <dd>Formal, flowing handwriting script, by Sideshow. Used here for the ampersand, and the WebFonts logo.</dd>
+            <dt><a href="http://www.smeltery.net/fonts/megalopolis-extra">MEgalopolis Extra</a></dt>
+            <dd>OpenType display font with a single, bold, weight by SMeltery. Has many OpenType features such as discretionary ligatures, contextual forms, swash forms, numerical alternates, and a range of stylistic sets. Used here to demonstrate common
                     and discretionary ligatures.</dd>
 
-                <dt><a href="https://www.google.com/fonts/specimen/Reenie%20Beanie">Reenie Beanie</a></dt>
-                <dd>Informal handwriting script, by James Grieshaber. Used here for comments and other annotations.</dd>
-                <dt><a href="https://github.com/adobe-fonts/source-han-sans/">Source Han Sans</a></dt>
+            <dt><a href="https://www.google.com/fonts/specimen/Reenie%20Beanie">Reenie Beanie</a></dt>
+            <dd>Informal handwriting script, by James Grieshaber. Used here for comments and other annotations.</dd>
+                <!--
+					<dt><a href="https://github.com/adobe-fonts/source-han-sans/">Source Han Sans</a></dt>
                 <dd>Gothic (sans-serif) pan-CJK font by Adobe. Used to demonstrate language-specific and CJK-specific OpenType features</dd>
+				-->
+			<dt><a href="https://github.com/eosrei/emojione-color-font">EmojiOne</a></dt>
+			<dd>SVG-in-OT emoji font by Brad Erickson. CC-BY-4.0 Includes skin colour modifiers, circled letters, flags.</dd>
+"
 
         </dl>
     </section>
@@ -719,7 +735,7 @@ arvo.loaded.then(()=>{
         <h1>Thank you!</h1>
         <ul>
             <li><a href="mailto:chris@w3.org">chris@w3.org</a></li>
-            <li><a href="http://svgees.us">svgees.us/a></li>
+            <li><a href="http://svgees.us">svgees.us</a></li>
             <li><a href="http://twitter.com/svgeesus">@svgeesus</a></li>
         </ul>
         <p>Slides: <a href="https://github.com/svgeesus/font-level-up/">github.com/svgeesus/font-level-up/</a></p>
