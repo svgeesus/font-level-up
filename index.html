@@ -190,7 +190,7 @@ h1 {
 	@font-face {
 		font-family: 'Headings';
 		src: url(fonts/Japanese.woff);
-		unicode-range: U+A5, U+4E00-9FFF, U+30??, U+FF00-FF9F; 
+		unicode-range: U+A5, U+4E00-9FFF, U+30??, U+FF00-FF9F;
 		/* yen, kanji, hiragana, katakana */
 	}</code></pre>
             <!--
@@ -198,7 +198,7 @@ h1 {
 		<div class="delayed"><p>Glyphs for characters outside range <em>not used</em></p>
 			<p class="delayed">… even if the font has them</p>
 		</div>
-		
+
 	-->
         </section>
 
@@ -230,7 +230,7 @@ h1 {
 	Then change the font-family on the h1 to amps, Arvo, serif
 
 	Lastly add the unicode-range: U+26;
-	
+
 
 	then change the font-family on the h1 to ampersand, var(- -heading-font)
 	-->
@@ -243,7 +243,7 @@ h1 {
 h1 {
 	font-family: Arvo, serif;
 }
-				
+
 </textarea>
         </section>
 
@@ -293,10 +293,10 @@ h1 {
 		</select>;</pre>
         </section>
 
-        <!-- broken, keep as template for hsplit 
+        <!-- broken, keep as template for hsplit
 	<section class="dark slide hsplit dont-resize" id="numeric">
 		<h1>Numeric font variants</h1>
-		<div class="delayed figure" id="numericex"><p>1234567890ABC<br /> 
+		<div class="delayed figure" id="numericex"><p>1234567890ABC<br />
 			1234567890abj</p></div>
 	<textarea class="delayed code" data-subject="#numericex">
 	font-variant-numeric: lining-nums;
@@ -353,8 +353,8 @@ h1 {
         <!--
 	<section class="property slide" id="east-asian">
 		<p class="figure">
-			<span lang="zh-hans">草</span> 
-			<span lang="zh-hant">草</span> 
+			<span lang="zh-hans">草</span>
+			<span lang="zh-hant">草</span>
 		</p>
 		<pre><code>font-variant-east-asian:</code> <select data-style="font-variant-east-asian: {value};" class="css-control">
 			<option>normal</option>
@@ -367,17 +367,17 @@ h1 {
         <!-- nope
         <section class="property slide" id="east-asian">
             <p class="figure">
-			<span lang="zh-hans">草</span> 
-			<span lang="zh-hant">草</span>  
-			<span lang="ja-jp">草</span> 
+			<span lang="zh-hans">草</span>
+			<span lang="zh-hant">草</span>
+			<span lang="ja-jp">草</span>
         <span lang="zh-Hans">&#x66DC;</span>
         <span lang="zh-Hant">&#x66DC;</span>
         <span lang="ja-Jp">&#x66DC;</span>
         </p>
         <p class="figure">
-			<span lang="zh-hans">草</span> 
-			<span lang="zh-hant">草</span>  
-			<span lang="ja-jp">草</span> 
+			<span lang="zh-hans">草</span>
+			<span lang="zh-hant">草</span>
+			<span lang="ja-jp">草</span>
             <span lang="zh-Hans">廣</span>
             <span lang="zh-Hant">廣</span>
             <span lang="ja-Jp">廣</span>
@@ -456,15 +456,15 @@ h1 {
         <section class="darker slide" id="woff1">
             <h1>WOFF 1 compression</h1>
 			<div class="wrapper">
-				<object class="sfnt" data="sfnt-woff1.svg"></object>    
-			</div>         
+				<object class="sfnt" data="sfnt-woff1.svg"></object>
+			</div>
         </section>
 
 		<section class="darker slide" id="woff2-hmtx">
 			<h1>WOFF2: hmtx</h1>
 			<div class="wrapper">
-				<object class="sfnt" data="woff2-hmtx.svg"></object>    
-			</div> 
+				<object class="sfnt" data="woff2-hmtx.svg"></object>
+			</div>
 		</section>
 
         <section class="darker slide split-definition" id="woff2-glyf-loca">
@@ -482,8 +482,8 @@ h1 {
 		<section class="darker slide" id="woff2">
             <h1>WOFF 2 compression</h1>
             <div class="wrapper">
-				<object class="sfnt" data="sfnt-woff2.svg"></object>    
-			</div>  
+				<object class="sfnt" data="sfnt-woff2.svg"></object>
+			</div>
         </section>
 
         <section class="slide dont-resize">
@@ -633,7 +633,7 @@ arvo.loaded.then(()=>{
 
         <section class="slide hsplit dont-resize" id="svg-palette-demo">
             <!--
-	The original demo depends on the SVG glyphs having used var() syntax, which the 
+	The original demo depends on the SVG glyphs having used var() syntax, which the
 	exported kafeel does not
 	Bug report to FontLab for TransType 4
 	Also, var syntax changed wrt SVG Glyphs in OpenType report
@@ -647,7 +647,7 @@ arvo.loaded.then(()=>{
             <textarea>#demo {
 	--color0: black;
 	--color1: hsl(15, 75%, 34%);
-	--color2: hsl(15, 80%, 70%); 
+	--color2: hsl(15, 80%, 70%);
 	--color3: hsl(15, 75%, 53%);
 	--color4: hsl(15, 75%, 40%);
 	--color5: white;
@@ -688,9 +688,12 @@ arvo.loaded.then(()=>{
             </dl>
         </section>
 
+        <section class="slide white figure" id="axes">
+            <p><img src="img/dunbar.gif" alt="Dunbar variable font"/></p>
+        </section>
 
         <section class="slide dark figure"  id="throbber">
-            <p><video src="videos/lab.mp4"/ autoplay></p>
+            <p><video src="videos/lab.mp4"/ autoplay loop></p>
         </section>
 
         <section class="slide white figure" id="axes">
@@ -702,10 +705,12 @@ arvo.loaded.then(()=>{
         </section>
 
         <section class="dark slide quote">
-            <p class="quote">This may be the most 
-                significant development for design 
-                on the web since responsive design itself</p>
-            <p class="quote-attr">— Jason Pamental</p>
+            <blockquote>
+                <p class="quote">This may be the most
+                    significant development for design
+                    on the web since responsive design itself</p>
+                <p class="quote-attr">—Jason Pamental</p>
+            </blockquote>
         </section>
 
         <!-- end of futures section -->
@@ -728,7 +733,7 @@ arvo.loaded.then(()=>{
             <dd>Unknown Miniaturist, English (active 1120s in Canterbury). Public domain.</dd>
 			<dt><a href="http://stuff.djr.com/variable-demo/">“Lab” Variable font</a></dt>
             <dd>David Jonathan Ross, "intended for fun and experimentation"</dd>
-            <dt><a href="https://medium.com/@tiro/https-medium-com-tiro-introducing-opentype-variable-fonts-12ba6cd2369#.thauil4ix">Normalised 
+            <dt><a href="https://medium.com/@tiro/https-medium-com-tiro-introducing-opentype-variable-fonts-12ba6cd2369#.thauil4ix">Normalised
             design space of a 3-axis variable font</a></dt>
             <dd>John Hudson, using Kepler, a design by Robert Slimbach</dd>
         </dl>

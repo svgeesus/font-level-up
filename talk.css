@@ -547,6 +547,12 @@
     line-height: 1.35;
 }
 
+.figure.slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .property.slide pre input[type="number"] {
     -webkit-appearance: none;
     -moz-appearance: textfield;
@@ -689,14 +695,14 @@ pre.inline + pre.inline {
     --color2: hsl(15, 80%, 70%);
     --color3: hsl(15, 75%, 53%);
     /* orange */
-    
+
     --color4: hsl(15, 75%, 40%);
     --color5: white;
     --color6: hsl(58, 15%, 56%);
     --color7: hsl(58, 15%, 65%);
     --color8: hsl(58, 15%, 46%);
     /* pale green */
-    
+
     --color9: hsl(58, 15%, 30%);
 }
 .multicolour-fake > * {
@@ -1016,6 +1022,7 @@ select {
 p.quote {
         font-family: 'Helvetica Neue', sans-serif;
         font-size: 3em;
+        font-style: italic;
         margin-left: 5vw;
         margin-right: 5vw;
         text-align: center;
@@ -1042,8 +1049,8 @@ p.quote-attr {
 }
 
 .figure p {
-    margin-left: auto; 
-    margin-right: auto; 
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
 }
 
