@@ -1087,3 +1087,22 @@ p.quote-attr {
     font-family: var(--handwriting-font);
     font-size: 100%;
 }
+
+#trick-question {
+    text-align: center;
+}
+
+    #trick-question pre {
+        margin: 2em 0;
+        text-align: left;
+    }
+
+    #trick-question .answer {
+        display: inline-block;
+        width: 30vw;
+        padding: .8em;
+        border-radius: .3em;
+        margin: 0 .2em;
+        background: hsla(0,0%,100%,.5);
+        font-size: 200%;
+    }
