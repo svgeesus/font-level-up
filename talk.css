@@ -1088,7 +1088,7 @@ p.quote-attr {
 #font-credits {
     font-size: 140%;
 }
-#font-credits dd {
+.credits dd {
     font-family: var(--handwriting-font);
     font-size: 100%;
 }
