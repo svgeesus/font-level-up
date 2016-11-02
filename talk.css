@@ -1059,6 +1059,10 @@ p.quote-attr {
     width: 80vw;
 }
 
+.code.slide pre {
+    margin: 1.3em 0;
+}
+
 #throbber {
     background: #1f1c21;
 }

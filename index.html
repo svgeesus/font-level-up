@@ -707,10 +707,26 @@ font-weight: calc(9 * 100);</code></pre>
             <p><img src="img/3-axes.png" alt="three axes"/></p>
         </section>
 
-        <section class="centered slide">
+        <section class="centered code dark slide" style="align-items: center">
+            <pre style="font-size: calc(55% + 1vmin); padding: 0; margin: 0; width: max-content;"><code>@font-face {
+    font-family: "Dunbar";
+    src: "dunbar.otf";
+    font-weight: 100 900;
+    font-stretch: 50% 200%;
+    font-style: -10deg 40deg;
+}
+
+h1 {
+    font-weight: 234;
+    font-stretch: 80%;
+    font-style: oblique 24deg;
+}</code></pre>
+        </section>
+
+        <section class="centered code slide">
             <pre><code>/* Supported in Safari!! (TP 16+) */
 font-variation-settings:"wght" 3.1, "wdth" .7, "radi" .4;</code></pre>
-            <pre style="margin-top: 2.5em"><code>@keyframes expand {
+            <pre><code>@keyframes expand {
     from { font-variation-settings: 'wght' .3 }
     to { font-variation-settings: 'wght' 3.1; }
 }</code></pre>
