@@ -547,9 +547,10 @@
     line-height: 1.35;
 }
 
-.figure.slide {
+.figure.slide,
+.centered.slide {
     display: flex;
-    align-items: center;
+    flex-flow: column;
     justify-content: center;
 }
 
@@ -1058,9 +1059,13 @@ p.quote-attr {
     width: 80vw;
 }
 
-#throbber p {
-    margin-top:18vh;
+#throbber {
+    background: #1f1c21;
 }
+
+    #throbber p {
+        margin-top: 18vh;
+    }
 
 #axes {
     background-color: white;
