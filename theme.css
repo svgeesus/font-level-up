@@ -123,7 +123,7 @@ textarea, pre.styled {
 	}
 
 .slide {
-	padding: 2.5rem;	
+	padding: 2.5rem;
 	background-color: #9E9D81;
 	color: var(--darkgrey);
 }
@@ -145,12 +145,16 @@ textarea, pre.styled {
 		color: var(--buff);
 	}
 
+    .white.slide {
+        background: white;
+    }
+
 	.slide > h1 {
 		text-align: center;
 		margin: 0 0 .6em;
 		font-size: 140%;
 	}
-	
+
 	.slide h2 {
 		color: #E79D5E;
 		font-size: 120%;
