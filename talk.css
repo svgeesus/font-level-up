@@ -1016,22 +1016,21 @@ select {
 p.quote {
         font-family: 'Helvetica Neue', sans-serif;
         font-size: 3em;
-        line-height: 2.1
         margin-left: 5vw;
         margin-right: 5vw;
         text-align: center;
 }
 
+p.quote:before,
 p.quote:after {
     content: " ”";
     font-size: 1.5em;
     color: var(--tan);
+    line-height: .6;
 }
 
 p.quote:before {
     content: "“ ";
-    font-size: 1.5em;
-    color: var(--tan);
 }
 
 p.quote-attr {
@@ -1054,6 +1053,13 @@ p.quote-attr {
 
 #throbber p {
     margin-top:18vh;
+}
+
+#axes {
+    background-color: white;
+}
+#axes img {
+    width: 50vw;
 }
 
 .credits {
