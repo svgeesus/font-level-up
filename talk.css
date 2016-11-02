@@ -1042,14 +1042,18 @@ p.quote-attr {
         color: var(--orange);
 }
 
-#peace p {
+.figure p {
     margin-left: auto; 
     margin-right: auto; 
     text-align: center;
 }
 
-#peace img {
+.figure img, .figure video {
     width: 80vw;
+}
+
+#throbber p {
+    margin-top:18vh;
 }
 
 .credits {
