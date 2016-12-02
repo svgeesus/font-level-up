@@ -9,7 +9,9 @@
     <link href="../csss/reusable.css" rel="stylesheet" />
     <link href="theme.css" rel="stylesheet" />
     <link href="talk.css" rel="stylesheet" />
+    <!--
     <script src="../prefixfree/prefixfree.min.js"></script>
+    -->
 
 </head>
 
@@ -22,57 +24,13 @@
 
     <header id="intro" class="slide">
         <h1>
-		WebFonts: <strong>Level Up!</strong>
+		WebFonts: <strong>Power Up!</strong>
 	</h1>
         <h2><a href="http://w3.org/People#clilley">Chris Lilley</a> <a href="http://twitter.com/svgeesus" class="twitter">@svgeesus</a></h2>
         <p class="attribution"></p>
     </header>
 
-    <section id="#intro">
-        <section class="slide activity" id="hi">
-            <img id="mypic" src="img/chris-av.jpg" alt="me">
-            <p>Hello! <br /><span class="de-emphasize">I’m Chris or @svgeesus</span></p>
-        </section>
-
-        <section class="slide activity" id="w3c">
-            <img src="img/w3c-logo.svg" />
-            <p><a href="http://www.w3.org/People/#clilley">Technical Director at W3C <br /><span class="de-emphasize">(Interaction Domain)</span></a></p>
-        </section>
-
-        <section class="slide activity" id="svg">
-            <img src="img/svg-logo.svg" />
-            <p><a href="http://www.w3.org/Graphics/SVG/WG/wiki/Secret_Origin_of_SVG#Drivers_and_Deployment">Started SVG <span class="de-emphasize">(1996)</span></a></p>
-            <p><a href="http://www.w3.org/2001/12/tag-pressrelease.html.en">SVG WG Chair <span class="de-emphasize">(1998-2006)</span></a></p>
-        </section>
-
-        <section class="slide activity" id="png">
-            <img src="img/png-icon.png" />
-            <p><a href="http://www.w3.org/TR/PNG/">Co-authored PNG <span class="de-emphasize">(1996)</span></a></p>
-        </section>
-
-        <section class="slide activity" id="css">
-            <img src="img/woolly.svg" />
-
-            <ul>
-                <li>CSS WG: <a href="https://lists.w3.org/Archives/Member/w3c-ac-members/2001JulSep/0007.html">Chair <span class="de-emphasize">(1997-2002)</span></a>, Staff contact</li>
-                <li><a href="http://www.w3.org/TR/REC-CSS2/">CSS2 co-editor <span class="de-emphasize">(@font-face, descriptors)</span></a></li>
-                <li><a href="http://www.w3.org/TR/css3-color/">CSS3 Color co-editor</a></li>
-                <li><a href="http://www.w3.org/TR/css4-color/">CSS4 Color co-editor</a></li>
-            </ul>
-        </section>
-
-        <section class="slide activity" id="webfonts">
-            <h1><span class="web">Web</span>Fonts</h1>
-            <ul>
-                <li>Fonts WG Chair <span class="de-emphasize">(1996-1998)</span></li>
-                <!-- all Member-only, sadly -->
-                <li><a href="http://www.w3.org/Fonts/WG/">WOFF 1.0, WOFF 2.0</a></li>
-                <li><a href="https://www.w3.org/community/svgopentype/">Chromatic Fonts</a></li>
-            </ul>
-        </section>
-
-        <!-- end of hello -->
-    </section>
+  
 
     <section class="slide darker" id="topics">
         <h1>Topics for today</h1>
@@ -163,89 +121,7 @@ h1 {
             </dl>
         </section>
 
-        <section class="slide" id="stacks">
-            <h1>Font stacks</h1>
-            <div class="delayed">
-                <p>First font with glyphs for a given character is used</p>
-            </div>
-            <div class="delayed">
-                <p>Problem: avoiding bad Latin glyphs in Japanese fonts</p>
-            </div>
-            <pre class="delayed inline"><code>@font-face {
-	font-family: Demo;
-	src: url(Latin.woff), url(Japanese.woff);
-}</code></pre>
-            <div class="delayed">
-                <p>
-                    <em>Both</em> fonts can’t be first!</p>
-            </div>
-        </section>
-
-        <section class="dark slide split-definition" id="urange">
-            <dl>
-                <dt>unicode-range</dt>
-                <dd>Descriptor for allowed range of Unicode characters</dd>
-            </dl>
-            <pre class="delayed  code"><code class="language-css">
-	@font-face {
-		font-family: 'Headings';
-		src: url(fonts/Japanese.woff);
-		unicode-range: U+A5, U+4E00-9FFF, U+30??, U+FF00-FF9F;
-		/* yen, kanji, hiragana, katakana */
-	}</code></pre>
-            <!--
-		<div class="delayed"><p>Descriptor for allowed range of Unicode characters</p></div>
-		<div class="delayed"><p>Glyphs for characters outside range <em>not used</em></p>
-			<p class="delayed">… even if the font has them</p>
-		</div>
-
-	-->
-        </section>
-
-        <section class=" slide" id="apology">
-            <pre><code>unicode-range: U+A5, U+4E00-9FFF, U+30??, U+FF00-FF9F;</code></pre>
-            <img src="img/poop.png" alt="poop" />
-            <p>I'm really sorry about the unicode-range syntax. :(<br /> What was I thinking?!</p>
-        </section>
-
-        <section class="slide split-definition" id="fancy-ampersand">
-            <dl>
-                <dt id="ampersand">This & That</dt>
-                <dd>no need for extra elements</dd>
-                <!-- broken in Firefox, unicode-range bug *still* not
-		         deployed. fix is to set, in about:config
-		         layout.css.unicode-range.enabled to true
-		         then restart firefox /facepalm -->
-            </dl>
-            <dl>
-                <dt>U+26</dt>
-                <dd>Use just the ampersand</dd>
-            </dl>
-        </section>
-
-        <section class="slide hsplit dont-resize" id="ampersand-demo">
-            <!--
-	First hover over the h1 to show that it has no extra elements.
-
-	Then change the font-family on the h1 to amps, Arvo, serif
-
-	Lastly add the unicode-range: U+26;
-
-
-	then change the font-family on the h1 to ampersand, var(- -heading-font)
-	-->
-            <h1 class="show-html">This & That</h1>
-            <textarea>@font-face {
-		font-family: amps;
-		src: url(fonts/Rochester.otf);
-
-	}
-h1 {
-	font-family: Arvo, serif;
-}
-
-</textarea>
-        </section>
+        
 
         <!-- end of basics section -->
     </section>
@@ -293,25 +169,6 @@ h1 {
 		</select>;</pre>
         </section>
 
-        <!-- broken, keep as template for hsplit
-	<section class="dark slide hsplit dont-resize" id="numeric">
-		<h1>Numeric font variants</h1>
-		<div class="delayed figure" id="numericex"><p>1234567890ABC<br />
-			1234567890abj</p></div>
-	<textarea class="delayed code" data-subject="#numericex">
-	font-variant-numeric: lining-nums;
-	</textarea>
-	</section>
-
-
-	<section class="dark slide hsplit dont-resize" id="hsplit">
-		<h1>Test for editable css, horizontal split</h1>
-		<div class="delayed figure" id="numeric2">12345</div>
-	<textarea class="delayed code" data-subject="#numeric2">
-	font-variant-numeric: oldstyle-nums;
-	</textarea>
-	</section>
--->
 
         <section class="property slide" id="fractions">
             <p class="figure">
@@ -350,47 +207,7 @@ h1 {
 		</select>;</pre>
         </section>
 
-        <!--
-	<section class="property slide" id="east-asian">
-		<p class="figure">
-			<span lang="zh-hans">草</span>
-			<span lang="zh-hant">草</span>
-		</p>
-		<pre><code>font-variant-east-asian:</code> <select data-style="font-variant-east-asian: {value};" class="css-control">
-			<option>normal</option>
-			<option>simplified</option>
-			<option>traditional</option>
-		</select>;</pre>
-	</section>
-	-->
-
-        <!-- nope
-        <section class="property slide" id="east-asian">
-            <p class="figure">
-			<span lang="zh-hans">草</span>
-			<span lang="zh-hant">草</span>
-			<span lang="ja-jp">草</span>
-        <span lang="zh-Hans">&#x66DC;</span>
-        <span lang="zh-Hant">&#x66DC;</span>
-        <span lang="ja-Jp">&#x66DC;</span>
-        </p>
-        <p class="figure">
-			<span lang="zh-hans">草</span>
-			<span lang="zh-hant">草</span>
-			<span lang="ja-jp">草</span>
-            <span lang="zh-Hans">廣</span>
-            <span lang="zh-Hant">廣</span>
-            <span lang="ja-Jp">廣</span>
-        </p>
-        <pre><code>font-feature-settings:</code> <select data-style='font-feature-settings: "{value}";' class="css-control">
-			<option>normal</option>
-			<option>smpl</option>
-			<option>trad</option>
-		</select>;</pre>
-    </section>
-
-    -->
-
+       
         <section class="property slide" id="no-fake-bold-italic">
             <p class="figure">
                 Roman<br />
@@ -430,137 +247,12 @@ h1 {
 
     <section>
 
-        <header class="image slide bottom-heavy" style="background: url(img/speedometer_o.jpg) center #2D2C2C no-repeat; background-size: cover;" id="perf">
-            <h1 style="background: transparent">Performance</h1>
-        </header>
-
-        <section class="image slide" style="background-image: url(img/subsetting.png); background-size: auto" data-source="fontsquirrel.com">
-            <h1>Subset all the things!</h1>
-        </section>
-
-        <section class="slide darker" id="subsetGlyph">
-            <h1>Subsetting</h1>
-            <ul>
-                <li>Glyphs: Big space savings!</li>
-                <li>OpenType Tables: Moderate savings</li>
-                <li>Tools:
-                    <ul>
-                        <li><a href="http://www.fontsquirrel.com/tools/webfont-generator">fontsquirrel.com</a></li>
-                        <li><a href="https://typekit.com/">Typekit</a></li>
-                        <li>Behdad's <a href="https://github.com/behdad/fonttools">fonttools</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-
-        <section class="darker slide" id="woff1">
-            <h1>WOFF 1 compression</h1>
-			<div class="wrapper">
-				<object class="sfnt" data="sfnt-woff1.svg"></object>
-			</div>
-        </section>
-
-		<section class="darker slide" id="woff2-hmtx">
-			<h1>WOFF2: hmtx</h1>
-			<div class="wrapper">
-				<object class="sfnt" data="woff2-hmtx.svg"></object>
-			</div>
-		</section>
-
-        <section class="darker slide split-definition" id="woff2-glyf-loca">
-            <dl>
-                <dt>WOFF2: glyf</dt>
-                <dd>Seven streams for better compression</dd>
-            </dl>
-
-            <dl class="delayed">
-                <dt>WOFF2: loca</dt>
-                <dd><em>discard</em>, recalculate</dd>
-            </dl>
-        </section>
-
-		<section class="darker slide" id="woff2">
-            <h1>WOFF 2 compression</h1>
-            <div class="wrapper">
-				<object class="sfnt" data="sfnt-woff2.svg"></object>
-			</div>
-        </section>
-
-        <section class="slide dont-resize">
-            <ul class="bar-chart" title="File size">
-                <li title="Uncompressed" style="height: 100%">100%</li>
-                <li title="WOFF 1.0" style="height: 45%">45%</li>
-                <li title="WOFF 2.0" style="height: 32%">32%</li>
-            </ul>
-        </section>
-
-        <section class="darker slide split-definition" id="woff2size">
-            <dl><dt>WOFF 2.0</dt>
-                <dd>with TrueType glyphs</dd>
-            </dl>
-            <dl>
-                <dt>68%</dt>
-                <dd>25% better than WOFF 1.0</dd>
-            </dl>
-        </section>
-
-        <section class="darker slide split-definition" id="woff2size2">
-            <dl><dt>WOFF 2.0</dt>
-                <dd>with CFF glyphs</dd>
-            </dl>
-            <dl>
-                <dt>63.5%</dt>
-                <dd>15.5% better than WOFF 1.0</dd>
-            </dl>
-        </section>
-
-        <section class="slide" id="mobilewoff2">
-            <h1>WOFF2 & mobile</h1>
-            <p>Balance decompression time & download speed</p>
-            <p>Last 2% size gain <em>doubles</em> decode time!</p>
-            <p>Memory for decompression only 1.05x that for WOFF1</p>
-        </section>
-
-        <section class="slide darker" id="font-loading" data-steps="1">
-            <!-- <h1>Font Loading API</h1> -->
-
-            <pre class="styled"><code>
-
-
-@font-face {
-	font-family: Arvo;
-	src: url(Arvo-BoldItalic.woff)
-	     format ("woff");
-	font-weight: bold;
-	font-style: italic;
-}</code></pre>
-
-            <pre class="styled language-javascript"><code>/* Font Loading API!
-http://w3.org/TR/css-font-loading
-Support: FF, Chrome, Opera, Android */
-var arvo = new FontFace(
-	'Arvo',
-	'url(Arvo-BoldItalic.woff) \
-		format ("woff")',
-	{
-		weight: "bold",
-		style: "italic"
-	}
-);</code><code>
-
-arvo.loaded.then(()=>{
-	document.body.classList.add("arvo-loaded");
-});
-</code></pre>
-        </section>
-
-        <!-- end of perf section -->
-    </section>
 
     <section>
 
-        <header class="image slide top-heavy" style="background: url(img/crystal_ball_o.jpg) center #2D2C2C no-repeat; background-size: cover;" id="future">
-            <h1>The future</h1>
+        <header class="image slide top-heavy" style="background: url(img/kafeel-handdrawn.jpg) 
+        center #2D2C2C no-repeat; background-size: cover;" id="color">
+            <h1>Color Fonts</h1>
         </header>
 
         <section class="slide darker" id="illuminated">
@@ -568,10 +260,7 @@ arvo.loaded.then(()=>{
             <p><img src="img/illum.jpg" alt="illuminated manuscript" /></p>
         </section>
 
-        <!--
-        <section class="slide darker" id="emojidance" title="…to emoji" data-src="http://emojiparty.club/%F0%9F%98%8E%F0%9F%98%B3%F0%9F%98%8D%F0%9F%98%BC"></section>
--->
-
+       
         <section class="slide darker" id="emoji">
 			<h1>…to emoji</h1>
             <div class="embiggen show-html">
@@ -668,15 +357,16 @@ arvo.loaded.then(()=>{
             </dl>
         </section>
 
-        <section class="slide split-definition" id="css4-fonts2">
-            <dl><dt>CSS4 font-synthesis</dt>
-                <dd>small-caps (disable fake small caps)</dd>
-            </dl>
-            <dl class="delayed">
-                <dt>emoji, math, fangsong</dt>
-                <dd>New generic font families</dd>
-            </dl>
-        </section>
+    </section>
+
+    <section>
+
+        <header class="image slide top-heavy" style="background: url(img/peace-type.gif) 
+        center #2D2C2C no-repeat; background-size: cover; " id="variable">
+            <h1 style="color: yellow">Variable Fonts</h1>
+        </header>
+
+        <!-- new section -->
 
          <section class="slide" id="trick-question">
             <h1>Quick question</h1>
@@ -701,10 +391,6 @@ font-weight: calc(9 * 100);</code></pre>
 
         <section class="slide white figure">
             <p><img src="img/dunbar.gif" alt="Dunbar variable font"/></p>
-        </section>
-
-        <section class="slide white figure" id="axes">
-            <p><img src="img/3-axes.png" alt="three axes"/></p>
         </section>
 
         <section class="centered code dark slide" style="align-items: center">
@@ -755,59 +441,8 @@ font-variation-settings:"wght" 2.4, "wdth" .7, "radi" .4;</code></pre>
         <!-- end of futures section -->
     </section>
 
-    <section class="slide credits" id="image-credits">
-        <h1>Image credits</h1>
-        <dl>
-            <dt><a href="https://www.flickr.com/photos/davepc/6883820262/">Typography I/Helvetica</a></dt>
-            <dd>David Costa, cc-by-nc</dd>
-            <dt><a href="https://www.flickr.com/photos/fontshop/4134128747/">Periodic Table of Font Elements 1.1</a></dt>
-            <dd>FontShop, cc-by</dd>
-            <dt><a href="https://www.flickr.com/photos/zachheller/5116640316/">Speedometer</a></dt>
-            <dd>Zach Heller, cc-by</dd>
-            <dt><a href="https://www.flickr.com/photos/stinkiepinkie_infinity/2620802106/">Crystal Ball</a></dt>
-            <dd>Shawn Perez, cc-by</dd>
-            <dt><a href="https://www.flickr.com/photos/jcolman/2794559035/">Wooden type blocks at Fremont indoor Sunday market</a></dt>
-            <dd>Jonathon Colman, cc-by-nc-nd</dd>
-            <dt><a href="https://commons.wikimedia.org/wiki/File:12th-century_painters_-_Manuscript_of_Church_Law_-_WGA15726.jpg">Manuscript of Church Law</a></dt>
-            <dd>Unknown Miniaturist, English (active 1120s in Canterbury). Public domain.</dd>
-			<dt><a href="http://stuff.djr.com/variable-demo/">“Lab” Variable font</a></dt>
-            <dd>David Jonathan Ross, "intended for fun and experimentation"</dd>
-            <dt><a href="https://medium.com/@tiro/https-medium-com-tiro-introducing-opentype-variable-fonts-12ba6cd2369#.thauil4ix">Normalised
-            design space of a 3-axis variable font</a></dt>
-            <dd>John Hudson, using Kepler, a design by Robert Slimbach</dd>
-            <dt><a href="http://letterror.com/dev/mathshapes/page_25_Peace.html">peace demo</a></dt>
-            <dd>Erik van Blokland</dd>
-        </dl>
-    </section>
-
-    <section class="slide credits" id="font-credits">
-        <h1>WebFonts used</h1>
-        <dl>
-            <dt><a href="https://www.google.com/fonts/specimen/Arvo">Arvo</a></dt>
-            <dd>Geometric slab serif with four faces (Roman, Italic, Roman Bold, Bold Italic) by Anton Koovit. Used here for headings.</dd>
-            <dt><a href="http://www.linuxlibertine.org/index.php?id=87&L=1">Linux Libertine</a></dt>
-            <dd>OpenType serif font with many OpenType features: ligatures, small caps, oldstyle and tabular numeric variants, fractions, greek final forms, superiors & inferiors, contextual alternates. Used here for all the numeric feature demos.</dd>
-            <dt><a href="http://www.handpaintedtype.com/">Painter Kafeel</a></dt>
-            <dd>Commercial (50 USD). Set of ten fonts intended to be manually overlaid to produce lettering in the Indian hand-painted street signage style, by Painter Kafeel and sold by Handpainted Type. Used here as input to produce COLR and SVG demo chromatic
-                fonts. (Because this is a commercially licensed font, I could use it personally but not put the font into the GitHub repo).
-            <dt><a href="http://www.fontsquirrel.com/fonts/rochester">Rochester Regular</a></dt>
-            <dd>Formal, flowing handwriting script, by Sideshow. Used here for the ampersand, and the WebFonts logo.</dd>
-            <dt><a href="http://www.smeltery.net/fonts/megalopolis-extra">MEgalopolis Extra</a></dt>
-            <dd>OpenType display font with a single, bold, weight by SMeltery. Has many OpenType features such as discretionary ligatures, contextual forms, swash forms, numerical alternates, and a range of stylistic sets. Used here to demonstrate common
-                    and discretionary ligatures.</dd>
-
-            <dt><a href="https://www.google.com/fonts/specimen/Reenie%20Beanie">Reenie Beanie</a></dt>
-            <dd>Informal handwriting script, by James Grieshaber. Used here for comments and other annotations.</dd>
-                <!--
-					<dt><a href="https://github.com/adobe-fonts/source-han-sans/">Source Han Sans</a></dt>
-                <dd>Gothic (sans-serif) pan-CJK font by Adobe. Used to demonstrate language-specific and CJK-specific OpenType features</dd>
-				-->
-			<dt><a href="https://github.com/eosrei/emojione-color-font">EmojiOne</a></dt>
-			<dd>SVG-in-OT emoji font by Brad Erickson. CC-BY-4.0 Includes skin colour modifiers, circled letters, flags.</dd>
-
-        </dl>
-    </section>
-
+   
+    
     <footer class="dark slide">
         <img src="img/chris-av.jpg" alt="me" />
         <h1>Thank you!</h1>
