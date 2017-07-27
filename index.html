@@ -615,6 +615,16 @@ arvo.loaded.then(()=>{
             <h1>Where did the styling go?</h1>
         </section>
 
+        <section class="slide split-definition" id="css4-fonts">
+            <dl><dt>CSS4 font-palette</dt>
+                <dd>select from provided palettes</dd>
+            </dl>
+            <dl class="delayed">
+                <dt>CSS4 @palette-entries</dt>
+                <dd>override baked-in palettes</dd>
+            </dl>
+        </section>
+
         <section class="dark slide" id="kafeelSVG">
             <h1>SVG (+ CPAL)</h1>
             <div class="delayed">
@@ -624,7 +634,7 @@ arvo.loaded.then(()=>{
                 <p>CPAL holds color palette(s)</p>
             </div>
             <div class="delayed">
-                <p>CSS variables to alter palette</p>
+                <p>CSS 4 <em>@font-palette-values</em> to alter palette</p>
             </div>
             <div class="delayed">
                 <p id="kSVG">Painter Kafeel</p>
@@ -638,13 +648,8 @@ arvo.loaded.then(()=>{
 	Bug report to FontLab for TransType 4
 	Also, var syntax changed wrt SVG Glyphs in OpenType report
 	http://www.w3.org/2013/10/SVG_in_OpenType/#render
-	so this is, sadly, a demo of what it *will* be like
-	-->
-            <div class="multicolour-fake" id="demo">
-                <p>Painter Kaffeel</p>
-            </div>
-            <!-- Idea: instead of typing entirely new colours, press shift + arrow key with caret on hue to circle through all hues -->
-            <textarea>#demo {
+    so this is, sadly, a demo of what it *will* be like
+                <textarea>#demo {
 	--color0: black;
 	--color1: hsl(15, 75%, 34%);
 	--color2: hsl(15, 80%, 70%);
@@ -656,17 +661,31 @@ arvo.loaded.then(()=>{
 	--color8: hsl(58, 15%, 46%);
 	--color9: hsl(58, 15%, 30%);
 }</textarea>
+
+    ok even better, we changed it again!! Now in CSS4 fonts
+    it is @font-palette-values
+	-->
+            <div class="multicolour-fake" id="demo">
+                <p>Painter Kaffeel</p>
+            </div>
+            <!-- Idea: instead of typing entirely new colours, press shift + arrow key with caret on hue to circle through all hues -->
+            <textarea>@font-palette-values autumnal {
+    font-family: Painter Kafeel;
+    base-palette: 2;            
+	0: black;
+	1: hsl(15, 75%, 34%);
+	2: hsl(15, 80%, 70%);
+	3: hsl(15, 75%, 53%);
+	4: hsl(15, 75%, 40%);
+	5: white;
+	6: hsl(58, 15%, 56%);
+	7: hsl(58, 15%, 65%);
+	8: hsl(58, 15%, 46%);
+	9: hsl(58, 15%, 30%);
+}</textarea>
         </section>
 
-        <section class="slide split-definition" id="css4-fonts">
-            <dl><dt>CSS4 font-palette</dt>
-                <dd>select from provided palettes</dd>
-            </dl>
-            <dl class="delayed">
-                <dt>CSS4 @palette-entries</dt>
-                <dd>override baked-in palettes</dd>
-            </dl>
-        </section>
+
 
         <section class="slide split-definition" id="css4-fonts2">
             <dl><dt>CSS4 font-synthesis</dt>
@@ -777,6 +796,7 @@ font-variation-settings:"wght" 2.4, "wdth" .7, "radi" .4;</code></pre>
             <dd>John Hudson, using Kepler, a design by Robert Slimbach</dd>
             <dt><a href="http://letterror.com/dev/mathshapes/page_25_Peace.html">peace demo</a></dt>
             <dd>Erik van Blokland</dd>
+            <dt>Responsive variable font samples</dt>
         </dl>
     </section>
 

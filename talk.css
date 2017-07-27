@@ -37,12 +37,12 @@
 
 @font-face {
     font-family: KafeelCOLR;
-    src: url(fonts/Kafeel/KafeelPainter-Layers-COLR.ttf);
+    src: url(fonts/Kafeel/KafeelPainter-Layers-COLR.woff);
 }
 
 @font-face {
     font-family: KafeelSVG;
-    src: url(fonts/Kafeel/KafeelPainter-Layers-SVG.ttf);
+    src: url(fonts/Kafeel/KafeelPainter-Layers-SVG.woff);
 }
 
 @font-face {

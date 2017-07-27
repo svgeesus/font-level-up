@@ -19,6 +19,8 @@ $$(".question").forEach(function(q) {
     q.classList.add("delayed");
 });
 
+// Fake multicolor demo
+
 $$(".multicolour-fake > *").forEach(function(p) {
     var div = p.parentNode;
 
@@ -26,6 +28,30 @@ $$(".multicolour-fake > *").forEach(function(p) {
         div.appendChild(document.createTextNode("\n\t"));
         div.appendChild(p.cloneNode(true));
     }
+});
+
+StyleFix.register(function(css, raw) {
+    /** We want to copy out the values of the numeric descriptors from an @font-palette-values 
+    *   rule and create a set of css variable declarations derived from them. So
+    *   @font-palette-values autumnal {
+    *     font-family: Painter Kafeel;
+    *     base-palette: 2;            
+	*     0: black;
+	*     1: hsl(15, 75%, 34%);
+	*     2: hsl(15, 80%, 70%);
+    *     }
+    *    becomes
+    *
+    *    --color0: black;
+	*    --color1: hsl(15, 75%, 34%);
+	*    --color2: hsl(15, 80%, 70%);
+    */
+    
+        css = css.replace("@font-palette-values autumnal", "#demo")
+                  .replace(/\s(?=\d:)/g, "\t--color");
+console.log(css);
+        return css;
+        
 });
 
 /**
