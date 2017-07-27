@@ -1,46 +1,58 @@
 ﻿todo for talk (?? means optional, if time):
 
-DONE stash the Kafeel chromatic fonts somewhere for easy copying in each time (can't be put in GitHub, not free fonts -  use .gitignore)
 
 ?? do another slide with the Multicolore fonts http://xerographer.github.io/multicoloure/ and Reinebow http://xerographer.github.io/reinebow/
 plus the quote from the original multicolore designer
+https://www.behance.net/gallery/5172881/Multicolore-FREE-Font
 
-DONE 	Replace emojiparty with the EmojiOne examples
-https://github.com/eosrei/emojione-color-font
+"Technically this is not a font (as the current state of technology doesn't allow multicolored fonts) and you cannot write with it in your favorite program - you will need a vector editing application like Adobe Illustrator"
+http://www.fontfabric.com/multicolore-free-fonts/
 
-TO-DO more font loading api examples, see https://drafts.csswg.org/css-font-loading/#font-load-event-examples
+TODO Stylistic sets demo with @font-feature-settings, use MEgalopolis
+
+TODO specifying font-variant-* with @supports not, so only apply low-level settings as fallback for older browsers.
+
+TODO font rendering controls from css fonts 4
+https://drafts.csswg.org/css-fonts-4/#font-display-desc
+
+TODO font-feature-values demo
+
+?? font-presentation property
+requires exlainng unicode variation selectors, maybe too deep for this talk
+https://drafts.csswg.org/css-fonts-4/#font-presentation-desc
 
 ?? add font-kerning: normal to force all browsers to do the kerning they should be doing anyway
 
+TO-DO more font loading api examples, see https://drafts.csswg.org/css-font-loading/#font-load-event-examples
+
 ?? mentions same-origin policy and effect on webfonts
+
+TODO Brotli compression options for best decompress speed with slight size tradeoff
+https://docs.google.com/presentation/d/10ZuRkawUDmeNKQCkmXrenCBva53NBKSwFzaBWEmn-8Y/pub?start=false&loop=false&delayms=3000#slide=id.gcafdb9c0a_0_194
+
+
+
+TODO - second fallback font declare as urange all, actually has .notdef only. Use as server-side counter for when user content exceeds current subsetting.
+
+
+
+=================
+old todo 
+
+DONE stash the Kafeel chromatic fonts somewhere for easy copying in each time (can't be put in GitHub, not free fonts -  use .gitignore)
+
+DONE 	Replace emojiparty with the EmojiOne examples
+https://github.com/eosrei/emojione-color-font
 
 DONE DIAG add woff1 diagram, showing per-table compression, header, meta
 
 DONE DIAG add woff2 diagram showing type rearrangement, discard, full stream compression 
 add diag of hmtx, header & meta processing
 
-TODO Brotli compression options for best decompress speed with slight size tradeoff
-https://docs.google.com/presentation/d/10ZuRkawUDmeNKQCkmXrenCBva53NBKSwFzaBWEmn-8Y/pub?start=false&loop=false&delayms=3000#slide=id.gcafdb9c0a_0_194
-
-TODO specifying font-variant-* with @supports not, so only apply low-level settings as fallback for older browsers.
-
-TODO - second fallback font declare as urange all, actually has .notdef only. Use as server-side counter for when user content exceeds current subsetting.
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-=================
-old todo 
 
 NO TIME  slide with bad japanese serif latin, as example
 
