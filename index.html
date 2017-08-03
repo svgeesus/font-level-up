@@ -22,11 +22,18 @@
 
     <header id="intro" class="slide">
         <h1>
-		WebFonts: <strong>Level Up!</strong>
+		The State of <strong>WebFonts</strong>
 	</h1>
         <h2><a href="http://w3.org/People#clilley">Chris Lilley</a> <a href="http://twitter.com/svgeesus" class="twitter">@svgeesus</a></h2>
         <p class="attribution"></p>
     </header>
+
+    <!-- Australia-specific intro -->
+    <section class="slide activity" id="hi2">
+            <img id="mypic" src="img/other-chris.jpg" alt="not me">
+            <p >Hello! <br /><span class="de-emphasize">I’m Chris Lilley</span></p>
+            <p class="delayed">No, I'm not <em>that</em> Chris Lilley</p>
+        </section>
 
     <section id="#intro">
         <section class="slide activity" id="hi">
@@ -36,7 +43,9 @@
 
         <section class="slide activity" id="w3c">
             <img src="img/w3c-logo.svg" />
-            <p><a href="http://www.w3.org/People/#clilley">Technical Director at W3C <br /><span class="de-emphasize">(Interaction Domain)</span></a></p>
+            <p><a href="http://www.w3.org/People/#clilley">Technical Director at W3C</a></p>
+            <p>ex-W3C Technical Architecture Group</p>
+            <p>W3C Core Web Strategy</p>
         </section>
 
         <section class="slide activity" id="svg">
@@ -438,9 +447,9 @@ h1 {
             <h1>Subset all the things!</h1>
         </section>
 
-        <section class="slide darker" id="subsetGlyph">
+        <section class="slide darker centred" id="subsetGlyph" style="font-size: 3.5em">
             <h1>Subsetting</h1>
-            <ul>
+            <ul style="margin-left: 10vw">
                 <li>Glyphs: Big space savings!</li>
                 <li>OpenType Tables: Moderate savings</li>
                 <li>Tools:
@@ -516,9 +525,11 @@ h1 {
 
         <section class="slide" id="mobilewoff2">
             <h1>WOFF2 & mobile</h1>
-            <p>Balance decompression time & download speed</p>
-            <p>Last 2% size gain <em>doubles</em> decode time!</p>
-            <p>Memory for decompression only 1.05x that for WOFF1</p>
+            <ul class="delayed-children criteria" style="margin-top: 20vh">
+            <li>Balance decompression time & download speed</li>
+            <li>Last 2% size gain doubles decode time!</li>
+            <li>Memory for decompression only 1.05x that for WOFF1</li>
+            </ul>
         </section>
 
         <section class="slide darker" id="font-loading" data-steps="1">
@@ -554,7 +565,7 @@ arvo.loaded.then(()=>{
 </code></pre>
         </section>
 
-        <!-- end of perf section -->
+            <!-- end of perf section -->
     </section>
 
     <section>
@@ -563,14 +574,100 @@ arvo.loaded.then(()=>{
             <h1>The future</h1>
         </header>
 
-        <section class="slide darker" id="illuminated">
-            <h1>From illuminated manuscripts…</h1>
-            <p><img src="img/illum.jpg" alt="illuminated manuscript" /></p>
+
+        <section class="dark slide centered" id="timeline-list">
+            <h1>The Font Display Timeline</h1>
+            <div class="container">
+                <img src="img/stopwatch.jpg"  alt=" the font face’s font download timer"/>
+                <ul class="delayed-children criteria">
+                    <li>font block period (invisible fallback)</li>
+                    <li> font swap period (loaded fallback)</li>
+                    <li>font failure period (font stack)</li>
+                </ul>
+            </div>
         </section>
 
-        <!--
-        <section class="slide darker" id="emojidance" title="…to emoji" data-src="http://emojiparty.club/%F0%9F%98%8E%F0%9F%98%B3%F0%9F%98%8D%F0%9F%98%BC"></section>
--->
+        <section class="dark slide split-definition" id="fd-auto">
+            <h1>font-display descriptor (CSS Fonts 4)</h1>
+            <div class="evil">
+                <p>block: <span class="dur">??</span></p>
+                <p>swap: <span class="dur">??</span></p>
+                <p>failure: <span class="dur">??</span></p>
+            </div>
+            <pre class="delayed  code"><code class="language-css">
+	@font-face {
+		font-family: 'Foo';
+		src: url(foo.woff2);
+		font-display: auto;
+    }</code></pre>
+    </section>
+
+        <section class="dark slide split-definition" id="fd-block">
+            <h1>font-display descriptor (CSS Fonts 4)</h1>
+            <div class="evil">
+                <p>block: <span class="dur">3s</span></p>
+                <p>swap: <span class="dur">∞</span></p>
+                <p>failure: <span class="dur">-</span></p>
+            </div>
+            <pre class="code"><code class="language-css">
+	@font-face {
+		font-family: 'Foo';
+		src: url(foo.woff2);
+		font-display: block;
+    }</code></pre>
+    </section>
+
+        <section class="dark slide split-definition" id="fd-swap">
+            <h1>font-display descriptor (CSS Fonts 4)</h1>
+            <div class="evil">
+                <p>block: <span class="dur">0s</span></p>
+                <p>swap: <span class="dur">∞</span></p>
+                <p>failure: <span class="dur">-</span></p>
+            </div>
+            <pre class="code"><code class="language-css">
+	@font-face {
+		font-family: 'Foo';
+		src: url(foo.woff2);
+		font-display: swap;
+    }</code></pre>
+    </section>
+
+    <section class="dark slide split-definition" id="fd-fallback">
+            <h1>font-display descriptor (CSS Fonts 4)</h1>
+            <div class="evil">
+                <p>block: <span class="dur">100ms</span></p>
+                <p>swap: <span class="dur">3s</span></p>
+                <p>failure: <span class="dur">-</span></p>
+            </div>
+            <pre class="code"><code class="language-css">
+	@font-face {
+		font-family: 'Foo';
+		src: url(foo.woff2);
+		font-display: fallback;
+    }</code></pre>
+    </section>
+
+    <section class="dark slide split-definition" id="fd-optional">
+            <h1>font-display descriptor (CSS Fonts 4)</h1>
+            <div class="evil">
+                <p>block: <span class="dur">100ms</span></p>
+                <p>swap: <span class="dur">0s</span></p>
+                <p>failure: <span class="dur">-</span></p>
+            </div>
+            <pre class="code"><code class="language-css">
+	@font-face {
+		font-family: 'Foo';
+		src: url(foo.woff2);
+		font-display: optional;
+    }</code></pre>
+    </section>
+
+
+    <section class="slide darker" id="illuminated">
+        <h1>From illuminated manuscripts…</h1>
+        <p><img src="img/illum.jpg" alt="illuminated manuscript" /></p>
+    </section>
+        
 
         <section class="slide darker" id="emoji">
 			<h1>…to emoji</h1>
@@ -620,7 +717,7 @@ arvo.loaded.then(()=>{
                 <dd>select from provided palettes</dd>
             </dl>
             <dl class="delayed">
-                <dt>CSS4 @palette-entries</dt>
+                <dt>CSS4 @font-palette-values</dt>
                 <dd>override baked-in palettes</dd>
             </dl>
         </section>

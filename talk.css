@@ -157,7 +157,7 @@
     margin: .9em 0;
 }
 
-#hi img {
+#hi img, #hi2 img {
     border-radius: 50%;
     border: .2em solid var(--darkgrey);
 }
@@ -1114,4 +1114,87 @@ p.quote-attr {
         margin: 0 .2em;
         background: hsla(0,0%,100%,.5);
         font-size: 200%;
+    }
+
+    
+.criteria {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+
+}
+
+	.criteria li {
+		display: flex;
+		align-items: center;
+		padding-right: .5em;
+		/* font-weight: bold; */
+		--color: var(--dark-green);
+		background: linear-gradient(hsla(0,0%,100%,.75), hsla(0,0%,100%,.75)), var(--color);
+		color: var(--color);
+	}
+
+	.criteria li.fail {
+		--color: #c00;
+	}
+
+		.criteria li::before {
+			content: "✓";
+			padding: .1em .5em;
+			margin-right: .3em;
+			background: var(--color);
+			color: white;
+		}
+
+		.criteria li.fail::before {
+			content: "✕";
+		}
+
+
+#timeline-list div {
+    padding: 4em;
+    display: flex;
+    flex-flow: row;
+}
+
+    #timeline-list img {
+        /* object-fit: contain; */
+        object-fit: contain;
+        width: 30vw;
+        border-radius: 8vw;
+    }
+
+    #timeline-list .criteria {
+        margin-top: 2.8em;
+        margin-left: 2em;
+    }
+
+    #timeline-list .criteria li {
+        margin-bottom: 0.8em;
+    }
+
+    div.evil {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        margin-top: 10vh;
+        white-space: nowrap;
+    }
+
+   div.evil p {
+        background: var(--pale-green);
+        color: var(--dark-green);
+        padding: 0.2em;
+        margin-right: 2em;
+    }
+
+    div.evil p > span{
+        background: var(--tan);
+        color: white;
+        width: 5em;
+        display: inline-block;
+        padding-left: 1em;
+        padding-right: 1em;
     }
