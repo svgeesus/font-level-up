@@ -1177,9 +1177,9 @@ p.quote-attr {
         display: flex;
         flex-flow: row;
         justify-content: center;
-        margin-left: 10vw;
-        margin-right: 10vw;
-        margin-top: 10vh;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        margin-top: 8vh;
         white-space: nowrap;
     }
 
@@ -1187,7 +1187,7 @@ p.quote-attr {
         background: var(--pale-green);
         color: var(--dark-green);
         padding: 0.2em;
-        margin-right: 2em;
+        margin-right: 1em;
     }
 
     div.evil p > span{
@@ -1195,6 +1195,6 @@ p.quote-attr {
         color: white;
         width: 5em;
         display: inline-block;
-        padding-left: 1em;
-        padding-right: 1em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
     }

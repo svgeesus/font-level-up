@@ -4,7 +4,8 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>WebFonts: Level Up!</title>
+    <!-- <title>WebFonts: Level Up!</title> -->
+    <title>The State of WebFonts</title>
     <link href="../csss/slideshow.css" rel="stylesheet" />
     <link href="../csss/reusable.css" rel="stylesheet" />
     <link href="theme.css" rel="stylesheet" />
@@ -527,7 +528,7 @@ h1 {
             <h1>WOFF2 & mobile</h1>
             <ul class="delayed-children criteria" style="margin-top: 20vh">
             <li>Balance decompression time & download speed</li>
-            <li>Last 2% size gain doubles decode time!</li>
+            <li class="fail">Last 2% size gain doubles decode time!</li>
             <li>Memory for decompression only 1.05x that for WOFF1</li>
             </ul>
         </section>
@@ -703,7 +704,7 @@ arvo.loaded.then(()=>{
             <div class="delayed">
                 <p>CPAL holds color palette(s)</p>
             </div>
-            <div class="delayed">
+            <div class="delayed" contenteditable>
                 <p id="kCOLR">Painter Kafeel</p>
             </div>
         </section>
@@ -713,11 +714,11 @@ arvo.loaded.then(()=>{
         </section>
 
         <section class="slide split-definition" id="css4-fonts">
-            <dl><dt>CSS4 font-palette</dt>
+            <dl><dt style="font-size: 2em">CSS4 font-palette</dt>
                 <dd>select from provided palettes</dd>
             </dl>
             <dl class="delayed">
-                <dt>CSS4 @font-palette-values</dt>
+                <dt style="font-size: 2em">CSS4 @font-palette-values</dt>
                 <dd>override baked-in palettes</dd>
             </dl>
         </section>
@@ -733,7 +734,7 @@ arvo.loaded.then(()=>{
             <div class="delayed">
                 <p>CSS 4 <em>@font-palette-values</em> to alter palette</p>
             </div>
-            <div class="delayed">
+            <div class="delayed" contenteditable>
                 <p id="kSVG">Painter Kafeel</p>
             </div>
         </section>
@@ -766,9 +767,8 @@ arvo.loaded.then(()=>{
                 <p>Painter Kaffeel</p>
             </div>
             <!-- Idea: instead of typing entirely new colours, press shift + arrow key with caret on hue to circle through all hues -->
-            <textarea>@font-palette-values autumnal {
-    font-family: Painter Kafeel;
-    base-palette: 2;            
+            <textarea class="code"><code class="language-css">@font-palette-values autumnal {
+    font-family: Painter Kafeel; base-palette: 2;            
 	0: black;
 	1: hsl(15, 75%, 34%);
 	2: hsl(15, 80%, 70%);
@@ -778,8 +778,7 @@ arvo.loaded.then(()=>{
 	6: hsl(58, 15%, 56%);
 	7: hsl(58, 15%, 65%);
 	8: hsl(58, 15%, 46%);
-	9: hsl(58, 15%, 30%);
-}</textarea>
+	9: hsl(58, 15%, 30%); }</code></textarea>
         </section>
 
 
@@ -789,7 +788,8 @@ arvo.loaded.then(()=>{
                 <dd>small-caps (disable fake small caps)</dd>
             </dl>
             <dl class="delayed">
-                <dt>emoji, math, fangsong</dt>
+                <dt>emoji, math, <a href="https://webdesign.tutsplus.com/articles/the-complete-beginners-guide-to-chinese-fonts--cms-23444" 
+                    target="_blank">fangsong</a></dt>
                 <dd>New generic font families</dd>
             </dl>
         </section>
