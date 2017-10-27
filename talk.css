@@ -36,6 +36,10 @@
 }
 
 @font-face {
+    font-family: Lato;
+    src: url(fonts/Lato.woff2);
+}
+@font-face {
     font-family: KafeelCOLR;
     src: url(fonts/Kafeel/KafeelPainter-Layers-COLR.woff);
 }

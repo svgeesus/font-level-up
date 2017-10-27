@@ -29,13 +29,13 @@
         <p class="attribution"></p>
     </header>
 
-    <!-- Australia-specific intro -->
+    <!-- Australia-specific intro
     <section class="slide activity" id="hi2">
             <img id="mypic" src="img/other-chris.jpg" alt="not me">
             <p >Hello! <br /><span class="de-emphasize">I’m Chris Lilley</span></p>
             <p class="delayed">No, I'm not <em>that</em> Chris Lilley</p>
         </section>
-
+    -->
     <section id="#intro">
         <section class="slide activity" id="hi">
             <img id="mypic" src="img/chris-av.jpg" alt="me">
@@ -416,7 +416,8 @@ h1 {
 <code>font-family:</code> <select data-style="font-family: {value};" class="css-control" data-subject=".figure">
 			<option>Free Sans</option>
 			<option>Arvo</option>
-			<option selected>LinBio</option>
+            <option >LinBio</option>
+            <option selected>Lato</option>
 			<option>Megalopolis</option>
 			<option>Rochester</option>
 		</select>;</pre>
@@ -524,6 +525,7 @@ h1 {
             </dl>
         </section>
 
+        <!--
         <section class="slide" id="mobilewoff2">
             <h1>WOFF2 & mobile</h1>
             <ul class="delayed-children criteria" style="margin-top: 20vh">
@@ -532,6 +534,7 @@ h1 {
             <li>Memory for decompression only 1.05x that for WOFF1</li>
             </ul>
         </section>
+    -->
 
         <section class="slide darker" id="font-loading" data-steps="1">
             <!-- <h1>Font Loading API</h1> -->
@@ -575,7 +578,7 @@ arvo.loaded.then(()=>{
             <h1>The future</h1>
         </header>
 
-
+<!--
         <section class="dark slide centered" id="timeline-list">
             <h1>The Font Display Timeline</h1>
             <div class="container">
@@ -587,7 +590,9 @@ arvo.loaded.then(()=>{
                 </ul>
             </div>
         </section>
+    -->
 
+        <!--
         <section class="dark slide split-definition" id="fd-auto">
             <h1>font-display descriptor (CSS Fonts 4)</h1>
             <div class="evil">
@@ -662,13 +667,13 @@ arvo.loaded.then(()=>{
 		font-display: optional;
     }</code></pre>
     </section>
-
+-->
 
     <section class="slide darker" id="illuminated">
         <h1>From illuminated manuscripts…</h1>
         <p><img src="img/illum.jpg" alt="illuminated manuscript" /></p>
     </section>
-        
+
 
         <section class="slide darker" id="emoji">
 			<h1>…to emoji</h1>
@@ -705,7 +710,10 @@ arvo.loaded.then(()=>{
                 <p>CPAL holds color palette(s)</p>
             </div>
             <div class="delayed" contenteditable>
+                <!--
                 <p id="kCOLR">Painter Kafeel</p>
+                -->
+                <p id="kCOLR">View Source</p>
             </div>
         </section>
 
@@ -734,8 +742,10 @@ arvo.loaded.then(()=>{
             <div class="delayed">
                 <p>CSS 4 <em>@font-palette-values</em> to alter palette</p>
             </div>
-            <div class="delayed" contenteditable>
+            <div class="delayed" contenteditable><!--
                 <p id="kSVG">Painter Kafeel</p>
+            -->
+                <p id="kSVG">Hello, London!</p>
             </div>
         </section>
 
@@ -767,8 +777,8 @@ arvo.loaded.then(()=>{
                 <p>Painter Kaffeel</p>
             </div>
             <!-- Idea: instead of typing entirely new colours, press shift + arrow key with caret on hue to circle through all hues -->
-            <textarea class="code"><code class="language-css">@font-palette-values autumnal {
-    font-family: Painter Kafeel; base-palette: 2;            
+            <textarea class="code">@font-palette-values autumnal {
+    font-family: Painter Kafeel; base-palette: 2;
 	0: black;
 	1: hsl(15, 75%, 34%);
 	2: hsl(15, 80%, 70%);
@@ -778,7 +788,7 @@ arvo.loaded.then(()=>{
 	6: hsl(58, 15%, 56%);
 	7: hsl(58, 15%, 65%);
 	8: hsl(58, 15%, 46%);
-	9: hsl(58, 15%, 30%); }</code></textarea>
+	9: hsl(58, 15%, 30%); }</textarea>
         </section>
 
 
@@ -788,7 +798,7 @@ arvo.loaded.then(()=>{
                 <dd>small-caps (disable fake small caps)</dd>
             </dl>
             <dl class="delayed">
-                <dt>emoji, math, <a href="https://webdesign.tutsplus.com/articles/the-complete-beginners-guide-to-chinese-fonts--cms-23444" 
+                <dt>emoji, math, <a href="https://webdesign.tutsplus.com/articles/the-complete-beginners-guide-to-chinese-fonts--cms-23444"
                     target="_blank">fangsong</a></dt>
                 <dd>New generic font families</dd>
             </dl>
@@ -819,10 +829,11 @@ font-weight: calc(9 * 100);</code></pre>
             <p><img src="img/dunbar.gif" alt="Dunbar variable font"/></p>
         </section>
 
+        <!--
         <section class="slide white figure" id="axes">
             <p><img src="img/3-axes.png" alt="three axes"/></p>
         </section>
-
+    -->
         <section class="centered code dark slide" style="align-items: center">
             <pre style="font-size: calc(55% + 1vmin); padding: 0; margin: 0; width: max-content;"><code>@font-face {
     font-family: "Dunbar";
@@ -841,7 +852,7 @@ h1 {
         </section>
 
         <section class="centered code slide">
-            <pre><code>/* Supported in Safari!! (TP 16+) */
+            <pre><code>/* Supported in Safari (TP 16+) &amp; Chrome 62 */
 font-variation-settings:"wght" 2.4, "wdth" .7, "radi" .4;</code></pre>
             <pre class="delayed"><code>@keyframes expand {
     from { font-variation-settings: 'wght' .3 }
@@ -921,7 +932,7 @@ font-variation-settings:"wght" 2.4, "wdth" .7, "radi" .4;</code></pre>
 				-->
 			<dt><a href="https://github.com/eosrei/emojione-color-font">EmojiOne</a></dt>
             <dd>SVG-in-OT emoji font by Brad Erickson. CC-BY-4.0 Includes skin colour modifiers, circled letters, flags.</dd>
-            
+
             <dt><a href="http://xerographer.github.io/multicoloure/">Multicolore</a></dt>
             <dd>SVG-in-OT conversion by Xerographer fonts of Illustrator concept font by Ivan Filipov. CC-BY-SA 4.0.</dd>
 
