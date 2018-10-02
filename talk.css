@@ -1120,7 +1120,7 @@ p.quote-attr {
         font-size: 200%;
     }
 
-    
+
 .criteria {
 	padding: 0;
 	margin: 0;
@@ -1202,3 +1202,18 @@ p.quote-attr {
         padding-left: 0.5em;
         padding-right: 0.5em;
     }
+
+    table.axtbl {
+        margin-left: auto;
+        margin-right: auto;
+        width: 26em
+    }
+
+        table.axtbl tr:nth-of-type(2n) {
+            background: #333;
+        }
+
+        table.axtbl th {
+            color: var(--orange);
+            text-align: left;
+        }
