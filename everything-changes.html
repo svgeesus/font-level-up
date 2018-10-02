@@ -405,12 +405,12 @@ font-weight: calc(9 * 100);</code></pre>
         </section>
 
 
-    <section class="slide white figure">
+    <section class="slide white figure" id="dunbar">
         <p><img src="img/dunbar.gif" alt="Dunbar variable font"/></p>
     </section>
 
 
-    <section class="centered code dark slide" style="align-items: center">
+    <section class="centered code dark slide" id="descriptor-ranges" style="align-items: center">
         <pre style="font-size: calc(55% + 1vmin); padding: 0; margin: 0; width: max-content;"><code>@font-face {
 font-family: "Dunbar";
 src: "dunbar.otf";
@@ -427,7 +427,7 @@ font-optical-sizing: none;
 }</code></pre>
     </section>
 
-    <section class="centered code slide">
+    <section class="centered code slide" id="animated-fvs">
         <pre><code>/* Supported Safari (TP 16+), Firefox 62 &amp; Chrome 62 */
 font-variation-settings:"wght" 2.4, "wdth" .7, "radi" .4;</code></pre>
         <pre class="delayed"><code>@keyframes expand {
@@ -444,7 +444,7 @@ to { font-variation-settings: 'wght' 3.1; }
         <p><video src="videos/lab.mp4"/ autoplay loop></p>
     </section>
 
-    <section class="slide" style="background: url(img/dollar.gif) center repeat-x white;"></section>
+    <section id="simplify-gsub" class="slide" style="background: url(img/dollar.gif) center repeat-x white;"></section>
 
     <section class="slide figure" id="peace">
         <p><img src="img/peace-type.gif" alt="peace"/></p>
@@ -525,7 +525,7 @@ to { font-variation-settings: 'wght' 3.1; }
                     <!--
                     <p id="kCOLR">Painter Kafeel</p>
                     -->
-                    <p id="kCOLR">Frontend Conf</p>
+                    <p id="kCOLR">Fronteers</p>
                 </div>
             </section>
 
@@ -557,34 +557,12 @@ to { font-variation-settings: 'wght' 3.1; }
                 <div class="delayed" contenteditable><!--
                     <p id="kSVG">Painter Kafeel</p>
                 -->
-                    <p id="kSVG">Hello, Moscow!</p>
+                    <p id="kSVG">Hello, Amsterdam!</p>
                 </div>
             </section>
 
-            <section class="slide hsplit dont-resize" id="svg-palette-demo">
-                <!--
-        The original demo depends on the SVG glyphs having used var() syntax, which the
-        exported kafeel does not
-        Bug report to FontLab for TransType 4
-        Also, var syntax changed wrt SVG Glyphs in OpenType report
-        http://www.w3.org/2013/10/SVG_in_OpenType/#render
-        so this is, sadly, a demo of what it *will* be like
-                    <textarea>#demo {
-        --color0: black;
-        --color1: hsl(15, 75%, 34%);
-        --color2: hsl(15, 80%, 70%);
-        --color3: hsl(15, 75%, 53%);
-        --color4: hsl(15, 75%, 40%);
-        --color5: white;
-        --color6: hsl(58, 15%, 56%);
-        --color7: hsl(58, 15%, 65%);
-        --color8: hsl(58, 15%, 46%);
-        --color9: hsl(58, 15%, 30%);
-    }</textarea>
+            <section class="slide hsplit dont-resize" id="svg-palette-demo" data-type="CSS fonts 4">
 
-        ok even better, we changed it again!! Now in CSS4 fonts
-        it is @font-palette-values
-        -->
                 <div class="multicolour-fake" id="demo">
                     <p>Painter Kaffeel</p>
                 </div>
@@ -603,6 +581,20 @@ to { font-variation-settings: 'wght' 3.1; }
         9: hsl(58, 15%, 30%); }</textarea>
             </section>
 
+<!-- slide here on supports syntax-->
+
+<section class="slide" id="supports" data-type="CSS fonts 4">
+    <h1>supports &lt;font-technology&gt;</h1>
+    <p>features, variations, color(), palettes</p>
+    <p>COLR, SVG, sbix</p>
+    <pre style="font-size: calc(55% + 1vmin); padding: 0; margin: 0; width: max-content;">
+    <code>@font-face {
+        font-family: "Sample";
+        src: url("smp-colr.otf") format(opentype supports color(COLR)),
+             url("smp-bw.otf") format(opentype);
+    }
+    </code></pre>
+</section>
 
     <!-- end of color section -->
     </section>
