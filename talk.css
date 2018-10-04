@@ -59,6 +59,12 @@
     src: url(fonts/EmojiOneColor-SVGinOT.ttf);
 }
 
+@font-face {
+    font-family: "Kairos Sans";
+    src: url(fonts/KairosSans_Variable.ttf);
+    font-weight: 250 900;
+}
+
 #for-browser {
     background: #333;
     background-image: linear-gradient(to left, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), linear-gradient(to left, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
@@ -1207,4 +1213,35 @@ p.quote-attr {
         display: inline-block;
         padding-left: 0.5em;
         padding-right: 0.5em;
+    }
+
+    table.axtbl {
+        margin-left: auto;
+        margin-right: auto;
+        width: 26em
+    }
+
+        table.axtbl tr:nth-of-type(2n) {
+            background: #333;
+        }
+
+        table.axtbl th {
+            color: var(--orange);
+            text-align: left;
+        }
+
+#weight-anim {
+    font-family: "Kairos Sans";
+}
+
+    #weight-anim .w300 {
+        font-weight: 300;
+    }
+
+    #weight-anim .w800 {
+        font-weight: 800;
+    }
+
+    #weight-anim .variable {
+        font-weight: 600;
     }
