@@ -8,6 +8,7 @@
     <title>The State of WebFonts</title>
     <link href="../csss/slideshow.css" rel="stylesheet" />
     <link href="../csss/reusable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="mavo.css">
     <link href="theme.css" rel="stylesheet" />
     <link href="talk.css" rel="stylesheet" />
     <script src="../prefixfree/prefixfree.min.js"></script>
@@ -30,13 +31,6 @@
         <p class="attribution"></p> -->
     </header>
 
-    <!-- Australia-specific intro
-    <section class="slide activity" id="hi2">
-            <img id="mypic" src="img/other-chris.jpg" alt="not me">
-            <p >Hello! <br /><span class="de-emphasize">I’m Chris Lilley</span></p>
-            <p class="delayed">No, I'm not <em>that</em> Chris Lilley</p>
-        </section>
-    -->
     <section id="#intro">
         <section class="slide activity" id="hi">
             <img id="mypic" src="img/chris-av.jpg" alt="me">
@@ -335,7 +329,7 @@ h1 {
             </table>
         </section>
 
-    <section data-import="tofino-family"></section>
+    <!-- <section data-import="tofino-family"></section> -->
 
     <section class="centered code slide dark" id="fvs" data-type="CSS fonts 4">
             <pre><code>/* select position  on each axis */
@@ -406,8 +400,15 @@ font-weight: calc(9 * 100);</code></pre>
                         <td>font-weight</td>
                 </tr>
         </table>
-        </section>
+    </section>
 
+    <section class="slide dark" id="weight-anim">
+        <ul class="wdemo delayed-children">
+            <li class="300">Variable, Weight 300</li>
+            <li class="800">Variable, Weight 800</li>
+            <li class="variable">Variable, Weight vari</li>
+        </ul>
+    </section>
 
     <section class="slide white figure" id="dunbar">
         <p><img src="img/dunbar.gif" alt="Dunbar variable font"/></p>
@@ -970,7 +971,7 @@ to { font-variation-settings: 'wght' 3.1; }
         </dl>
     </section>
 
-
+    <script src="mavo.min.js"></script>
     <script src="../csss/slideshow.js"></script>
     <script src="prism.js"></script>
     <script src="../csss/plugins/css-edit.js"></script>

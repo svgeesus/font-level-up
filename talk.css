@@ -59,6 +59,12 @@
     src: url(fonts/EmojiOneColor-SVGinOT.ttf);
 }
 
+@font-face {
+    font-family: "Kairos Sans";
+    src: url(fonts/KairosSans_Variable.ttf);
+    font-weight: 250 900;
+}
+
 #for-browser {
     background: #333;
     background-image: linear-gradient(to left, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), linear-gradient(to left, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
@@ -1217,3 +1223,19 @@ p.quote-attr {
             color: var(--orange);
             text-align: left;
         }
+
+#weight-anim {
+    font-family: "Kairos Sans";
+}
+
+    #weight-anim .300 {
+        font-weight: 300;
+    }
+
+    #weight-anim .800 {
+        font-weight: 800;
+    }
+
+    #weight-anim .variable {
+        font-weight: 600;
+    }
