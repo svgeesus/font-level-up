@@ -684,16 +684,26 @@ pre.inline + pre.inline {
 }
 
 /* SECTION: The Future starts here */
-#illuminated p,
-#TransTypeDemo p {
+#illuminated p {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#illuminated p img,
-#TransTypeDemo p img {
+
+#illuminated p img {
     margin: auto;
 }
+
+#TransTypeDemo {
+    align-items: center;
+
+}
+
+    #TransTypeDemo img {
+        border-radius: 8px;
+        filter: drop-shadow(.1em .1em .3em rgba(0,0,0,.4));
+    }
+
 #kafeelColor,
 #kafeelSVG {
     font-size: 300%;
@@ -833,7 +843,6 @@ pre.inline + pre.inline {
     margin-right: auto;
     margin-top: 0;
     margin-bottom: 0;
-    width: 90vw
 }
 #svg-palette-demo {
     background: var(--buff);
@@ -847,6 +856,18 @@ pre.inline + pre.inline {
 #kCOLR {
     font-family: KafeelCOLR;
 }
+
+#kafeelCOLR,
+#kafeelSVG {
+    align-items: center;
+}
+
+    #kafeelCOLR ul,
+    #kafeelSVG ul {
+        width: -moz-fit-content;
+        width: fit-content;
+    }
+
 #kSVG,
 #kSVG2 {
     font-family: KafeelSVG;
@@ -1019,10 +1040,16 @@ select {
     color: inherit;
     vertical-align: middle;
 }
-#emoji .embiggen {
-    font-family: emojione;
-    font-size: 3em;
+
+#emoji {
+    text-align: center;
 }
+
+    #emoji > div {
+        font-family: emojione;
+        font-size: 3em;
+        white-space: pre-line;
+    }
 
 #woff1 div, #woff2-hmtx div, #woff2 div  {
 	margin-left: auto;
@@ -1229,28 +1256,74 @@ p.quote-attr {
         }
 
 #weight-anim {
+    align-items: center;
     font-family: "Kairos Sans";
+    line-height: 1;
+    padding: 2em;
 }
+
+    #weight-anim ul {
+        flex: 1;
+        display: flex;
+        flex-flow: column;
+        width: fit-content;
+        width: -moz-fit-content;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        font-size: 150%;
+        color: var(--tan);
+    }
+
+    #weight-anim ul::before {
+        content: '';
+        position: absolute;
+        top: .7em;
+        bottom: .5em;
+        left: -.75em;
+        width: .1em;
+        background: currentColor;
+    }
 
     #weight-anim .w300 {
         font-weight: 300;
     }
 
     #weight-anim .w800 {
+        margin-top: auto;
         font-weight: 800;
     }
 
+    @keyframes weight {
+        from, 5% {
+            font-weight: 300;
+            top: 0;
+        }
+
+        95%, to {
+            font-weight: 800;
+            top: calc(100% - 1em);
+        }
+    }
+
     #weight-anim .variable {
-        font-weight: 600;
+        position: absolute;
+        top: 0;
+        font-weight: 300;
+        color: var(--buff);
+    }
+
+    #weight-anim .variable::after {
+        content: " " var(--font-weight, "300");
+    }
+
+    #weight-anim .variable.current {
+        animation: weight 3s linear infinite alternate;
     }
 
 #tofino-family {
     align-items: center;
 }
-
-    #tofino-family h1 {
-
-    }
 
     #tofino-family img {
         flex: 1;
@@ -1282,4 +1355,10 @@ p.quote-attr {
 #fvs-properties {
     align-items: center;
     font-size: 400%;
+}
+
+ul.plain {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }

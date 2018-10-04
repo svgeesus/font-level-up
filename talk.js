@@ -157,3 +157,17 @@ $$('.show-html').forEach(function(element) {
         element.tooltip.classList.remove('active');
     }
 });
+
+$("#weight-anim").addEventListener("slidechange", evt => {
+    var slide = evt.target;
+
+    requestAnimationFrame(function callee() {
+        var weight = getComputedStyle($(".variable", slide)).fontWeight;
+        weight = Math.round(weight);
+        slide.style.setProperty("--font-weight", `"${weight}"`);
+
+        if (location.hash === "#" + slide.id) {
+            requestAnimationFrame(callee);
+        }
+    }, 50);
+});

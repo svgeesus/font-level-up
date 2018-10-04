@@ -407,11 +407,11 @@ font-optical-sizing: auto</code></pre>
         </table>
     </section>
 
-    <section class="slide dark" id="weight-anim">
-        <ul class="wdemo delayed-children">
-            <li class="w300">Variable, Weight 300</li>
-            <li class="w800">Variable, Weight 800</li>
-            <li class="variable">Variable, Weight vari</li>
+    <section class="slide dark" id="weight-anim" data-type="CSS Fonts 4">
+        <ul class="wdemo">
+            <li class="w300">Kairos Sans 300</li>
+            <li class="w800 delayed">Kairos Sans 800</li>
+            <li class="variable delayed">Kairos Sans</li>
         </ul>
     </section>
 
@@ -422,18 +422,18 @@ font-optical-sizing: auto</code></pre>
 
     <section class="centered code dark slide" id="descriptor-ranges"  data-type="CSS fonts 4" style="align-items: center">
         <pre style="font-size: calc(55% + 1vmin); padding: 0; margin: 0; width: max-content;"><code>@font-face {
-font-family: "Dunbar";
-src: url("dunbar.otf");
-font-weight: 100 900;
-font-stretch: 50% 200%;
-font-style: -10deg 40deg;
+    font-family: "Dunbar";
+    src: url("dunbar.otf");
+    font-weight: 100 900;
+    font-stretch: 50% 200%;
+    font-style: -10deg 40deg;
 }
 
 h1 {
-font-weight: 234;
-font-stretch: 80%;
-font-style: oblique 24deg;
-font-optical-sizing: none;
+    font-weight: 234;
+    font-stretch: 80%;
+    font-style: oblique 24deg;
+    font-optical-sizing: none;
 }</code></pre>
     </section>
 
@@ -441,8 +441,8 @@ font-optical-sizing: none;
         <pre><code>/* Supported Safari (TP 16+), Firefox 62 &amp; Chrome 62 */
 font-variation-settings:"wght" 2.4, "wdth" .7, "radi" .4;</code></pre>
         <pre class="delayed"><code>@keyframes expand {
-from { font-variation-settings: 'wght' .3 }
-to { font-variation-settings: 'wght' 3.1; }
+    from { font-variation-settings: 'radi' .3 }
+    to { font-variation-settings: 'radi' 3.1; }
 }</code></pre>
     </section>
 
@@ -505,14 +505,11 @@ to { font-variation-settings: 'wght' 3.1; }
 
             <section class="slide darker" id="emoji">
                 <h1>…to emoji</h1>
-                <div class="embiggen show-html">
-                    😀 😎 🤖 👨‍👩‍👧‍👦 👦🏻 👧🏻 👨🏻 👩🏻 👦🏼 👧🏼 👨🏼 👩🏼
-                    <br/> 👦🏽 👧🏽 👨🏽 👩🏽 👦🏾 👧🏾 👨🏾 👩🏾 👦🏿 👧🏿 👨🏿 👩🏿
-                    <br/> 🐱 🐶 🐌 🌎 🍕 🍲 🍫 🍻 ⚽️ 🏀 🏈 ⚾️
-                    <br/> 🌈 🏯 🗽 🚆 📱 🎉 🗓 💸 🇫 🇴 🇳 🇹
-                    <br/> 🇺🇸 🇧🇷 🇲🇹 🇸🇪 🇳🇬
-                    🇰🇭 🇭🇷 🇮🇩 🇳🇿 🇪🇬 🇫🇮 🇨🇳<br/>
-                </div>
+<div class="show-html">    😀 😎 🤖 👨‍👩‍👧‍👦 👦🏻 👧🏻 👨🏻 👩🏻 👦🏼 👧🏼 👨🏼 👩🏼
+    👦🏽 👧🏽 👨🏽 👩🏽 👦🏾 👧🏾 👨🏾 👩🏾 👦🏿 👧🏿 👨🏿 👩🏿
+    🐱 🐶 🐌 🌎 🍕 🍲 🍫 🍻 ⚽️ 🏀 🏈 ⚾️
+    🌈 🏯 🗽 🚆 📱 🎉 🗓 💸 🇫 🇴 🇳 🇹
+    🇺🇸 🇧🇷 🇲🇹 🇸🇪 🇳🇬 🇰🇭 🇭🇷 🇮🇩 🇳🇿 🇪🇬 🇫🇮 🇨🇳</div>
             </section>
 
             <section class="image slide" style="background-image: url('img/kafeel-handdrawn.jpg');" data-source="handpaintedtype.com"></section>
@@ -531,18 +528,13 @@ to { font-variation-settings: 'wght' 3.1; }
 
             <section class="dark slide" id="kafeelCOLR">
                 <h1>COLR + CPAL</h1>
-                <div class="delayed">
-                    <p>COLR holds stack of TrueType outlines</p>
-                </div>
-                <div class="delayed">
-                    <p>CPAL holds color palette(s)</p>
-                </div>
-                <div class="delayed" contenteditable>
-                    <!--
-                    <p id="kCOLR">Painter Kafeel</p>
-                    -->
-                    <p id="kCOLR">Fronteers</p>
-                </div>
+                <ul class="plain delayed-children">
+                    <li>COLR holds stack of TrueType outlines</li>
+                    <li>CPAL holds color palette(s)</li>
+                    <li contenteditable id="kCOLR">
+                        Fronteers
+                    </li>
+                </ul>
             </section>
 
             <section class="image slide" id="unstyled" style="background: url(img/woodletters_o.jpg) center #2D2C2C no-repeat; background-size: cover;">
@@ -562,20 +554,13 @@ to { font-variation-settings: 'wght' 3.1; }
 
             <section class="dark slide" id="kafeelSVG">
                 <h1>SVG (+ CPAL)</h1>
-                <div class="delayed">
-                    <p>SVG holds SVG graphics</p>
-                </div>
-                <div class="delayed">
-                    <p>CPAL holds color palette(s)</p>
-                </div>
-                <div class="delayed">
-                    <p>CSS 4 <em>@font-palette-values</em> to alter palette</p>
-                </div>
-                <div class="delayed" contenteditable><!--
-                    <p id="kSVG">Painter Kafeel</p>
-                -->
-                    <p id="kSVG">Hello, Amsterdam!</p>
-                </div>
+
+                <ul class="plain delayed-children">
+                    <li>SVG holds SVG graphics</li>
+                    <li>CPAL holds color palette(s)</li>
+                    <li>CSS 4 <em>@font-palette-values</em> to alter palette</li>
+                    <li id="kSVG" contentEditable>I ❤️ Amsterdam!</li>
+                </ul>
             </section>
 
             <section class="slide hsplit dont-resize" id="svg-palette-demo" data-type="CSS fonts 4">

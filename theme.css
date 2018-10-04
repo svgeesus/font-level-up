@@ -123,6 +123,9 @@ textarea, pre.styled {
 	}
 
 .slide {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
 	padding: 2.5rem;
 	background-color: #9E9D81;
 	color: var(--darkgrey);
