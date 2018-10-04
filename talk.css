@@ -142,8 +142,13 @@
 }
 
 .activity {
+    align-items: center;
     text-align: center;
     font: bold 400%/1 var(--heading-font);
+}
+
+.activity h1 {
+    margin: 0;
 }
 
 .activity img {
@@ -292,7 +297,9 @@
     font: 80vh/.9 Baskerville, Garamond, Georgia, serif;
 }
 
-#familyface {}
+#familyface {
+    align-items: flex-start;
+}
 
 #familyface article {
     width: fit-content;
@@ -476,7 +483,9 @@
     font-family: amp, Arvo, serif;
 }
 
-#ampersand-demo {}
+#ampersand-demo {
+    justify-content: flex-start;
+}
 
 #ampersand-demo h1 {
     font-size: 300%;
@@ -845,6 +854,7 @@ pre.inline + pre.inline {
     margin-bottom: 0;
 }
 #svg-palette-demo {
+    justify-content: flex-start;
     background: var(--buff);
 }
 #svg-palette-demo .multicolour-fake {
@@ -873,10 +883,12 @@ pre.inline + pre.inline {
     font-family: KafeelSVG;
 }
 footer.slide {
+    align-items: center;
     text-align: center;
     padding-top: 1em;
     color: #9E9D81;
 }
+
 footer.slide img {
     border-radius: 50%;
 }
@@ -1145,6 +1157,12 @@ p.quote-attr {
     #trick-question pre {
         margin: 2em 0;
         text-align: left;
+        font-size: 110%;
+    }
+
+    #trick-question .answers {
+        display: flex;
+        justify-content: center;
     }
 
     #trick-question .answer {
@@ -1339,6 +1357,7 @@ p.quote-attr {
         line-height: 1;
         font-size: 200%;
         transition-timing-function: cubic-bezier(.3,.2,.5,1.5);
+        box-shadow: .1em .1em .3em rgba(0,0,0,.3);
     }
 
     #tofino-family p.delayed:not(.displayed):not(.current) {
@@ -1362,3 +1381,17 @@ ul.plain {
     padding: 0;
     list-style: none;
 }
+
+#stacks {
+
+}
+
+    #stacks pre {
+        margin: 2em 0;
+    }
+
+    #stacks p {
+        margin: 0 auto;
+        width: 25em;
+        font-size: 150%;
+    }

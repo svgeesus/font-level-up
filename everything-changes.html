@@ -173,20 +173,15 @@ h1 {
 
         <section class="slide" id="stacks">
             <h1>Font stacks</h1>
-            <div class="delayed">
-                <p>First font with glyphs for a given character is used</p>
-            </div>
-            <div class="delayed">
-                <p>Problem: avoiding bad Latin glyphs in Japanese fonts</p>
-            </div>
+
+            <p class="delayed">First font with glyphs for a given character is used</p>
+            <p class="delayed">Problem: avoiding bad Latin glyphs in Japanese fonts</p>
+
             <pre class="delayed inline"><code>@font-face {
 	font-family: Demo;
 	src: url(Latin.woff), url(Japanese.woff);
 }</code></pre>
-            <div class="delayed">
-                <p>
-                    <em>Both</em> fonts can’t be first!</p>
-            </div>
+            <p class="delayed"><em>Both</em> fonts can’t be first!</p>
         </section>
 
         <section class="dark slide split-definition" id="urange">
@@ -350,8 +345,11 @@ font-variation-settings:
         <pre class="styled"><code>font-weight: 400;
 font-weight: calc(9 * 100);</code></pre>
 
-        <div style="font-weight: 400" class="delayed answer">AaАа 400</div>
-        <div style="font-weight: 900" class="delayed answer">BbБб 900</div>
+        <div class="answers">
+            <div style="font-weight: 400" class="delayed answer">AaΑα 400</div>
+            <div style="font-weight: 900" class="delayed answer">BbΒβ 900</div>
+        </div>
+
         <!-- <p class="delayed">Number-like strings 100 to 900. <span class="delayed">Really.</span></p> -->
      </section>
 
@@ -589,17 +587,12 @@ font-variation-settings:"wght" 2.4, "wdth" .7, "radi" .4;</code></pre>
 
 <section class="slide" id="supports" data-type="CSS fonts 4">
     <h1>supports &lt;font-technology&gt;</h1>
-    <div class="delayed-children">
-            <p>&lt;font-technology&gt;: features | variations | color(tech) | palettes</p>
-            <p>tech: COLR | SVG | sbix</p>
-            <pre style="font-size: calc(55% + 1vmin); padding: 0; margin: 0; width: max-content;">
-    <code>@font-face {
-        font-family: "Sample";
-        src: url("smp-colr.otf") format(opentype supports color(COLR)),
-                url("smp-bw.otf") format(opentype);
-    }
-    </code></pre>
-    </div>
+    <pre class="delayed" style="font-size: calc(55% + 1vmin); margin: 1em 0"><code>@font-face {
+font-family: "Sample";
+src: url("smp-colr.otf") format(opentype supports color(COLR)),
+     url("smp-bw.otf") format(opentype);
+}</code></pre>
+    <p class="delayed"><code style="color: inherit">features | variations | color(COLR | SVG | sbix) | palettes</code></p>
 </section>
 
     <!-- end of color section -->
@@ -642,7 +635,7 @@ font-variation-settings:"wght" 2.4, "wdth" .7, "radi" .4;</code></pre>
             <p class="figure">
                 1234567890ABC<br /> 1234567890abj
             </p>
-            <pre><code>font-variant-numeric:</code> <select data-style="font-variant-numeric: {value};" class="css-control">
+            <pre><code>font-variant-numeric:</code> <select data-style="font-variant-numeric: {value};" class="css-control mv-autosize">
 			<option>lining-nums</option>
 			<option>oldstyle-nums</option>
 		</select>;</pre>
@@ -672,7 +665,7 @@ font-variation-settings:"wght" 2.4, "wdth" .7, "radi" .4;</code></pre>
             <p class="figure">
                 1/2 3/4 5/8<br /> 13/27 86/483
             </p>
-            <pre><code>font-variant-numeric:</code> <select data-style="font-variant-numeric: {value};" class="css-control">
+            <pre><code>font-variant-numeric:</code> <select data-style="font-variant-numeric: {value};" class="css-control mv-autosize">
 			<option>normal</option>
 			<option>diagonal-fractions</option>
 		</select>;</pre>
@@ -690,15 +683,25 @@ font-variation-settings:"wght" 2.4, "wdth" .7, "radi" .4;</code></pre>
                     <td>286,111.10</td>
                 </tr>
             </table>
-            <pre><code>font-variant-numeric:</code> <select data-style="font-variant-numeric: {value};" class="css-control">
+            <pre><code>font-variant-numeric:</code> <select data-style="font-variant-numeric: {value};" class="css-control mv-autosize">
 			<option>proportional-nums</option>
 			<option>tabular-nums</option>
 		</select>;</pre>
         </section>
 
+        <section class="property slide" id="font-variant-numeric2">
+            <p class="figure">
+                1st, 2nd, 3rd, 4th
+            </p>
+            <pre><code>font-variant-numeric:</code> <select data-style="font-variant-numeric: {value};" class="css-control mv-autosize">
+			<option>normal</option>
+			<option>ordinal</option>
+		</select>;</pre>
+        </section>
+
         <section class="property slide" id="ligatures">
             <p class="figure">INCROYABLE <br /> flaneur</p>
-            <pre><code>font-variant-ligatures:</code> <select data-style="font-variant-ligatures: {value};" class="css-control">
+            <pre><code>font-variant-ligatures:</code> <select data-style="font-variant-ligatures: {value};" class="css-control mv-autosize">
 			<option>normal</option>
 			<option>discretionary-ligatures</option>
 			<option>none</option>
@@ -798,7 +801,7 @@ font-variation-settings:"wght" 2.4, "wdth" .7, "radi" .4;</code></pre>
                 <li><a href="http://twitter.com/svgeesus">@svgeesus</a></li>
             </ul>
             <p>Slides: <a href="https://github.com/svgeesus/font-level-up/">github.com/svgeesus/font-level-up/</a></p>
-            <p style="font-size: 50%;">CSS Slideshow framework by Lea Verou: <a href="http://github.com/LeaVerou/CSSS">github.com/LeaVerou/CSSS</a></p>
+            <p style="font-size: 50%;">Slideshow framework by Lea Verou: <a href="http://github.com/LeaVerou/inspire.js">github.com/LeaVerou/inspire.js</a></p>
         </footer>
 
     <!-- start of "if time" section -->
