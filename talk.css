@@ -541,6 +541,7 @@
 
 .property.slide {
     text-align: center;
+    font-size: 200%;
 }
 
 .figure {
@@ -999,6 +1000,11 @@ div.browser-support {
 #no-fake-bold-italic select {
     text-align: right;
 }
+
+#font-variant-numeric2 .figure {
+    font-family: Adobe Caslon Pro, serif;
+}
+
 select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -1120,7 +1126,7 @@ p.quote-attr {
         font-size: 200%;
     }
 
-    
+
 .criteria {
 	padding: 0;
 	margin: 0;
