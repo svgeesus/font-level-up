@@ -195,12 +195,12 @@ h1 {
                 <dd>Descriptor for allowed range of Unicode characters</dd>
             </dl>
             <pre class="delayed  code"><code class="language-css">
-	@font-face {
-		font-family: 'Headings';
-		src: url(fonts/Japanese.woff);
-		unicode-range: U+A5, U+4E00-9FFF, U+30??, U+FF00-FF9F;
-		/* yen, kanji, hiragana, katakana */
-	}</code></pre>
+@font-face {
+	font-family: 'Headings';
+	src: url(fonts/Japanese.woff);
+	unicode-range: U+A5, U+4E00-9FFF, U+30??, U+FF00-FF9F;
+	/* yen, kanji, hiragana, katakana */
+}</code></pre>
             <!--
 		<div class="delayed"><p>Descriptor for allowed range of Unicode characters</p></div>
 		<div class="delayed"><p>Glyphs for characters outside range <em>not used</em></p>
@@ -265,9 +265,14 @@ h1 {
     </header>
 
     <section class="slide white figure" id="tofino-family">
-        <h3 style="font-size: 70%; margin-bottom: 0.2em">Tofino, by Alanna Munro (37)</h3>
+        <h1 style="font-size: 70%; margin-bottom: 0.2em">Tofino, by Alanna Munro</h1>
 
-            <p><img src="img/tmp-tofino-styles.png" alt="Tofino family"/></p>
+        <img src="img/tmp-tofino-styles.png" alt="Tofino family"/>
+
+        <p class="files delayed">
+            <strong>37</strong>
+            files
+        </p>
 
         </section>
 
@@ -333,10 +338,10 @@ h1 {
 
     <section class="centered code slide dark" id="fvs" data-type="CSS fonts 4">
             <pre><code>/* select position  on each axis */
-    font-variation-settings:
-        "wght" 2.4,
-        "wdth" .7,
-        "opsz" 32;</code></pre>
+font-variation-settings:
+    "wght" 2.4,
+    "wdth" .7,
+    "opsz" 32;</code></pre>
     </section>
 
      <section class="slide" id="trick-question">
@@ -359,11 +364,11 @@ font-weight: calc(9 * 100);</code></pre>
         </dl>
     </section>
 
-    <section class="centered code slide dark" data-type="CSS fonts 4">
+    <section class="centered code slide dark" data-type="CSS fonts 4" id="fvs-properties">
             <pre><code>/* properties select position  on each axis */
-    font-weight: 362; /* fairly light */
-    font-stretch: 70; /* condensed */
-    font-optical-sizing: auto</code></pre>
+font-weight: 362; /* fairly light */
+font-stretch: 70; /* condensed */
+font-optical-sizing: auto</code></pre>
     </section>
 
     <section class="slide dark" id="registered_axes_2" data-type="CSS fonts 4">

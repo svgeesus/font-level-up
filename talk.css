@@ -1243,3 +1243,43 @@ p.quote-attr {
     #weight-anim .variable {
         font-weight: 600;
     }
+
+#tofino-family {
+    align-items: center;
+}
+
+    #tofino-family h1 {
+
+    }
+
+    #tofino-family img {
+        flex: 1;
+    }
+
+    #tofino-family p {
+        position: absolute;
+        padding: .3em;
+        width: 3.1em;
+        border-radius: 50%;
+        background: #b00;
+        color: white;
+        line-height: 1;
+        font-size: 200%;
+        transition-timing-function: cubic-bezier(.3,.2,.5,1.5);
+    }
+
+    #tofino-family p.delayed:not(.displayed):not(.current) {
+        transform: scale(0);
+    }
+
+        #tofino-family p strong {
+            display: block;
+            font-size: 200%;
+            font-weight: inherit;
+        }
+
+#fvs,
+#fvs-properties {
+    align-items: center;
+    font-size: 400%;
+}
