@@ -1228,11 +1228,11 @@ p.quote-attr {
     font-family: "Kairos Sans";
 }
 
-    #weight-anim .300 {
+    #weight-anim .w300 {
         font-weight: 300;
     }
 
-    #weight-anim .800 {
+    #weight-anim .w800 {
         font-weight: 800;
     }
 
