@@ -31,14 +31,14 @@ $$(".multicolour-fake > *").forEach(function(p) {
 });
 
 StyleFix.register(function(css, raw) {
-    /** We want to copy out the values of the numeric descriptors from an @font-palette-values 
+    /** We want to copy out the values of the numeric descriptors from an @font-palette-values
     *   rule and create a set of css variable declarations derived from them. So
     *   @font-palette-values autumnal {
     *     font-family: Painter Kafeel;
-    *     base-palette: 2;            
-	*     0: black;
-	*     1: hsl(15, 75%, 34%);
-	*     2: hsl(15, 80%, 70%);
+    *     base-palette: 2;
+	*     color-0: black;
+	*     color-1: hsl(15, 75%, 34%);
+	*     color-2: hsl(15, 80%, 70%);
     *     }
     *    becomes
     *
@@ -46,12 +46,11 @@ StyleFix.register(function(css, raw) {
 	*    --color1: hsl(15, 75%, 34%);
 	*    --color2: hsl(15, 80%, 70%);
     */
-    
         css = css.replace("@font-palette-values autumnal", "#demo")
-                  .replace(/\s(?=\d:)/g, "\t--color");
-console.log(css);
+                  .replace(/\scolor-(\d+):/g, "\t--color$1:");
+
         return css;
-        
+
 });
 
 /**

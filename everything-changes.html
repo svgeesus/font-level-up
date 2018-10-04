@@ -270,7 +270,10 @@ h1 {
     </header>
 
     <section class="slide white figure" id="tofino-family">
+        <h3 style="font-size: 70%; margin-bottom: 0.2em">Tofino, by Alanna Munro (37)</h3>
+
             <p><img src="img/tmp-tofino-styles.png" alt="Tofino family"/></p>
+
         </section>
 
     <!-- <section class="slide split-definition" id="css4-fonts2">
@@ -333,7 +336,7 @@ h1 {
 
     <section data-import="tofino-family"></section>
 
-    <section class="centered code slide dark" data-type="CSS fonts 4">
+    <section class="centered code slide dark" id="fvs" data-type="CSS fonts 4">
             <pre><code>/* select position  on each axis */
     font-variation-settings:
         "wght" 2.4,
@@ -410,7 +413,7 @@ font-weight: calc(9 * 100);</code></pre>
     </section>
 
 
-    <section class="centered code dark slide" id="descriptor-ranges" style="align-items: center">
+    <section class="centered code dark slide" id="descriptor-ranges"  data-type="CSS fonts 4" style="align-items: center">
         <pre style="font-size: calc(55% + 1vmin); padding: 0; margin: 0; width: max-content;"><code>@font-face {
 font-family: "Dunbar";
 src: "dunbar.otf";
@@ -533,13 +536,14 @@ to { font-variation-settings: 'wght' 3.1; }
                 <h1>Where did the styling go?</h1>
             </section>
 
-            <section class="slide split-definition" id="css4-fonts" data-type="CSS fonts 4">
+            <section class="slide split-definition" id="css4-palettes" data-type="CSS fonts 4">
                 <dl><dt style="font-size: 2em">CSS4 font-palette</dt>
                     <dd>select from provided palettes</dd>
                 </dl>
                 <dl class="delayed">
                     <dt style="font-size: 2em">CSS4 @font-palette-values</dt>
                     <dd>override baked-in palettes</dd>
+                    <dd>create new palettes</dd>
                 </dl>
             </section>
 
@@ -567,33 +571,37 @@ to { font-variation-settings: 'wght' 3.1; }
                     <p>Painter Kaffeel</p>
                 </div>
                 <!-- Idea: instead of typing entirely new colours, press shift + arrow key with caret on hue to circle through all hues -->
+                <!-- demo broken because of updated descriptor names -->
                 <textarea class="code">@font-palette-values autumnal {
-        font-family: Painter Kafeel; base-palette: 2;
-        0: black;
-        1: hsl(15, 75%, 34%);
-        2: hsl(15, 80%, 70%);
-        3: hsl(15, 75%, 53%);
-        4: hsl(15, 75%, 40%);
-        5: white;
-        6: hsl(58, 15%, 56%);
-        7: hsl(58, 15%, 65%);
-        8: hsl(58, 15%, 46%);
-        9: hsl(58, 15%, 30%); }</textarea>
+    font-family: Painter Kafeel; base-palette: 2;
+    color-0: white;
+    color-1: hsl(15, 75%, 34%);
+    color-2: hsl(15, 80%, 70%);
+    color-3: hsl(15, 75%, 53%);
+    color-4: hsl(15, 75%, 40%);
+    color-5: orange;
+    color-6: hsl(58, 15%, 56%);
+    color-7: hsl(58, 15%, 65%);
+    color-8: hsl(58, 15%, 46%);
+    color-9: hsl(58, 15%, 30%); }</textarea>
             </section>
+            <!-- ensure css vars can be used here. what scope? -->
 
 <!-- slide here on supports syntax-->
 
 <section class="slide" id="supports" data-type="CSS fonts 4">
     <h1>supports &lt;font-technology&gt;</h1>
-    <p>features, variations, color(), palettes</p>
-    <p>COLR, SVG, sbix</p>
-    <pre style="font-size: calc(55% + 1vmin); padding: 0; margin: 0; width: max-content;">
+    <div class="delayed-children">
+            <p>&lt;font-technology&gt;: features | variations | color(tech) | palettes</p>
+            <p>tech: COLR | SVG | sbix</p>
+            <pre style="font-size: calc(55% + 1vmin); padding: 0; margin: 0; width: max-content;">
     <code>@font-face {
         font-family: "Sample";
         src: url("smp-colr.otf") format(opentype supports color(COLR)),
-             url("smp-bw.otf") format(opentype);
+                url("smp-bw.otf") format(opentype);
     }
     </code></pre>
+    </div>
 </section>
 
     <!-- end of color section -->
