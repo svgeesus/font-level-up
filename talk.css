@@ -210,10 +210,8 @@
     width: 50%;
     background: center / cover no-repeat;
     color: black;
-}
-
-#topics li:nth-of-type(n+3) {
-    color: white;
+    text-align: center;
+    text-shadow: 0 0 .1em white, 0 0 .2em white, 0 0 .3em white;
 }
 
 .titleslide {
