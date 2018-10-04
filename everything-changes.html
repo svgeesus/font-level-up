@@ -416,7 +416,7 @@ font-weight: calc(9 * 100);</code></pre>
     <section class="centered code dark slide" id="descriptor-ranges"  data-type="CSS fonts 4" style="align-items: center">
         <pre style="font-size: calc(55% + 1vmin); padding: 0; margin: 0; width: max-content;"><code>@font-face {
 font-family: "Dunbar";
-src: "dunbar.otf";
+src: url("dunbar.otf");
 font-weight: 100 900;
 font-stretch: 50% 200%;
 font-style: -10deg 40deg;
@@ -449,14 +449,20 @@ to { font-variation-settings: 'wght' 3.1; }
 
     <section id="simplify-gsub" class="slide" style="background: url(img/dollar.gif) center repeat-x white;"></section>
 
+    <section class="image slide white" id="independent-axes"
+    style="background: url(img/weight-width-1.png) center white no-repeat; background-size: contain;">
+
+    </section>
+
+    <section class="image slide white" id="coordinated-axes"
+    style="background: url(img/weight-width-2.png) center white no-repeat; background-size: contain;">
+
+    </section>
+
     <section class="slide figure" id="peace">
         <p><img src="img/peace-type.gif" alt="peace"/></p>
     </section>
 
-    <section class="image slide image" id="wakamai"
-    style="background: url(img/wakamai-fondue.png) center black no-repeat; background-size: cover">
-        <h1>What Can My Font Do?</h1>
-    </section>
 
     <section class="dark slide quote">
         <blockquote>
@@ -782,7 +788,12 @@ to { font-variation-settings: 'wght' 3.1; }
 <code>letter-spacing:</code> <input type="number" min="-.1" max=".1" step=".01" value="0" class="css-control" data-style="letter-spacing: {value}em;" data-subject=".figure">em;</pre>
         </section>
 
+        <section class="image slide image" id="wakamai"
+        style="background: url(img/wakamai-fondue.png) center black no-repeat; background-size: cover">
+            <h1>What Can My Font Do?</h1>
+        </section>
 
+        <!-- now tab to the live site -->
         <!-- end of OT features section -->
     </section>
 
@@ -900,24 +911,30 @@ to { font-variation-settings: 'wght' 3.1; }
         <dl>
             <dt><a href="https://www.flickr.com/photos/davepc/6883820262/">Typography I/Helvetica</a></dt>
             <dd>David Costa, cc-by-nc</dd>
+            <dt><a href="https://www.monotype.com/resources/articles/variable-fonts-making-the-promise-a-reality/">Coordinated axes to preserve line length</a></dt>
+            <dd>Bob Taylor, Monotype</dd>
             <dt><a href="https://www.flickr.com/photos/fontshop/4134128747/">Periodic Table of Font Elements 1.1</a></dt>
             <dd>FontShop, cc-by</dd>
-            <dt><a href="https://www.flickr.com/photos/zachheller/5116640316/">Speedometer</a></dt>
+            <!-- <dt><a href="https://www.flickr.com/photos/zachheller/5116640316/">Speedometer</a></dt>
             <dd>Zach Heller, cc-by</dd>
             <dt><a href="https://www.flickr.com/photos/stinkiepinkie_infinity/2620802106/">Crystal Ball</a></dt>
-            <dd>Shawn Perez, cc-by</dd>
+            <dd>Shawn Perez, cc-by</dd> -->
             <dt><a href="https://www.flickr.com/photos/jcolman/2794559035/">Wooden type blocks at Fremont indoor Sunday market</a></dt>
             <dd>Jonathon Colman, cc-by-nc-nd</dd>
             <dt><a href="https://commons.wikimedia.org/wiki/File:12th-century_painters_-_Manuscript_of_Church_Law_-_WGA15726.jpg">Manuscript of Church Law</a></dt>
             <dd>Unknown Miniaturist, English (active 1120s in Canterbury). Public domain.</dd>
 			<dt><a href="http://stuff.djr.com/variable-demo/">“Lab” Variable font</a></dt>
             <dd>David Jonathan Ross, "intended for fun and experimentation"</dd>
-            <dt><a href="https://medium.com/@tiro/https-medium-com-tiro-introducing-opentype-variable-fonts-12ba6cd2369#.thauil4ix">Normalised
+            <!-- <dt><a href="https://medium.com/@tiro/https-medium-com-tiro-introducing-opentype-variable-fonts-12ba6cd2369#.thauil4ix">Normalised
             design space of a 3-axis variable font</a></dt>
-            <dd>John Hudson, using Kepler, a design by Robert Slimbach</dd>
-            <dt><a href="http://letterror.com/dev/mathshapes/page_25_Peace.html">peace demo</a></dt>
+            <dd>John Hudson, using Kepler, a design by Robert Slimbach</dd>-->
+            <dt><a href="http://letterror.com/dev/mathshapes/page_25_Peace.html">peace variable font demo</a></dt>
             <dd>Erik van Blokland</dd>
-            <dt>Responsive variable font samples</dt>
+            <dt>
+                <a href="https://codepen.io/mandymichael/pen/YYaWop">Grassy Text with Variable fonts. </a>
+                <dd>Codepen by Mandy Michael </dd>
+            </dt>
+
         </dl>
     </section>
 
