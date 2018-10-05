@@ -579,6 +579,7 @@
     font-family: LinBio;
     font-size: 400%;
     line-height: 1.35;
+    white-space: nowrap;
 }
 
 .figure.slide,
