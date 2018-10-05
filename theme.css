@@ -286,6 +286,7 @@ blockquote {
  	word-break: normal;
  	word-wrap: normal;
  	line-height: 1.5;
+ 	-moz-tab-size: 4;
  	tab-size: 4;
  	hyphens: none;
  }
