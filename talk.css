@@ -164,6 +164,11 @@
 
 .activity img {
     height: 55vh;
+    flex-shrink: 0;
+}
+
+.activity p {
+    margin: .5em 0;
 }
 
 .activity a:not(:hover) {
@@ -1409,7 +1414,7 @@ ul.plain {
     left: 100%;
     height: 100%;
     margin: 0;
-    transform: translateX(-50%) rotate(.5turn);
+    transform: translateX(-50%);
     filter: contrast(300%);
 }
 
