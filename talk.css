@@ -163,8 +163,7 @@
 }
 
 .activity img {
-    height: 55vh;
-    flex-shrink: 0;
+    height: 50vh;
 }
 
 .activity p {
