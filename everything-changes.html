@@ -435,6 +435,15 @@ h1 {
 }</code></pre>
     </section>
 
+    <section class="centered code slide" id="animated-fvs">
+        <pre><code>/* Supported Safari (TP 16+), Firefox 62 &amp; Chrome 62 */
+font-variation-settings:"wght" 2.4, "wdth" .7, "radi" .4;</code></pre>
+        <pre class="delayed"><code>@keyframes expand {
+    from { font-variation-settings: 'radi' .3 }
+    to { font-variation-settings: 'radi' 3.1; }
+}</code></pre>
+    </section>
+    
     <section class="vardemo slide" id="decovar" mv-app="decovar" mv-mode="edit">
         <div>
             <pre><code>@font-face {
@@ -454,15 +463,6 @@ p {
         <p style='font-variation-settings: "TRMC" [TRMC], "TRMB" [TRMB], "SKLA" [SKLA], "TRMK" [TRMK];'><span>De</span>
 <span>co</span>
 <span>var</span></p>
-    </section>
-
-    <section class="centered code slide" id="animated-fvs">
-        <pre><code>/* Supported Safari (TP 16+), Firefox 62 &amp; Chrome 62 */
-font-variation-settings:"wght" 2.4, "wdth" .7, "radi" .4;</code></pre>
-        <pre class="delayed"><code>@keyframes expand {
-    from { font-variation-settings: 'radi' .3 }
-    to { font-variation-settings: 'radi' 3.1; }
-}</code></pre>
     </section>
 
     <section class="image slide" style="background: url(img/Mandy-Grass.png) center white no-repeat; background-size: cover;" id="grass">
