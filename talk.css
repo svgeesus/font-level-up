@@ -65,6 +65,11 @@
     font-weight: 250 900;
 }
 
+@font-face {
+    font-family: "Poo";
+    src: url(fonts/poo.ttf);
+}
+
 #for-browser {
     background: #333;
     background-image: linear-gradient(to left, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), linear-gradient(to left, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
@@ -1394,4 +1399,37 @@ ul.plain {
         margin: 0 auto;
         width: 25em;
         font-size: 150%;
+    }
+
+#poo {
+    padding: 0;
+    flex-flow: row;
+    align-items: stretch;
+}
+
+    #poo > div {
+        position: relative;
+    }
+
+    #poo pre {
+        box-sizing: border-box;
+        height: 100%;
+        box-shadow: none;
+        padding: 1em;
+    }
+
+    #poo input[type=range] {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        height: 100%;
+        margin: 0;
+        transform: translateX(-50%) rotate(.5turn);
+        filter: contrast(300%);
+    }
+
+    #poo p {
+        margin: auto;
+        font: 800%/1 Poo;
+        font-variation-settings: "crap" 100;
     }

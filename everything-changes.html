@@ -585,6 +585,23 @@ font-variation-settings:"wght" 2.4, "wdth" .7, "radi" .4;</code></pre>
 
 <!-- slide here on supports syntax-->
 
+<section class="slide" id="poo" mv-app="poo">
+    <div>
+        <pre><code>@font-face {
+    /* By Pixel Ambacht */
+    font-family: "Poo";
+    src: url(fonts/poo.ttf);
+}
+
+p {
+    font: 600%/1 Poo;                   
+    font-variation-settings: "crap" </code><code>[crap]</code><code>;
+}</code></pre>
+        <input type="range" orient="vertical" property="crap" value="100" min="10" max="999">
+    </div>
+    <p style='font-variation-settings: "crap" [crap];'>💩</p>
+</section>
+
 <section class="slide" id="supports" data-type="CSS fonts 4">
     <h1>supports &lt;font-technology&gt;</h1>
     <pre class="delayed" style="font-size: calc(55% + 1vmin); margin: 1em 0"><code>@font-face {
