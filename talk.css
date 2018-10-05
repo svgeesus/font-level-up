@@ -402,7 +402,7 @@
 
 #propvsdesc-code pre {
     width: fit-content;
-    margin: auto;
+    margin: 0 auto;
     font-size: 80%;
 }
 
