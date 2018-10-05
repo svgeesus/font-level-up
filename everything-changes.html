@@ -435,6 +435,27 @@ h1 {
 }</code></pre>
     </section>
 
+    <section class="vardemo slide" id="decovar" mv-app="decovar" mv-mode="edit">
+        <div>
+            <pre><code>@font-face {
+    /* By David Berlow */
+    font-family: "Decovar";
+    src: url(fonts/decovar.ttf);
+}
+p {
+    font-family: Decovar;
+    font-variation-settings: &nbsp; &nbsp;&nbsp;
+      "TRMC" </code><code property="TRMC" mv-attribute="data-value" data-value="0" mv-edit-type="range" mv-edit-min="0" mv-edit-max="999">[TRMC]</code><code>, /* Rounded slab */
+      "TRMB" </code><code property="TRMB" mv-attribute="data-value" data-value="0" mv-edit-type="range" mv-edit-min="0" mv-edit-max="999">[TRMB]</code><code>, /* Flared */
+      "SKLA" </code><code property="SKLA" mv-attribute="data-value" data-value="0" mv-edit-type="range" mv-edit-min="0" mv-edit-max="999">[SKLA]</code><code>, /* Inline Skeleton */
+      "TRMK" </code><code property="TRMK" mv-attribute="data-value" data-value="0" mv-edit-type="range" mv-edit-min="0" mv-edit-max="999">[TRMK]</code><code>; /* Inline Terminal */
+}</code></pre>
+        </div>
+        <p style='font-variation-settings: "TRMC" [TRMC], "TRMB" [TRMB], "SKLA" [SKLA], "TRMK" [TRMK];'><span>De</span>
+<span>co</span>
+<span>var</span></p>
+    </section>
+
     <section class="centered code slide" id="animated-fvs">
         <pre><code>/* Supported Safari (TP 16+), Firefox 62 &amp; Chrome 62 */
 font-variation-settings:"wght" 2.4, "wdth" .7, "radi" .4;</code></pre>
@@ -585,7 +606,7 @@ font-variation-settings:"wght" 2.4, "wdth" .7, "radi" .4;</code></pre>
 
 <!-- slide here on supports syntax-->
 
-<section class="slide" id="poo" mv-app="poo">
+<section class="vardemo slide" id="poo" mv-app="poo">
     <div>
         <pre><code>@font-face {
     /* By Pixel Ambacht */
@@ -594,7 +615,7 @@ font-variation-settings:"wght" 2.4, "wdth" .7, "radi" .4;</code></pre>
 }
 
 p {
-    font: 600%/1 Poo;                   
+    font: 600%/1 Poo;
     font-variation-settings: "crap" </code><code>[crap]</code><code>;
 }</code></pre>
         <input type="range" orient="vertical" property="crap" value="100" min="10" max="999">

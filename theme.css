@@ -237,6 +237,43 @@ code.de-emphasize {
 	mix-blend-mode: multiply;
 }
 
+blockquote {
+    font-synthesis: none;
+
+}
+
+    p.quote {
+        font-family: var(--handwriting-font);
+        font-size: 300%;
+        font-style: italic;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        text-align: center;
+    }
+
+    p.quote:before,
+    p.quote:after {
+        content: " ”";
+        display: inline-block;
+        height: .8em;
+        margin: 0 .1em;
+        vertical-align: middle;
+        color: var(--tan);
+        font: 2em/.8 var(--body-font);
+    }
+
+    p.quote:before {
+        content: "“ ";
+    }
+
+    p.quote-attr {
+            font-variant: oblique;
+            font-size: 2em;
+            text-align: right;
+            margin-right: 5vw;
+            color: var(--orange);
+    }
+
 /*
  * Prism
  */
