@@ -76,6 +76,10 @@
     src: url(fonts/decovar.ttf);
 }
 
+.white.slide {
+    background: white;
+}
+
 #for-browser {
     background: #333;
     background-image: linear-gradient(to left, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), linear-gradient(to left, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
@@ -260,11 +264,6 @@
 
 .split-definition {
     padding: 0;
-    flex-flow: column;
-}
-
-.split-definition:target {
-    display: flex;
 }
 
 .split-definition dl,
@@ -286,13 +285,13 @@
 
 .split-definition dl+dl,
 #urange dl {
-    background: var(--buff);
+    background: var(--color3);
     color: var(--darkgrey);
 }
 
 .split-definition dl+dl dt,
 #urange dl dt {
-    color: var(--orange);
+    color: var(--color2);
 }
 
 .charquiz {
@@ -508,9 +507,9 @@
     line-height: 2;
 }
 
-#ampersand-demo textarea,
-#loadAPI textarea {
-    font-size: 80% !important;
+#ampersand-demo,
+#loadAPI {
+    --font-size-multiplier: .8;
 }
 
 #font-loading:target {
@@ -1075,7 +1074,8 @@ select {
 }
 
     #emoji > div {
-        font-family: emojione;
+        /* font-family: emojione, emoji; */
+
         font-size: 3em;
         white-space: pre-line;
     }
@@ -1361,7 +1361,7 @@ select {
 #fvs,
 #fvs-properties {
     align-items: center;
-    font-size: 400%;
+    font-size: 300%;
 }
 
 ul.plain {

@@ -8,12 +8,15 @@ $$("pre input").forEach(function(input) {
 });
 
 var topics = $("#topics ul");
-$$("section > header.slide").forEach(function(slide) {
-    var li = document.createElement("li");
-    li.style.backgroundImage = slide.style.backgroundImage;
-    li.textContent = $("h1", slide).textContent;
-    topics.appendChild(li);
-});
+if (topics) {
+    $$("section > header.slide").forEach(function(slide) {
+        var li = document.createElement("li");
+        li.style.backgroundImage = slide.style.backgroundImage;
+        li.textContent = $("h1", slide).textContent;
+        topics.appendChild(li);
+    });
+}
+
 
 $$(".question").forEach(function(q) {
     q.classList.add("delayed");
@@ -30,74 +33,70 @@ $$(".multicolour-fake > *").forEach(function(p) {
     }
 });
 
-StyleFix.register(function(css, raw) {
-    /** We want to copy out the values of the numeric descriptors from an @font-palette-values
-    *   rule and create a set of css variable declarations derived from them. So
-    *   @font-palette-values autumnal {
-    *     font-family: Painter Kafeel;
-    *     base-palette: 2;
-	*     color-0: black;
-	*     color-1: hsl(15, 75%, 34%);
-	*     color-2: hsl(15, 80%, 70%);
-    *     }
-    *    becomes
-    *
-    *    --color0: black;
-	*    --color1: hsl(15, 75%, 34%);
-	*    --color2: hsl(15, 80%, 70%);
-    */
-        css = css.replace("@font-palette-values autumnal", "#demo")
-                  .replace(/\scolor-(\d+):/g, "\t--color$1:");
+// StyleFix.register(function(css, raw) {
+//     /** We want to copy out the values of the numeric descriptors from an @font-palette-values
+//     *   rule and create a set of css variable declarations derived from them. So
+//     *   @font-palette-values autumnal {
+//     *     font-family: Painter Kafeel;
+//     *     base-palette: 2;
+// 	*     color-0: black;
+// 	*     color-1: hsl(15, 75%, 34%);
+// 	*     color-2: hsl(15, 80%, 70%);
+//     *     }
+//     *    becomes
+//     *
+//     *    --color0: black;
+// 	*    --color1: hsl(15, 75%, 34%);
+// 	*    --color2: hsl(15, 80%, 70%);
+//     */
+//         css = css.replace("@font-palette-values autumnal", "#demo")
+//                   .replace(/\scolor-(\d+):/g, "\t--color$1:");
+//
+//         return css;
+//
+// });
 
-        return css;
-
-});
-
-/**
- * SLIDESHOW CREATION
- */
-var slideshow = new SlideShow();
-
-$$('.css-control').forEach(function(control) {
-    new CSSControl(control);
-});
-
-function insertText(element, text) {
-    var textEvent = document.createEvent('TextEvent');
-
-    textEvent.initTextEvent('textInput', true, true, null, text);
-
-    element.dispatchEvent(textEvent);
-}
-
-$$('textarea').forEach(function(textarea) {
-    if (textarea.parentNode.id != "conic-test") {
-        textarea.setAttribute('data-raw', '');
-    }
-
-    new Incrementable(textarea);
-    new CSSSnippet(textarea);
-
-    textarea.addEventListener("keyup", function(evt) {
-        if (evt.keyCode == 13) { // Enter
-            // Get indent
-            var before = this.value.slice(0, this.selectionStart - 1);
-            var indents = before.match(/^\s*/mg);
-            var indent = indents && indents[indents.length - 1];
-
-            if (indent) {
-                insertText(this, indent);
-            }
-        }
-    });
-
-    textarea.addEventListener("keydown", function(evt) {
-        if (evt.keyCode == 9) { // Tab
-            insertText(this, "\t");
-            evt.preventDefault();
-        }
-    })
-});
+// /**
+//  * SLIDESHOW CREATION
+//  */
+//
+//
+// function insertText(element, text) {
+//     var textEvent = document.createEvent('TextEvent');
+//
+//     textEvent.initTextEvent('textInput', true, true, null, text);
+//
+//     element.dispatchEvent(textEvent);
+// }
+//
+// $$('textarea').forEach(function(textarea) {
+//     if (textarea.parentNode.id != "conic-test") {
+//         textarea.setAttribute('data-raw', '');
+//     }
+//
+//     new Incrementable(textarea);
+//     new CSSSnippet(textarea);
+//
+//     textarea.addEventListener("keyup", function(evt) {
+//         if (evt.keyCode == 13) { // Enter
+//             // Get indent
+//             var before = this.value.slice(0, this.selectionStart - 1);
+//             var indents = before.match(/^\s*/mg);
+//             var indent = indents && indents[indents.length - 1];
+//
+//             if (indent) {
+//                 insertText(this, indent);
+//             }
+//         }
+//     });
+//
+//     textarea.addEventListener("keydown", function(evt) {
+//         if (evt.keyCode == 9) { // Tab
+//             insertText(this, "\t");
+//             evt.preventDefault();
+//         }
+//     })
+// });
 
 
 
@@ -141,7 +140,7 @@ $$('.show-html').forEach(function(element) {
 
             element.tooltip.appendChild(code);
 
-            SlideShow.getSlide(element).appendChild(element.tooltip);
+            Inspire.getSlide(element).appendChild(element.tooltip);
 
             Prism.highlightElement(code);
         }

@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" style="font-size: 16px">
+<html lang="en">
 
 <head>
 
     <meta charset="utf-8" />
     <!-- <title>WebFonts: Level Up!</title> -->
     <title>The State of WebFonts</title>
-    <link href="../csss/slideshow.css" rel="stylesheet" data-noprefix />
-    <link href="../csss/reusable.css" rel="stylesheet" data-noprefix />
-    <link rel="stylesheet" href="mavo.css" data-noprefix>
+    <link href="https://inspirejs.org/inspire.css" rel="stylesheet" data-noprefix />
+    <link rel="stylesheet" href="https://dev.mavo.io/dist/mavo.css" data-noprefix>
     <link href="theme.css" rel="stylesheet" data-noprefix />
     <link href="talk.css" rel="stylesheet" data-noprefix />
-    <script src="../prefixfree/prefixfree.min.js"></script>
+    <!-- <script src="../prefixfree/prefixfree.min.js"></script> -->
 
 </head>
 
@@ -25,7 +24,7 @@
     <header id="intro" class="slide">
         <h1>
 		Everything Changes <strong>WebFonts in 2018</strong>
-    </h1>
+        </h1>
 
         <!-- <h2><a href="http://w3.org/People#clilley">Chris Lilley</a> <a href="http://twitter.com/svgeesus" class="twitter">@svgeesus</a></h2>
         <p class="attribution"></p> -->
@@ -86,7 +85,7 @@
         </ul>
     </section>
 
-    <section>
+    <section id="font-basics" class="language-css">
         <header class="image slide bottom-heavy" style="background-image: url(img/helvtype_o.jpg);" id="basics">
             <h1>Basics</h1>
         </header>
@@ -153,19 +152,20 @@
                 </dl>
             </section>
 
-        <section class="dark slide" id="propvsdesc-code" data-steps="1">
+        <section class="dark slide language-css" id="propvsdesc-code" data-steps="1">
             <h1>Properties &amp; descriptors</h1>
             <pre><code class="language-css">
-@font-face {
-	font-family: Arvo; /* Descriptor */
-	src: url(fonts/s.woff); /* Descriptor */
-	font-weight: bold; /* Descriptor */
-}
+                @font-face {
+                	font-family: Arvo; /* Descriptor */
+                	src: url(fonts/s.woff); /* Descriptor */
+                	font-weight: bold; /* Descriptor */
+                }
 
-h1 {
-	font-family: Arvo; /* Property */
-	font-weight: bold; /* Property */
-}</code></pre>
+                h1 {
+                	font-family: Arvo; /* Property */
+                	font-weight: bold; /* Property */
+                }
+            </code></pre>
         </section>
 
 
@@ -175,10 +175,12 @@ h1 {
             <p class="delayed">First font with glyphs for a given character is used</p>
             <p class="delayed">Problem: avoiding bad Latin glyphs in Japanese fonts</p>
 
-            <pre class="delayed inline"><code>@font-face {
-	font-family: Demo;
-	src: url(Latin.woff), url(Japanese.woff);
-}</code></pre>
+            <pre class="delayed inline"><code>
+                @font-face {
+                	font-family: Demo;
+                	src: url(Latin.woff), url(Japanese.woff);
+                }
+            </code></pre>
             <p class="delayed"><em>Both</em> fonts can’t be first!</p>
         </section>
 
@@ -188,12 +190,13 @@ h1 {
                 <dd>Descriptor for allowed range of Unicode characters</dd>
             </dl>
             <pre class="delayed  code"><code class="language-css">
-@font-face {
-	font-family: 'Headings';
-	src: url(fonts/Japanese.woff);
-	unicode-range: U+A5, U+4E00-9FFF, U+30??, U+FF00-FF9F;
-	/* yen, kanji, hiragana, katakana */
-}</code></pre>
+            @font-face {
+            	font-family: 'Headings';
+            	src: url(fonts/Japanese.woff);
+            	unicode-range: U+A5, U+4E00-9FFF, U+30??, U+FF00-FF9F;
+            	/* yen, kanji, hiragana, katakana */
+            }
+            </code></pre>
             <!--
 		<div class="delayed"><p>Descriptor for allowed range of Unicode characters</p></div>
 		<div class="delayed"><p>Glyphs for characters outside range <em>not used</em></p>
@@ -224,7 +227,7 @@ h1 {
             </dl>
         </section>
 
-        <section class="slide hsplit dont-resize" id="ampersand-demo">
+        <section class="horizontal demo slide" id="ampersand-demo">
             <!--
 	First hover over the h1 to show that it has no extra elements.
 
@@ -235,15 +238,17 @@ h1 {
 
 	then change the font-family on the h1 to ampersand, var(- -heading-font)
 	-->
-            <h1 class="show-html">This & That</h1>
-        <textarea>@font-face {
-    font-family: amps;
-    src: url(fonts/Rochester.otf);
-    unicode-range: U+26;
-}
-h1 {
-	font-family: Arvo, serif;
-}</textarea>
+            <textarea class="language-html"><h1>This & That</h1></textarea>
+            <textarea class="language-css">
+                @font-face {
+                    font-family: amps;
+                    src: url(fonts/Rochester.otf);
+                    unicode-range: U+26;
+                }
+                h1 {
+                	font-family: Arvo, serif;
+                }
+            </textarea>
         </section>
 
         <!-- end of basics section -->
@@ -444,7 +449,7 @@ font-variation-settings:"wght" 2.4, "wdth" .7, "radi" .4;</code></pre>
 
     <section class="vardemo slide" id="decovar" mv-app="decovar" mv-mode="edit">
         <div>
-            <pre><code>@font-face {
+            <pre class="no-whitespace-normalization"><code>@font-face {
     /* By David Berlow */
     font-family: "Decovar";
     src: url(fonts/decovar.ttf);
@@ -634,7 +639,7 @@ src: url("smp-colr.otf") format(opentype supports color(COLR)),
     <!-- end of color section -->
     </section>
 
-    <section>
+    <section id="opentype-features">
         <header class="image slide " style="background: url(img/periodic_o.png) center #2D2C2C no-repeat; background-size: cover;" id="OTfeatures">
             <h1>OpenType Features &amp; CSS</h1>
         </header>
@@ -666,15 +671,14 @@ src: url("smp-colr.otf") format(opentype supports color(COLR)),
             </dl>
         </section>
 
-
         <section class="property slide" id="font-variant-numeric" mv-app>
             <p class="figure" style="font-variant-numeric: [value];">
                 1234567890ABC<br /> 1234567890abj
             </p>
-            <pre><code>font-variant-numeric:</code> <select class="mv-autosize" property="value">
+            <pre class="no-whitespace-normalization"><code>font-variant-numeric: </code> <select class="mv-autosize" property="value">
 			<option>lining-nums</option>
 			<option>oldstyle-nums</option>
-		</select>;</pre>
+		</select><code>;</code></pre>
         </section>
 
         <!-- broken, keep as template for hsplit
@@ -701,7 +705,7 @@ src: url("smp-colr.otf") format(opentype supports color(COLR)),
             <p class="figure" style="font-variant-numeric: [value];">
                 1/2 3/4 5/8<br /> 13/27 86/483
             </p>
-            <pre><code>font-variant-numeric:</code> <select  class="mv-autosize" property="value">
+            <pre class="no-whitespace-normalization"><code>font-variant-numeric:</code> <select  class="mv-autosize" property="value">
 			<option>normal</option>
 			<option>diagonal-fractions</option>
 		</select>;</pre>
@@ -719,7 +723,7 @@ src: url("smp-colr.otf") format(opentype supports color(COLR)),
                     <td>286,111.10</td>
                 </tr>
             </table>
-            <pre><code>font-variant-numeric:</code> <select class="mv-autosize"  property="value">
+            <pre class="no-whitespace-normalization"><code>font-variant-numeric:</code> <select class="mv-autosize"  property="value">
 			<option>proportional-nums</option>
 			<option>tabular-nums</option>
 		</select>;</pre>
@@ -729,7 +733,7 @@ src: url("smp-colr.otf") format(opentype supports color(COLR)),
             <p class="figure" style="font-variant-numeric: [value];">
                 1st, 2nd, 3rd, 4th
             </p>
-            <pre><code>font-variant-numeric:</code> <select class="mv-autosize" property="value">
+            <pre class="no-whitespace-normalization"><code>font-variant-numeric:</code> <select class="mv-autosize" property="value">
 			<option>normal</option>
 			<option>ordinal</option>
 		</select>;</pre>
@@ -742,7 +746,7 @@ src: url("smp-colr.otf") format(opentype supports color(COLR)),
             <p lang="fr" class="figure" style="font-variant-numeric: [value];">
                 1er, 2e, 3e, 4e
             </p>
-            <pre><code>font-variant-numeric:</code> <select class="mv-autosize" property="value">
+            <pre class="no-whitespace-normalization"><code>font-variant-numeric:</code> <select class="mv-autosize" property="value">
 			<option>normal</option>
 			<option>ordinal</option>
 		</select>;</pre>
@@ -750,7 +754,7 @@ src: url("smp-colr.otf") format(opentype supports color(COLR)),
 
         <section class="property slide" id="ligatures" mv-app>
             <p class="figure" style="font-variant-ligatures: [value];">INCROYABLE <br /> flaneur</p>
-            <pre><code>font-variant-ligatures:</code> <select class="mv-autosize" property="value">
+            <pre class="no-whitespace-normalization"><code>font-variant-ligatures:</code> <select class="mv-autosize" property="value">
 			<option>normal</option>
 			<option>discretionary-ligatures</option>
 			<option>none</option>
@@ -763,7 +767,7 @@ src: url("smp-colr.otf") format(opentype supports color(COLR)),
 			<span lang="zh-hans">草</span>
 			<span lang="zh-hant">草</span>
 		</p>
-		<pre><code>font-variant-east-asian:</code> <select class="mv-autosize" property="value">
+		<pre class="no-whitespace-normalization"><code>font-variant-east-asian:</code> <select class="mv-autosize" property="value">
 			<option>normal</option>
 			<option>simplified</option>
 			<option>traditional</option>
@@ -804,7 +808,7 @@ src: url("smp-colr.otf") format(opentype supports color(COLR)),
                 <i>Italic</i> <br />
                 <b>Bold</b>
             </p>
-            <pre><code>font-synthesis:</code> <select class="mv-autosize" property="value">
+            <pre class="no-whitespace-normalization"><code>font-synthesis:</code> <select class="mv-autosize" property="value">
 			<option selected>weight style</option>
 			<option>weight</option>
 			<option>style</option>
@@ -821,10 +825,10 @@ src: url("smp-colr.otf") format(opentype supports color(COLR)),
         </section>
 
         <section class="property slide" id="font-kerning" mv-app>
-            <p class="figure" style="font-kerning: [kern]; letter-spacing: [value]em;"">
+            <p class="figure" style="font-kerning: [kern]; letter-spacing: [value]em;">
                 JAVA Ta Wa
             </p>
-            <pre><code>font-kerning:</code> <select class="mv-autosize" property="kern">
+            <pre class="no-whitespace-normalization"><code>font-kerning:</code> <select class="mv-autosize" property="kern">
 			<option>auto</option>
 			<option>normal</option>
 			<option>none</option>
@@ -1013,11 +1017,12 @@ src: url("smp-colr.otf") format(opentype supports color(COLR)),
         </dl>
     </section>
 
-    <script src="mavo.min.js"></script>
-    <script src="../csss/slideshow.js"></script>
+    <script src="https://dev.mavo.io/dist/mavo.js"></script>
     <script src="prism.js"></script>
-    <script src="../csss/plugins/css-edit.js"></script>
-    <script src="../csss/plugins/css-snippets.js"></script>
+    <script src="https://inspirejs.org/inspire.js"></script>
+
+    <!-- <script src="../csss/plugins/css-edit.js"></script>
+    <script src="../csss/plugins/css-snippets.js"></script> -->
     <script src="../incrementable/incrementable.js"></script>
 
     <script src="talk.js"></script>
