@@ -697,18 +697,18 @@ src: url("smp-colr.otf") format(opentype supports color(COLR)),
 	</section>
 -->
 
-        <section class="property slide" id="fractions">
-            <p class="figure">
+        <section class="property slide" id="fractions" mv-app>
+            <p class="figure" style="font-variant-numeric: [value];">
                 1/2 3/4 5/8<br /> 13/27 86/483
             </p>
-            <pre><code>font-variant-numeric:</code> <select data-style="font-variant-numeric: {value};" class="css-control mv-autosize">
+            <pre><code>font-variant-numeric:</code> <select  class="mv-autosize" property="value">
 			<option>normal</option>
 			<option>diagonal-fractions</option>
 		</select>;</pre>
         </section>
 
-        <section class="property slide" id="tabular">
-            <table class="">
+        <section class="property slide" id="tabular" mv-app>
+            <table class="" style="font-variant-numeric: [value];" >
                 <tr>
                     <td>112,113.56</td>
                 </tr>
@@ -719,56 +719,69 @@ src: url("smp-colr.otf") format(opentype supports color(COLR)),
                     <td>286,111.10</td>
                 </tr>
             </table>
-            <pre><code>font-variant-numeric:</code> <select data-style="font-variant-numeric: {value};" class="css-control mv-autosize">
+            <pre><code>font-variant-numeric:</code> <select class="mv-autosize"  property="value">
 			<option>proportional-nums</option>
 			<option>tabular-nums</option>
 		</select>;</pre>
         </section>
 
-        <section class="property slide" id="font-variant-numeric2">
-            <p class="figure">
+        <section class="property slide" id="font-variant-numeric2" mv-app>
+            <p class="figure" style="font-variant-numeric: [value];">
                 1st, 2nd, 3rd, 4th
             </p>
-            <pre><code>font-variant-numeric:</code> <select data-style="font-variant-numeric: {value};" class="css-control mv-autosize">
+            <pre><code>font-variant-numeric:</code> <select class="mv-autosize" property="value">
 			<option>normal</option>
 			<option>ordinal</option>
 		</select>;</pre>
         </section>
 
-        <section class="property slide" id="ligatures">
-            <p class="figure">INCROYABLE <br /> flaneur</p>
-            <pre><code>font-variant-ligatures:</code> <select data-style="font-variant-ligatures: {value};" class="css-control mv-autosize">
+        <!-- incorrectly implemented in firefox and chrome. needs wpt testcase -->
+
+<!--
+            <section class="property slide" id="font-variant-numeric3" mv-app>
+            <p lang="fr" class="figure" style="font-variant-numeric: [value];">
+                1er, 2e, 3e, 4e
+            </p>
+            <pre><code>font-variant-numeric:</code> <select class="mv-autosize" property="value">
+			<option>normal</option>
+			<option>ordinal</option>
+		</select>;</pre>
+        </section> -->
+
+        <section class="property slide" id="ligatures" mv-app>
+            <p class="figure" style="font-variant-ligatures: [value];">INCROYABLE <br /> flaneur</p>
+            <pre><code>font-variant-ligatures:</code> <select class="mv-autosize" property="value">
 			<option>normal</option>
 			<option>discretionary-ligatures</option>
 			<option>none</option>
 		</select>;</pre>
         </section>
 
-        <!--
-	<section class="property slide" id="east-asian">
-		<p class="figure">
+
+	<!-- <section class="property slide" id="east-asian" mv-app>
+		<p class="figure" style="font-variant-east-asian: [value];" >
 			<span lang="zh-hans">草</span>
 			<span lang="zh-hant">草</span>
 		</p>
-		<pre><code>font-variant-east-asian:</code> <select data-style="font-variant-east-asian: {value};" class="css-control">
+		<pre><code>font-variant-east-asian:</code> <select class="mv-autosize" property="value">
 			<option>normal</option>
 			<option>simplified</option>
 			<option>traditional</option>
 		</select>;</pre>
-	</section>
-	-->
+	</section> -->
+
 
         <!-- nope
-        <section class="property slide" id="east-asian">
+        <section class="property slide" id="east-asian2" mv-app>
             <p class="figure">
 			<span lang="zh-hans">草</span>
 			<span lang="zh-hant">草</span>
 			<span lang="ja-jp">草</span>
-        <span lang="zh-Hans">&#x66DC;</span>
-        <span lang="zh-Hant">&#x66DC;</span>
-        <span lang="ja-Jp">&#x66DC;</span>
+            <span lang="zh-Hans">&#x66DC;</span>
+            <span lang="zh-Hant">&#x66DC;</span>
+            <span lang="ja-Jp">&#x66DC;</span>
         </p>
-        <p class="figure">
+        <p class="figure"  style='font-feature-settings: "[value]";'>
 			<span lang="zh-hans">草</span>
 			<span lang="zh-hant">草</span>
 			<span lang="ja-jp">草</span>
@@ -776,28 +789,28 @@ src: url("smp-colr.otf") format(opentype supports color(COLR)),
             <span lang="zh-Hant">廣</span>
             <span lang="ja-Jp">廣</span>
         </p>
-        <pre><code>font-feature-settings:</code> <select data-style='font-feature-settings: "{value}";' class="css-control">
+        <pre><code>font-feature-settings:</code> <select >
 			<option>normal</option>
 			<option>smpl</option>
 			<option>trad</option>
 		</select>;</pre>
-    </section>
+    </section> -->
 
-    -->
 
-        <section class="property slide" id="no-fake-bold-italic">
-            <p class="figure">
+
+        <section class="property slide" id="no-fake-bold-italic" mv-app>
+            <p class="figure" style="font-synthesis: [value]; font-family: [family];">
                 Roman<br />
                 <i>Italic</i> <br />
                 <b>Bold</b>
             </p>
-            <pre><code>font-synthesis:</code> <select data-style="font-synthesis: {value};" class="css-control">
+            <pre><code>font-synthesis:</code> <select class="mv-autosize" property="value">
 			<option selected>weight style</option>
 			<option>weight</option>
 			<option>style</option>
 			<option>none</option>
 		</select>;
-<code>font-family:</code> <select data-style="font-family: {value};" class="css-control" data-subject=".figure">
+<code>font-family:</code> <select class="mv-autosize" property="family">
 			<option>Free Sans</option>
 			<option>Arvo</option>
             <option >LinBio</option>
@@ -807,16 +820,16 @@ src: url("smp-colr.otf") format(opentype supports color(COLR)),
 		</select>;</pre>
         </section>
 
-        <section class="property slide" id="font-kerning">
-            <p class="figure">
+        <section class="property slide" id="font-kerning" mv-app>
+            <p class="figure" style="font-kerning: [kern]; letter-spacing: [value]em;"">
                 JAVA Ta Wa
             </p>
-            <pre><code>font-kerning:</code> <select data-style="font-kerning: {value};" class="css-control">
+            <pre><code>font-kerning:</code> <select class="mv-autosize" property="kern">
 			<option>auto</option>
 			<option>normal</option>
 			<option>none</option>
 		</select>;
-<code>letter-spacing:</code> <input type="number" min="-.1" max=".1" step=".01" value="0" class="css-control" data-style="letter-spacing: {value}em;" data-subject=".figure">em;</pre>
+<code>letter-spacing:</code> <input type="number" min="-.1" max=".1" step=".01" value="0" property="value">em;</pre> <!-- mavo autosizing bug-->
         </section>
 
         <section class="image slide image" id="wakamai"
@@ -1005,7 +1018,6 @@ src: url("smp-colr.otf") format(opentype supports color(COLR)),
     <script src="prism.js"></script>
     <script src="../csss/plugins/css-edit.js"></script>
     <script src="../csss/plugins/css-snippets.js"></script>
-    <script src="../csss/plugins/css-controls.js"></script>
     <script src="../incrementable/incrementable.js"></script>
 
     <script src="talk.js"></script>
