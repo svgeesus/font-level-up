@@ -157,7 +157,7 @@ $$('.show-html').forEach(function(element) {
     }
 });
 
-$("#weight-anim").addEventListener("slidechange", evt => {
+$.bind($("#weight-anim"), "slidechange", evt => {
     var slide = evt.target;
 
     requestAnimationFrame(function callee() {

@@ -112,7 +112,6 @@
             <p><span class="question" data-answer="1-2"></span> character(s), <span class="question" data-answer="1"></span> glyph(s), <span class="question" data-answer="1-2"></span> font(s)</p>
         </section>
 
-
         <section class="slide dont-resize" id="familyface">
             <article style="font-family: Myriad Pro">
                 <h1>Myriad Pro <span class="delayed note">&nbsp;&lt;— Font family</span></h1>
@@ -252,11 +251,11 @@
         </section>
 
         <!-- end of basics section -->
-
+    </section>
 
 <!-- start of Variable Fonts section -->
 
-<section>
+<section id="variable-fonts-section" class="language-css">
 
     <header class="image slide " style="background: url(img/tmp-vfont.png) center white no-repeat; background-size: cover;" id="Vfonts">
     <h1>Variable Fonts</h1>
@@ -447,8 +446,7 @@ font-variation-settings:"wght" 2.4, "wdth" .7, "radi" .4;</code></pre>
 }</code></pre>
     </section>
 
-    <section class="vardemo slide" id="decovar" mv-app="decovar" mv-mode="edit">
-        <div>
+    <section class="vardemo light slide" id="decovar" mv-app="decovar" mv-mode="edit">
             <pre class="no-whitespace-normalization"><code>@font-face {
     /* By David Berlow */
     font-family: "Decovar";
@@ -462,14 +460,13 @@ p {
       "SKLA" </code><code property="SKLA" mv-attribute="data-value" data-value="0" mv-edit-type="range" mv-edit-min="0" mv-edit-max="999">[SKLA]</code><code>, /* Inline Skeleton */
       "TRMK" </code><code property="TRMK" mv-attribute="data-value" data-value="0" mv-edit-type="range" mv-edit-min="0" mv-edit-max="999">[TRMK]</code><code>; /* Inline Terminal */
 }</code></pre>
-        </div>
         <p style='font-variation-settings: "TRMC" [TRMC], "TRMB" [TRMB], "SKLA" [SKLA], "TRMK" [TRMK];'><span>De</span>
 <span>co</span>
 <span>var</span></p>
     </section>
 
-    <section class="image slide" style="background: url(img/Mandy-Grass.png) center white no-repeat; background-size: cover;" id="grass">
-
+    <section class="slide" id="grass">
+        <a href="https://codepen.io/mandymichael/pen/YYaWop"><img src="img/Mandy-Grass.png" alt=""></a>
     </section>
 
     <section class="slide dark figure"  id="throbber">
@@ -609,9 +606,9 @@ p {
 
 <!-- slide here on supports syntax-->
 
-<section class="vardemo slide" id="poo" mv-app="poo">
+<section class="vardemo light slide" id="poo" mv-app="poo">
     <div>
-        <pre><code>@font-face {
+    <pre class="no-whitespace-normalization"><code>@font-face {
     /* By Pixel Ambacht */
     font-family: "Poo";
     src: url(fonts/poo.ttf);
@@ -621,7 +618,7 @@ p {
     font: 600%/1 Poo; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
     font-variation-settings: "crap" </code><code>[crap]</code><code>;
 }</code></pre>
-        <input type="range" orient="vertical" property="crap" value="100" min="10" max="999">
+    <input type="range" property="crap" value="100" min="10" max="999">
     </div>
     <p style='font-variation-settings: "crap" [crap];'>💩</p>
 </section>
@@ -639,7 +636,7 @@ src: url("smp-colr.otf") format(opentype supports color(COLR)),
     <!-- end of color section -->
     </section>
 
-    <section id="opentype-features">
+    <section id="opentype-features" class="language-css">
         <header class="image slide " style="background: url(img/periodic_o.png) center #2D2C2C no-repeat; background-size: cover;" id="OTfeatures">
             <h1>OpenType Features &amp; CSS</h1>
         </header>
@@ -661,7 +658,7 @@ src: url("smp-colr.otf") format(opentype supports color(COLR)),
             </dl>
         </section>
 
-        <section class="property slide split-definition" id="low-and-high">
+        <section class="property light slide split-definition" id="low-and-high">
             <dl><dt>font-variant</dt>
                 <dd>Preferred, <a href="http://caniuse.com/#feat=font-variant-alternates">support improving</a></dd>
             </dl>
@@ -671,7 +668,7 @@ src: url("smp-colr.otf") format(opentype supports color(COLR)),
             </dl>
         </section>
 
-        <section class="property slide" id="font-variant-numeric" mv-app>
+        <section class="property light slide" id="font-variant-numeric" mv-app>
             <p class="figure" style="font-variant-numeric: [value];">
                 1234567890ABC<br /> 1234567890abj
             </p>
@@ -701,7 +698,7 @@ src: url("smp-colr.otf") format(opentype supports color(COLR)),
 	</section>
 -->
 
-        <section class="property slide" id="fractions" mv-app>
+        <section class="property light slide" id="fractions" mv-app>
             <p class="figure" style="font-variant-numeric: [value];">
                 1/2 3/4 5/8<br /> 13/27 86/483
             </p>
@@ -711,7 +708,7 @@ src: url("smp-colr.otf") format(opentype supports color(COLR)),
 		</select>;</pre>
         </section>
 
-        <section class="property slide" id="tabular" mv-app>
+        <section class="property light slide" id="tabular" mv-app>
             <table class="" style="font-variant-numeric: [value];" >
                 <tr>
                     <td>112,113.56</td>
@@ -729,7 +726,7 @@ src: url("smp-colr.otf") format(opentype supports color(COLR)),
 		</select>;</pre>
         </section>
 
-        <section class="property slide" id="font-variant-numeric2" mv-app>
+        <section class="property light slide" id="font-variant-numeric2" mv-app>
             <p class="figure" style="font-variant-numeric: [value];">
                 1st, 2nd, 3rd, 4th
             </p>
@@ -742,7 +739,7 @@ src: url("smp-colr.otf") format(opentype supports color(COLR)),
         <!-- incorrectly implemented in firefox and chrome. needs wpt testcase -->
 
 <!--
-            <section class="property slide" id="font-variant-numeric3" mv-app>
+            <section class="property light slide" id="font-variant-numeric3" mv-app>
             <p lang="fr" class="figure" style="font-variant-numeric: [value];">
                 1er, 2e, 3e, 4e
             </p>
@@ -752,7 +749,7 @@ src: url("smp-colr.otf") format(opentype supports color(COLR)),
 		</select>;</pre>
         </section> -->
 
-        <section class="property slide" id="ligatures" mv-app>
+        <section class="property light slide" id="ligatures" mv-app>
             <p class="figure" style="font-variant-ligatures: [value];">INCROYABLE <br /> flaneur</p>
             <pre class="no-whitespace-normalization"><code>font-variant-ligatures:</code> <select class="mv-autosize" property="value">
 			<option>normal</option>
@@ -762,7 +759,7 @@ src: url("smp-colr.otf") format(opentype supports color(COLR)),
         </section>
 
 
-	<!-- <section class="property slide" id="east-asian" mv-app>
+	<!-- <section class="property light slide" id="east-asian" mv-app>
 		<p class="figure" style="font-variant-east-asian: [value];" >
 			<span lang="zh-hans">草</span>
 			<span lang="zh-hant">草</span>
@@ -776,7 +773,7 @@ src: url("smp-colr.otf") format(opentype supports color(COLR)),
 
 
         <!-- nope
-        <section class="property slide" id="east-asian2" mv-app>
+        <section class="property light slide" id="east-asian2" mv-app>
             <p class="figure">
 			<span lang="zh-hans">草</span>
 			<span lang="zh-hant">草</span>
@@ -802,7 +799,7 @@ src: url("smp-colr.otf") format(opentype supports color(COLR)),
 
 
 
-        <section class="property slide" id="no-fake-bold-italic" mv-app>
+        <section class="property light slide" id="no-fake-bold-italic" mv-app>
             <p class="figure" style="font-synthesis: [value]; font-family: [family];">
                 Roman<br />
                 <i>Italic</i> <br />
@@ -824,7 +821,7 @@ src: url("smp-colr.otf") format(opentype supports color(COLR)),
 		</select>;</pre>
         </section>
 
-        <section class="property slide" id="font-kerning" mv-app>
+        <section class="property light slide" id="font-kerning" mv-app mv-mode="edit">
             <p class="figure" style="font-kerning: [kern]; letter-spacing: [value]em;">
                 JAVA Ta Wa
             </p>
@@ -833,13 +830,10 @@ src: url("smp-colr.otf") format(opentype supports color(COLR)),
 			<option>normal</option>
 			<option>none</option>
 		</select>;
-<code>letter-spacing:</code> <input type="number" min="-.1" max=".1" step=".01" value="0" property="value">em;</pre> <!-- mavo autosizing bug-->
+<code>letter-spacing:</code> <span property="value" mv-edit-type="number" mv-edit-min="-.1" mv-edit-max=".1" mv-edit-step=".01">0</span>em;</pre> <!-- mavo autosizing bug-->
         </section>
 
-        <section class="image slide image" id="wakamai"
-        style="background: url(img/wakamai-fondue.png) center black no-repeat; background-size: cover">
-            <h1>What Can My Font Do?</h1>
-        </section>
+        <sections class="slide" data-src="https://wakamaifondue.com/" data-title="What can my font do?" id="wakamai"></sections>
 
         <!-- now tab to the live site -->
         <!-- end of OT features section -->
