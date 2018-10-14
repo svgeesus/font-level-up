@@ -1411,17 +1411,22 @@ ul.plain {
     position: absolute;
     top: 0;
     left: 100%;
-    height: 100%;
     margin: 0;
     width: 49.9vh;
-    transform: translateX(-25vh) scale(2) rotate(90deg);
-    xfilter: contrast(300%);
+    transform: translate(-25vh, 49vh) scale(2) rotate(-90deg);
 }
 
 #poo p {
     font: 800%/1 Poo;
     font-variation-settings: "crap" 100;
 }
+
+    @supports (-webkit-clip-path: initial) {
+        /* Chrome */
+         #poo p {
+             font-size: 333%;
+         }
+    }
 
 #decovar p {
     font: 500%/.8 Decovar;
