@@ -51,52 +51,52 @@
 
 @font-face {
     font-family: "Kafeel Painter 1";
-    src: local("Kafeel Painter 1"), url (fonts/Kafeel/Kafeel%20Painter%201.ttf) format ("ttf");
+    src: local("Kafeel Painter 1"), url(fonts/Kafeel/Kafeel%20Painter%201.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "Kafeel Painter 2";
-    src: local("Kafeel Painter 2"), url (fonts/Kafeel/Kafeel%20Painter%202.ttf) format ("ttf");
+    src: local("Kafeel Painter 2"), url(fonts/Kafeel/Kafeel%20Painter%202.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "Kafeel Painter 3";
-    src: local("Kafeel Painter 3"), url (fonts/Kafeel/Kafeel%20Painter%203.ttf) format ("ttf");
+    src: local("Kafeel Painter 3"), url(fonts/Kafeel/Kafeel%20Painter%203.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "Kafeel Painter 4";
-    src: local("Kafeel Painter 4"), url (fonts/Kafeel/Kafeel%20Painter%204.ttf) format ("ttf");
+    src: local("Kafeel Painter 4"), url(fonts/Kafeel/Kafeel%20Painter%204.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "Kafeel Painter 5";
-    src: local("Kafeel Painter 5"), url (fonts/Kafeel/Kafeel%20Painter%205.ttf) format ("ttf");
+    src: local("Kafeel Painter 5"), url(fonts/Kafeel/Kafeel%20Painter%205.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "Kafeel Painter 6";
-    src: local("Kafeel Painter 6"), url (fonts/Kafeel/Kafeel%20Painter%206.ttf) format ("ttf");
+    src: local("Kafeel Painter 6"), url(fonts/Kafeel/Kafeel%20Painter%206.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "Kafeel Painter 7";
-    src: local("Kafeel Painter 7"), url (fonts/Kafeel/Kafeel%20Painter%207.ttf) format ("ttf");
+    src: local("Kafeel Painter 7"), url(fonts/Kafeel/Kafeel%20Painter%207.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "Kafeel Painter 8";
-    src: local("Kafeel Painter 8"), url (fonts/Kafeel/Kafeel%20Painter%208.ttf) format ("ttf");
+    src: local("Kafeel Painter 8"), url(fonts/Kafeel/Kafeel%20Painter%208.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "Kafeel Painter 9";
-    src: local("Kafeel Painter 9"), url (fonts/Kafeel/Kafeel%20Painter%209.ttf) format ("ttf");
+    src: local("Kafeel Painter 9"), url(fonts/Kafeel/Kafeel%20Painter%209.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "Kafeel Painter base";
-    src: local("Kafeel Painter base"), url (fonts/Kafeel/Kafeel%20Painter%20base.ttf) format ("ttf");
+    src: local("Kafeel Painter base"), url(fonts/Kafeel/Kafeel%20Painter%20base.ttf) format("truetype");
 }
 
 @font-face {
