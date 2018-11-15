@@ -1117,7 +1117,9 @@ select {
 }
 
     #emoji > div {
-        /* font-family: emojione, emoji; */
+        display: grid;
+        grid-template-rows: repeat(5, auto);
+        font-family: emojione, emoji;
         font-size: calc(20vh - 2.2em);
         white-space: pre-line;
     }
