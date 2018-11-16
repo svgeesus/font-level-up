@@ -474,3 +474,30 @@ font: inherit;
 	text-shadow: none;
 	background: rgba(0,0,0,.5);
 }
+
+/* Ribbon */
+
+[data-type].slide::after {
+	content: attr(data-type);
+	position: fixed;
+	top: 0;
+	right: 0;
+
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	background: hsl(130, 72%, 65%);
+
+	/* background: var(--accent2); */
+	/* background-image: linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, 0)); */
+	font-size: 70%;
+	line-height: 1.6;
+	min-width: 20em;
+	box-shadow: 0 10px 5px -5px rgba(0,0,0,.3);
+	transform: rotate(45deg) translate(6em, -2em);
+}
+
+/* [data-type].slide:not(.hide-ribbon):after {
+	background: hsl(130, 91%, 55%);
+	font-size: 80%;
+} */
