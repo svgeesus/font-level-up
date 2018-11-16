@@ -486,8 +486,8 @@ font: inherit;
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: bold;
-	background: hsl(130, 72%, 65%);
-
+	/* background: hsl(130, 72%, 65%); */
+	background: var(--medium1);
 	/* background: var(--accent2); */
 	/* background-image: linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, 0)); */
 	font-size: 70%;
