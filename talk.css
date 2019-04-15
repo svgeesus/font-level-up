@@ -662,7 +662,7 @@
         text-align: right;
     }
 
-    #font-variant-numeric2 .figure {
+    #font-variant-numeric2 .figure, #font-variant-numeric3 .figure {
         font-family: Source Sans Pro, Adobe Caslon Pro, serif;
     }
 
