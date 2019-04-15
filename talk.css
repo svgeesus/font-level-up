@@ -13,6 +13,12 @@
 }
 
 @font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    src: url(fonts/source-sans-pro/SourceSansPro-Regular.otf);
+}
+
+@font-face {
     font-family: 'Reenie Beanie';
     font-style: normal;
     font-weight: 400;
@@ -657,7 +663,7 @@
     }
 
     #font-variant-numeric2 .figure {
-        font-family: Adobe Caslon Pro, serif;
+        font-family: Source Sans Pro, Adobe Caslon Pro, serif;
     }
 
 .figure {
