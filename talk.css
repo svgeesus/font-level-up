@@ -1507,3 +1507,12 @@ ul.plain {
     #decovar p span:nth-child(3) {
         text-indent: .1em;
     }
+
+#sinf {
+
+}
+
+    #sinf .figure {
+        font-family: 'Source Sans Pro';
+        font-size: 200%;
+    }
